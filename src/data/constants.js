@@ -222,7 +222,7 @@ export const Bio = {
       school: "Ramanuj Gupta Senior Secondary School",
       date: "Apr 2019 - Jun 2021",
       grade: "92.6%",
-      desc: "I completed my class 12 high school education at Ramanuj Gupta Junior College, Dankuni, where I studied Science.",
+      desc: "I completed my class 12 high school education at Ramanuj Gupta Junior College, where I studied Science.",
     },
     {
       id: 2,
