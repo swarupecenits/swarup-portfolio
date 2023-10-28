@@ -237,7 +237,7 @@ export const Bio = {
   export const projects = [
     {
       id: 9,
-      title: "Buisness",
+      title: "Business",
       date: "Jun 2023",
       description:
         "To establish an online presence, communicate our services, and engage customers. Key features include a responsive design, services showcase, contact information, blog/news section, and social media integration.",
