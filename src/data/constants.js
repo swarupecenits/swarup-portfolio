@@ -11,7 +11,7 @@ export const Bio = {
       "Pursuing a B.Tech in Computer Science and Engineering at NIT Silchar, I'm on an odyssey of continuous learning. I'm sculpting a multidimensional skill set, weaving my experiences into a tapestry of innovation and growth.",
     github: "https://github.com/swarupecenits",
     resume:
-      "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",
+      "https://docs.google.com/document/d/196DWgyxADrESWFW-PJvGOf4U0toqN_y4/edit?usp=sharing&ouid=116002041763183039872&rtpof=true&sd=true",
     linkedin: "https://www.linkedin.com/in/swarup-chanda-23053724a/",
     twitter: "https://twitter.com/_swarup_chanda",
     insta: "https://www.instagram.com/this_is_swarup_/",
@@ -83,7 +83,7 @@ export const Bio = {
         {
           name: "C++",
           image:
-            "https://e7.pngegg.com/pngimages/520/669/png-clipart-c-logo-c-programming-language-computer-icons-computer-programming-programming-miscellaneous-blue-thumbnail.png",
+            "https://w7.pngwing.com/pngs/46/626/png-transparent-c-logo-the-c-programming-language-computer-icons-computer-programming-source-code-programming-miscellaneous-template-blue.png",
         },
         {
           name: "C",
