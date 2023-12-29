@@ -8,7 +8,7 @@ export const Bio = {
     "Arduino Developer",
   ],
   description:
-    "Pursuing a B.Tech in Computer Science and Engineering at NIT Silchar, I'm on an odyssey of continuous learning. I'm sculpting a multidimensional skill set, weaving my experiences into a world of innovation and growth.",
+    "Pursuing a B.Tech in Computer Science and Engineering at NIT Silchar, I'm on an odyssey of continuous learning. I'm sculpting a multidimensional skill set, weaving my experiences into innovation and growth.",
   github: "https://github.com/swarupecenits",
   resume:
     "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",

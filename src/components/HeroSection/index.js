@@ -46,7 +46,7 @@ const HeroSection = () => {
             </TextLoop>
             <SubTitle>{Bio.description}</SubTitle>
             <button  class="btn-hero">
-             <a style={{color:"#fff", textDecoration:"none"}} href="https://drive.google.com/file/d/1CUHuHSEr6esID8am6dSr3dcV5cLRZ_S9/view?usp=drivesdk" target="blank">Check CV</a> </button>
+             <a style={{color:"#fff", textDecoration:"none"}} href="https://docs.google.com/document/d/196DWgyxADrESWFW-PJvGOf4U0toqN_y4/edit?usp=drivesdk&ouid=116002041763183039872&rtpof=true&sd=true" target="blank">Check CV</a> </button>
             {/* <ResumeButton href={Bio.resume} target="display">
               Check Resume
             </ResumeButton> */}
