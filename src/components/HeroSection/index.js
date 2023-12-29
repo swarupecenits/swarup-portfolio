@@ -12,9 +12,6 @@ import {
   Title,
   Span,
   SubTitle,
-  SocialMediaIcons,
-  SocialMediaIcon,
-  ResumeButton,
 } from "./HeroStyle";
 import HeroImg from "../../images/HeroImage.gif";
 import Typewriter from "typewriter-effect";
