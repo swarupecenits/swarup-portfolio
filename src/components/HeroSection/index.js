@@ -13,7 +13,7 @@ import {
   Span,
   SubTitle,
 } from "./HeroStyle";
-import HeroImg from "../../images/HeroImage.gif";
+// import HeroImg from "../../images/HeroImage.gif";
 import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/constants";
 
@@ -50,7 +50,7 @@ const HeroSection = () => {
           </HeroLeftContainer>
 
           <HeroRightContainer id="Right">
-            <Img src={HeroImg} alt="hero-image" />
+            <Img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ivcxkvbdqmplvap2fwi6" alt="hero-image" />
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>
