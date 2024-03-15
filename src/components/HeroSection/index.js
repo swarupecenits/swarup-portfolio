@@ -21,8 +21,8 @@ const HeroSection = () => {
   return (
     <div id="about">
       <HeroContainer>
-        <HeroBg>
-          <HeroBgAnimation />
+        <HeroBg className="hero_bg">
+        <HeroBgAnimation width={800} height={500} />
         </HeroBg>
         <HeroInnerContainer>
           <HeroLeftContainer id="Left">
