@@ -291,7 +291,7 @@ export const education = [
     school: "St. Vianney School",
     date: "Jan 2007 - Jun 2018",
     grade: "90.4%",
-    desc: "I completed my class 10 education at St. Vianney School, Tikarburunga",
+    desc: "Attended St. Vianney School, receiving a comprehensive education that laid the foundation for academic excellence and personal growth, shaping a well-rounded individual.",
   },
 ];
 
