@@ -2,8 +2,8 @@ export const Bio = {
   name: "Swarup Chanda",
   roles: [
     "Full Stack Developer",
-    "Android Developer",
-    "UI/UX Designer",
+    "Robotics Enthusiast",
+    "Programmer",
     "Video Editor",
     "Arduino Developer",
   ],
@@ -166,6 +166,11 @@ export const skills = [
         name: "Filmora",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wondershare_filmora_logo.svg/800px-Wondershare_filmora_logo.svg.png",
+      },
+      {
+        name: "Altium-PCB",
+        image:
+          "https://5.imimg.com/data5/SELLER/Default/2023/12/369981375/LG/VW/AF/195873594/ad-logo-vertical-light-bg.png",
       },
       {
         name: "Figma",
