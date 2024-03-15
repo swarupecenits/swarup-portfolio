@@ -15,6 +15,10 @@
     border-radius: 8px;
     cursor: pointer;
   }
+  .hero_bg{
+    margin-top: -85px;
+    background-repeat: no-repeat;
+  }
   
   .btn-hero::before {
     content: '';
@@ -54,4 +58,10 @@
     scale: 0.7;
   }
   
-  
+  @media only screen and (max-width: 600px) {
+    .hero_bg{
+      margin-top: -160px !important;
+      gap: -10rem !important;
+      background-repeat: none !important;
+    }
+  }
