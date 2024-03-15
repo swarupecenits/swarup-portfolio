@@ -133,6 +133,11 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/720px-Arduino_Logo.svg.png?20200922062315",
       },
       {
+        name: "ROS",
+        image:
+          "https://miro.medium.com/v2/resize:fit:580/0*N8Ew1wXNRVOSNO8m",
+      },
+      {
         name: "Git",
         image:
           "https://iconape.com/wp-content/png_logo_vector/git-icon.png",
@@ -167,11 +172,35 @@ export const skills = [
         image:
           "https://w7.pngwing.com/pngs/54/524/png-transparent-figma-app-logo-tech-companies-thumbnail.png",
       },
+      {
+        name: "AutoCAD",
+        image:
+          "https://banner2.cleanpng.com/20180420/iyq/kisspng-autocad-computer-aided-design-autodesk-computer-so-architectural-vector-5ada29d4b77028.5235821115242469967514.jpg",
+      },
     ],
   },
 ];
 
 export const experiences = [
+  {
+    id: 5,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaHCaJMhFz0p9KjJqOBcFfELj8ZEK5J2_WA&usqp=CAU",
+    role: "ISRO Robotics Challenge-URSC 2024 (IRoC-U2024)",
+    company: "ISRO",
+    date: "Nov 2023 - Present",
+    desc: "Participated in the ISRO Robotics Challenge-URSC 2024 (IRoC-U2024), showcasing expertise in robotics, engineering, and problem-solving within a competitive space exploration context.",
+    skills: [
+      "Rover Design",
+      "Power Electronics",
+      "ROS",
+      "Simulation",
+      "Computer Vision",
+      "Path Planning",
+      "Chassis Design",
+      "Electronics",
+      "Object Detection",
+    ],
+  },
   {
     id: 0,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgZjfVFbm53NoqtHcNsIqgDzSzyqdphtlSLQSIL0IWog&s",
@@ -194,9 +223,13 @@ export const experiences = [
     desc: "Working on the frontend of the web application using ReactJS, HTML,Java=script, and CSS.",
     skills: [
       "ReactJS",
+      "NextJS",
       "HTML",
       "CSS",
+      "SASS",
       "JavaScript",
+      "NodeJS",
+      "MongoDB",
     ],
   },
   {
@@ -208,6 +241,8 @@ export const experiences = [
     desc: "Working on Arduino UNO architecture including software as well as hardware practices",
     skills: [
       "Arduino IDE",
+      "Sensor Modules",
+      "Programming",
       "Hardware",
       "IOT Modules",
     ],
@@ -226,7 +261,6 @@ export const experiences = [
       "JavaScript",
       "NodeJS",
       "ExpressJS",
-      "MySQL",
       "MongoDB",
     ],
   },
@@ -264,7 +298,7 @@ export const education = [
 export const projects = [
   {
     id: 9,
-    title: "Buisness",
+    title: "Buisness Website",
     date: "Jun 2023",
     description:
       "To establish an online presence, communicate our services, and engage customers. Key features include a responsive design, services showcase, contact information, blog/news section, and social media integration.",
@@ -281,6 +315,44 @@ export const projects = [
   },
   {
     id: 1,
+    title: "Incandescence-2024 Website",
+    date: "Feb 2024",
+    description:
+      "Collaborated in creating a vibrant event website for Incandescence, showcasing our college's spirit through interactive design, engaging content, and seamless functionality.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/WhatsApp_Image_2024-03-15_at_12.14.58_5441dd4c_z2hykr",
+    tags: [
+      "NextJS",
+      "SASS",
+      "FramerMotion",
+      "NodeJS",
+      "MongoDB",
+    ],
+    category: "web app",
+    github: "https://github.com/Ecell-NITS/Incand24-frontend.git",
+    webapp: "https://www.incand.co.in/",
+  },
+  {
+    id: 7,
+    title: "Tecnoesis-2024 Website",
+    date: "Jan 2024",
+    description:
+      "Collaborated on vibrant Tecnoesis event website, ensuring interactive design, engaging content, and seamless functionality in Technical Fest, showcasing teamwork and college spirit.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/rxnglcnzxvz29tmtrhtm",
+    tags: [
+      "ReactJS",
+      "ModuleCSS",
+      "Animation",
+      "NodeJS",
+      "Firebase",
+    ],
+    category: "web app",
+    github: "https://github.com/gdsc-nits-org/tecnoesis-web.git",
+    webapp: "https://www.tecnoesis.co.in/",
+  },
+  {
+    id: 1,
     title: "Y20-Event Website",
     date: "Aug 2023",
     description:
@@ -291,6 +363,7 @@ export const projects = [
       "ReactJS",
       "CSS",
       "Javascript",
+      "Bootstrap",
     ],
     category: "web app",
     github: "https://github.com/swarupecenits/y20-website-dev.git",
@@ -341,6 +414,8 @@ export const projects = [
     tags: [
       "Arduino",
       "Hardware",
+      "Bluetooth Module",
+      "Sensors",
     ],
     category: "arduino",
     github: "https://github.com/swarupecenits/Spidy-The-Spider-Robot.git",
@@ -360,8 +435,25 @@ export const projects = [
       "Bluetooth Module",
     ],
     category: "arduino",
-    github: "#",
+    github: "https://github.com/swarupecenits/Bluetooth-Controlled-car.git",
     webapp: "https://youtu.be/KyjrGN9ZTPg?si=LOdZGxahC-Sqo95_",
+  },
+  {
+    id: 2,
+    title: "Maze-Solver-Bot",
+    date: "Jan 2024",
+    description:
+      "Developed a maze-solving bot using Arduino Uno, L298N motor driver, and ultrasonic sensors, demonstrating technical skills in robotics and programming for autonomous navigation tasks.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/qso3ofr1cwv4uivlz67y",
+    tags: [
+      "Arduino",
+      "Hardware",
+      "Bluetooth Module",
+      "Ultrasonic Sensors",
+    ],
+    category: "arduino",
+    github: "https://github.com/swarupecenits/Maze_solver.git",
   },
   
 ];
