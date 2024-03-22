@@ -11,7 +11,7 @@ export const Bio = {
     "Pursuing a B.Tech in Computer Science and Engineering at NIT Silchar, I'm on an odyssey of continuous learning. I'm sculpting a multidimensional skill set, weaving my experiences into innovation and growth.",
   github: "https://github.com/swarupecenits",
   resume:
-    "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",
+    "https://drive.google.com/file/d/1yVgfbnn2K9yYp3kiJhioJR9r8js0vXfQ/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/swarup-chanda-23053724a/",
   twitter: "https://twitter.com/_swarup_chanda",
   insta: "https://www.instagram.com/this_is_swarup_/",
