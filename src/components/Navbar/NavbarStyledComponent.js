@@ -117,7 +117,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.5rem;
     cursor: pointer;
-    color:  #0551ff;
+    color:  #9e095e;
   }
 `;
 
@@ -163,12 +163,12 @@ export const MobileMenuLink = styled(LinkR)`
   }
 
   &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.primary};
+    border-bottom: 2px solid #9e095e;
   }
 `;
 
 export const MobileMenuButton = styled.a`
-  border: 1.8px solid ${({ theme }) => theme.primary};
+  border: 1.8px solid #9e095e;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -183,7 +183,7 @@ export const MobileMenuButton = styled.a`
   transition: all 0.6s ease-in-out;
 
   :hover {
-    background: ${({ theme }) => theme.primary};
+    background: #9e095e;
     color: ${({ theme }) => theme.white};
   }
 `;
