@@ -28,7 +28,7 @@ const FooterWrapper = styled.footer`
 const Logo = styled.h1`
   font-weight: 600;
   font-size: 20px;
-  color: #0551ff;
+  color: #9e095e;
 `;
 
 const Nav = styled.nav`
