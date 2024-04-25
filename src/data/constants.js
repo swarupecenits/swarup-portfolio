@@ -305,23 +305,7 @@ export const education = [
 ];
 
 export const projects = [
-  {
-    id: 9,
-    title: "Buisness Website",
-    date: "Jun 2023",
-    description:
-      "To establish an online presence, communicate our services, and engage customers. Key features include a responsive design, services showcase, contact information, blog/news section, and social media integration.",
-    image:
-      "https://i.ibb.co/gw6LKzW/Screenshot-845.png",
-    tags: [
-      "HTML",
-      "CSS",
-      "Javascript",
-    ],
-    category: "web app",
-    github: "https://github.com/swarupecenits/Buisness.git  ",
-    webapp: "https://swarupecenits.github.io/Buisness/",
-  },
+  
   {
     id: 1,
     title: "Incandescence-2024 Website",
@@ -359,6 +343,40 @@ export const projects = [
     category: "web app",
     github: "https://github.com/gdsc-nits-org/tecnoesis-web.git",
     webapp: "https://www.tecnoesis.co.in/",
+  },
+  {
+    id: 7,
+    title: "Oikyotaan-2024 Website",
+    date: "April 2024",
+    description:
+      "Contributed to the Oikyotaan 2024 cultural event website by designing interactive elements, creating engaging content, ensuring seamless functionality, and enhancing the overall user experience. My goal was to showcase the vibrancy and spirit of our event and college.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/li4hmetwysdlhq9ziazn",
+    tags: [
+      "ReactJS",
+      "SASS",
+      "Animation",
+    ],
+    category: "web app",
+    github: "https://github.com/gdsc-nits-org/oikyotaan-2024.git",
+    webapp: "https://oikyotaan.in/",
+  },
+  {
+    id: 9,
+    title: "Buisness Website",
+    date: "Jun 2023",
+    description:
+      "To establish an online presence, communicate our services, and engage customers. Key features include a responsive design, services showcase, contact information, blog/news section, and social media integration.",
+    image:
+      "https://i.ibb.co/gw6LKzW/Screenshot-845.png",
+    tags: [
+      "HTML",
+      "CSS",
+      "Javascript",
+    ],
+    category: "web app",
+    github: "https://github.com/swarupecenits/Buisness.git  ",
+    webapp: "https://swarupecenits.github.io/Buisness/",
   },
   {
     id: 1,
