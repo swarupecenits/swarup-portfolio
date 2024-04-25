@@ -6,8 +6,8 @@ const Button = styled.button`
     display: none;
     width: 100%;
     padding: 10px;
-    background-color: ${({ theme }) => theme.white};
-    color: ${({ theme }) => theme.text_black};
+    background-color: #9e095e;
+    color: ${({ theme }) => theme.white};
     font-size: 14px;
     font-weight: 700;
     border: none;
@@ -58,7 +58,7 @@ const Tags = styled.div`
 const Tag = styled.span`
     font-size: 12px;
     font-weight: 400;
-    color: #0551ff;
+    color: #9e095e;
     background-color: ${({ theme }) => theme.primary + 15};
     padding: 2px 8px;
     border-radius: 10px;
@@ -141,7 +141,7 @@ const ProjectCards = ({project,setOpenModal}) => {
                     <Avatar src={member.img}/>
                 ))}
             </Members>
-            {/* <Button>View Project</Button> */}
+            <Button>View Project</Button>
         </Card>
     )
 }
