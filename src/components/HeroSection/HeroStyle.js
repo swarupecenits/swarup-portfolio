@@ -147,7 +147,7 @@ export const TextLoop = styled.div`
 `;
 
 export const Span = styled.span`
-  color:#0551ff;
+  color:#9e095e;
   cursor: pointer;
 `;
 

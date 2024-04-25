@@ -73,13 +73,13 @@ export const NavLink = styled.a`
 `;
 
 export const GitHubButton = styled.a`
-  border: 1.8px solid  #0551ff;
+  border: 1.8px solid  #9e095e;
   justify-content: center;
   display: flex;
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: #0551ff;
+  color: #9e095e;
   cursor: pointer;
   padding: 0 20px;
   font-weight: 500;
@@ -87,7 +87,7 @@ export const GitHubButton = styled.a`
   font-size: 16px;
   transition: all 0.6s ease-in-out;
   :hover {
-    background:  #0551ff;
+    background:  #9e095e;
     color: ${({ theme }) => theme.white};
   }
   @media screen and (max-width: 768px) {

@@ -96,7 +96,7 @@ const Tags = styled.div`
 const Tag = styled.div`
     font-size: 14px;
     font-weight: 400;
-    color: ${({ theme }) => theme.primary};
+    color: #9e095e;
     margin: 4px;
     padding: 4px 8px;
     border-radius: 8px;
@@ -162,19 +162,19 @@ const Button = styled.a`
     color: ${({ theme }) => theme.text_primary};
     padding: 12px 16px;
     border-radius: 8px;
-    background-color: ${({ theme }) => theme.primary};
+    background-color: #9e095e;
     ${({ dull, theme }) => dull && `
         background-color: ${theme.bgLight};
         color: ${theme.text_secondary};
         &:hover {
-            background-color: ${({ theme }) => theme.bg + 99};
+            background-color: #9e095e;
         }
     `}
     cursor: pointer;
     text-decoration: none;
     transition: all 0.5s ease;
     &:hover {
-        background-color: ${({ theme }) => theme.primary + 99};
+        background-color: #9e095e;
     }
     @media only screen and (max-width: 600px) {
         font-size: 12px;
