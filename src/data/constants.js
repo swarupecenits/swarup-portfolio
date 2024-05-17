@@ -306,6 +306,25 @@ export const education = [
 
 export const projects = [
   
+
+  {
+    id: 9,
+    title: "Space Rover",
+    date: "May 2024",
+    description:
+      "Designed and implemented a robust software and electronics system for an autonomous space rover, achieving precise navigation and task execution in challenging environment",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/lcqjp4o8wbd63i4ywcyw",
+    tags: [
+      "Power Electronics",
+      "Arduino",
+      "Autonomous Navigation",
+      "Jetson Nano",
+    ],
+    category: "web app",
+    github: "",
+    webapp: "https://www.youtube.com/watch?si=3AEBZuTgmTvywpda&v=0hkg6x7ZlYw&feature=youtu.be",
+  },
   {
     id: 1,
     title: "Incandescence-2024 Website",
@@ -368,7 +387,7 @@ export const projects = [
     description:
       "To establish an online presence, communicate our services, and engage customers. Key features include a responsive design, services showcase, contact information, blog/news section, and social media integration.",
     image:
-      "https://i.ibb.co/gw6LKzW/Screenshot-845.png",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/lryt7o1tpvmmw2ojpwan",
     tags: [
       "HTML",
       "CSS",
@@ -385,7 +404,7 @@ export const projects = [
     description:
       "Develop the Y20 Event Website to showcase our event, promote registration, and provide attendees with essential information. The site will feature event details, a registration portal, speaker profiles, an agenda, and a contact page.",
     image:
-      "https://i.ibb.co/cQ2cMrk/Screenshot-846.png",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/xcvtgg44afcvlt25zqxr",
     tags: [
       "ReactJS",
       "CSS",
@@ -403,7 +422,7 @@ export const projects = [
     description:
       "Elevate your online presence with a dynamic portfolio website project. Showcase your skills, creativity, and achievements through a visually stunning and user-friendly platform. Engage visitors with a captivating portfolio, personalized bio, and contact information, all while highlighting your unique talents and achievements. Let your digital footprint shine with your customized portfolio website.",
     image:
-      "https://i.ibb.co/xGqdtbZ/Screenshot-848.png",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ydu2odkv0ijvoy62g5p3",
     tags: [
       "HTML",
       "CSS",
@@ -420,7 +439,7 @@ export const projects = [
     description:
       "Develop the Y20 Event Website to showcase our event, promote registration, and provide attendees with essential information. The site will feature event details, a registration portal, speaker profiles, an agenda, and a contact page.",
     image:
-      "https://i.ibb.co/MMCJqmh/Screenshot-847.png",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/hu4x438zq3ci7i9qkqqs",
     tags: [
       "ReactJS",
       "CSS",
@@ -437,7 +456,7 @@ export const projects = [
     description:
       "Introducing our cutting-edge Spider Robot, powered by Arduino technology! This remarkable creation combines robotics and innovation, showcasing intricate movements and impressive functionality. With a sleek design and advanced capabilities, our Spider Robot is ready to amaze and inspire. Explore the future of robotics with us!",
     image:
-      "https://i.ibb.co/H2PQcBz/spidy.jpg",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/jnlg9kxawwfdnnpjsqjc",
     tags: [
       "Arduino",
       "Hardware",
@@ -455,7 +474,7 @@ export const projects = [
     description:
       "Experience the future of mobility with our Bluetooth-controlled car. This advanced vehicle puts you in the driver's seat with a smartphone app, offering precision control and an exhilarating ride. Seamlessly navigate, accelerate, and steer as you explore the possibilities of connected driving. Unleash the power of Bluetooth technology today.",
     image:
-      "https://i.ibb.co/Hp5yzzG/bluetooth.jpg",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/urepbjmsfl9fngsc9l5q",
     tags: [
       "Arduino",
       "Hardware",
