@@ -64,7 +64,7 @@ export const NavLink = styled.a`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   :hover {
-    color: #0551ff;
+    color: #9e095e;
   }
 
   &.active {
