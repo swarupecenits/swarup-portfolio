@@ -54,7 +54,7 @@ color: ${({ theme }) => theme.text_primary};
   font-size: 1.2rem;
   transition: color 0.2s ease-in-out;
   &:hover {
-    color: #0551ff;
+    color: #9e095e;
   }
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -73,7 +73,7 @@ const SocialMediaIcon = styled.a`
   color: ${({ theme }) => theme.text_primary};
   transition: color 0.2s ease-in-out;
   &:hover {
-    color:#0551ff;
+    color:#9e095e;
   }
 `;
 
