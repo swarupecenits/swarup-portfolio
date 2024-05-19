@@ -16,43 +16,58 @@ import {
 // import HeroImg from "../../images/HeroImage.gif";
 import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/constants";
+import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
+import {
+  headContainerAnimation,
+  headContentAnimation,
+  headTextAnimation,
+} from "../../utils/motion";
+import StarCanvas from "../canvas/Stars";
 
 const HeroSection = () => {
   return (
     <div id="about">
       <HeroContainer>
+        <StarCanvas />
         <HeroBg className="hero_bg">
-        <HeroBgAnimation width={800} height={500} />
+          <HeroBgAnimation width={800} height={500} />
         </HeroBg>
-        <HeroInnerContainer>
-          <HeroLeftContainer id="Left">
-            <Title>
-              Hi, I am <br /> {Bio.name}
-            </Title>
-            <TextLoop>
-              I am a
-              <Span>
-                <Typewriter
-                  options={{
-                    strings: Bio.roles,
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </Span>
-            </TextLoop>
-            <SubTitle>{Bio.description}</SubTitle>
-            <button  class="btn-hero">
-             <a style={{color:"#fff", textDecoration:"none"}} href="https://drive.google.com/file/d/1WhryeEsULP-3q6lZXpleW26c0jZbB4tz/view" target="blank">Check CV</a> </button>
-            {/* <ResumeButton href={Bio.resume} target="display">
+        <motion.div {...headContainerAnimation}>
+          <HeroInnerContainer>
+            <HeroLeftContainer id="Left">
+              <Title>
+                Hi, I am <br /> {Bio.name}
+              </Title>
+              <TextLoop>
+                I am a
+                <Span>
+                  <Typewriter
+                    options={{
+                      strings: Bio.roles,
+                      autoStart: true,
+                      loop: true,
+                    }}
+                  />
+                </Span>
+              </TextLoop>
+              <SubTitle>{Bio.description}</SubTitle>
+              <button class="btn-hero">
+                <a style={{ color: "#fff", textDecoration: "none" }} href="https://drive.google.com/file/d/1WhryeEsULP-3q6lZXpleW26c0jZbB4tz/view" target="blank">Check CV</a> </button>
+              {/* <ResumeButton href={Bio.resume} target="display">
               Check Resume
             </ResumeButton> */}
-          </HeroLeftContainer>
+            </HeroLeftContainer>
 
-          <HeroRightContainer id="Right">
-            <Img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ivcxkvbdqmplvap2fwi6" alt="hero-image" />
-          </HeroRightContainer>
-        </HeroInnerContainer>
+            <HeroRightContainer id="Right">
+              <motion.div {...headContentAnimation}>
+                <Tilt>
+                  <Img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ivcxkvbdqmplvap2fwi6" alt="hero-image" />
+                </Tilt>
+              </motion.div>
+            </HeroRightContainer>
+          </HeroInnerContainer>
+        </motion.div>
       </HeroContainer>
     </div>
   );

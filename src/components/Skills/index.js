@@ -1,6 +1,7 @@
 import React from "react";
 import { skills } from "../../data/constants";
 import styled, { keyframes } from "styled-components";
+import { Tilt } from "react-tilt";
 
 const Container = styled.div`
   display: flex;
@@ -135,17 +136,19 @@ const Skills = () => {
         <Desc>Here are some of my skills on which I have been working on.</Desc>
         <SkillsContainer>
           {skills.map((skill) => (
-            <Skill>
-              <SkillTitle>{skill.title}</SkillTitle>
-              <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image} />
-                    {item.name}
-                  </SkillItem>
-                ))}
-              </SkillList>
-            </Skill>
+            <Tilt>
+              <Skill>
+                <SkillTitle>{skill.title}</SkillTitle>
+                <SkillList>
+                  {skill.skills.map((item) => (
+                    <SkillItem>
+                      <SkillImage src={item.image} />
+                      {item.name}
+                    </SkillItem>
+                  ))}
+                </SkillList>
+              </Skill>
+            </Tilt>
           ))}
         </SkillsContainer>
       </Wrapper>
