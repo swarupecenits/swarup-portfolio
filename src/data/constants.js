@@ -73,7 +73,7 @@ export const skills = [
       {
         name: "MySQL",
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGOJWZgp_6sn9-7uzXd2JEAts1bJea_zuSSujTcUU&s",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
       },
       {
         name: "MongoDB",
@@ -99,7 +99,7 @@ export const skills = [
       {
         name: "Python",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
       },
       {
         name: "JavaScript",
@@ -129,6 +129,37 @@ export const skills = [
     ],
   },
   {
+    title: "Machine Learning",
+    skills: [
+      {
+        name: "Jupyter",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1767px-Jupyter_logo.svg.png",
+      },
+      {
+        name: "Python",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+      },
+      {
+        name: "TensorFlow",
+        image:
+          "https://static-00.iconduck.com/assets.00/tensorflow-icon-1911x2048-1m2s54vn.png",
+      },
+      {
+        name: "Scikit Learn",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png",
+      },
+      {
+        name: "Keras",
+        image:
+          "https://miro.medium.com/v2/resize:fit:600/1*DKu_54iqz6C-p6ndo7rO3g.png",
+      },
+      
+    ],
+  },
+  {
     title: "Others",
     skills: [
       {
@@ -145,6 +176,11 @@ export const skills = [
         name: "Git",
         image:
           "https://iconape.com/wp-content/png_logo_vector/git-icon.png",
+      },
+      {
+        name: "Netlify",
+        image:
+          "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
       },
       {
         name: "GitHub",
@@ -179,7 +215,7 @@ export const skills = [
       {
         name: "Figma",
         image:
-          "https://w7.pngwing.com/pngs/54/524/png-transparent-figma-app-logo-tech-companies-thumbnail.png",
+          "https://s3-alpha.figma.com/hub/file/1481185752/fa4cd070-6a79-4e1b-b079-8b9b76408595-cover.png",
       },
       {
         name: "AutoCAD",
