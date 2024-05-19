@@ -2,11 +2,12 @@ import styled from "styled-components";
 import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
-  background: ${({ theme }) => theme.card_light};
+  /* background: ${({ theme }) => theme.card_light}; */
   display: flex;
   justify-content: center;
   position: relative;
   padding: 80px 30px;
+  z-index: 1;
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
