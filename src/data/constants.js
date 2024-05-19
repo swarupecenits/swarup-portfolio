@@ -321,7 +321,7 @@ export const projects = [
       "Autonomous Navigation",
       "Jetson Nano",
     ],
-    category: "web app",
+    category: "robotics",
     github: "",
     webapp: "https://www.youtube.com/watch?si=3AEBZuTgmTvywpda&v=0hkg6x7ZlYw&feature=youtu.be",
   },
