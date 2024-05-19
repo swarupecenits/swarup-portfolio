@@ -1,9 +1,10 @@
 import { Link as LinkR } from "react-router-dom";
 import styled from "styled-components";
 import _default from "../../themes/default";
+import React, { useState } from "react";
 
 export const Nav = styled.div`
-  background-color: ${({ theme }) => theme.card_light};
+  background-color: ${({ theme }) => theme.bg};
   height: 80px;
   display: flex;
   align-items: center;
@@ -12,28 +13,30 @@ export const Nav = styled.div`
   position: sticky;
   top: 0;
   z-index: 10;
+  color: white;
   @media (max-width: 960px) {
     trastion: 0.8s all ease;
   }
 `;
 export const NavbarContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  z-index: 1;
   width: 100%;
-  padding: 0 24px;
   max-width: 1200px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
 `;
 
 export const NavLogo = styled(LinkR)`
+  display: flex;
+  align-items: center;
   width: 80%;
   padding: 0 6px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
   text-decoration: none;
+  color: inherit;
   @media (max-width: 640px) {
     padding: 0 0px;
   }
@@ -63,8 +66,8 @@ export const NavLink = styled.a`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  :hover {
-    color: #ab20fd;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
   }
 
   &.active {
@@ -73,22 +76,21 @@ export const NavLink = styled.a`
 `;
 
 export const GitHubButton = styled.a`
-  border: 1.8px solid  #ab20fd;
+  border: 1px solid ${({ theme }) =>theme.primary};
+  color: ${({ theme }) => theme.primary};
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 70%;
   border-radius: 20px;
-  color: #ab20fd;
   cursor: pointer;
-  padding: 0 20px;
-  font-weight: 500;
-  text-decoration: none;
+  padding: 10px 20px;
   font-size: 16px;
+  font-weight: 500;
   transition: all 0.6s ease-in-out;
-  :hover {
-    background:  #ab20fd;
-    color: ${({ theme }) => theme.white};
+  text-decoration: none;
+  &:hover {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.text_primary};
   }
   @media screen and (max-width: 768px) {
     font-size: 14px;
@@ -131,12 +133,12 @@ export const MobileMenu = styled.div`
   right: 0;
   width: 100%;
   padding: 12px 40px 24px 40px;
-  background: ${({ theme }) => theme.card_light + 99};
-  transition: all 0.6s ease-in-out;
+  background: ${({ theme }) => theme.card_light + "99"}; /* Add transparency */
+  backdrop-filter: blur(10px); /* Apply blur for glass effect */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  transition: all 1s ease-in-out;
   transform: ${({ isOpen }) =>
     isOpen ? "translateY(0)" : "translateY(-100%)"};
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
 `;
@@ -214,3 +216,4 @@ export const MobileNavLogo = styled(LinkR)`
     padding: 0 0px;
   }
 `;
+
