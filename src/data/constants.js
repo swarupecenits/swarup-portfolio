@@ -264,7 +264,7 @@ export const experiences = [
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpn5WB-RTXBn5P8cSwUSpjREVlqHfAHUiq0Bya4A4&s",
     role: "Junior Technical Associate",
     company: "E-Cell NIT Silchar",
-    date: "August 2023 - Present",
+    date: "August 2023 - April 2024",
     desc: "Working on the frontend of the web application using ReactJS, HTML,Java=script, and CSS.",
     skills: [
       "ReactJS",

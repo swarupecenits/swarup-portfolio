@@ -13,6 +13,7 @@ import {
 import ProjectCard from "../Cards/ProjectCards";
 import { projects } from "../../data/constants";
 
+
 const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");
   return (
@@ -47,7 +48,6 @@ const Projects = ({ openModal, setOpenModal }) => {
               WEB APP'S
             </ToggleButton>
           )}
-          <Divider />
           <Divider />
           {toggle === "robotics" ? (
             <ToggleButton
