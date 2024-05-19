@@ -6,7 +6,7 @@ const Button = styled.button`
     display: none;
     width: 100%;
     padding: 10px;
-    background-color: #9e095e;
+    background-color: #ab20fd;
     color: ${({ theme }) => theme.white};
     font-size: 14px;
     font-weight: 700;
@@ -58,7 +58,7 @@ const Tags = styled.div`
 const Tag = styled.span`
     font-size: 12px;
     font-weight: 400;
-    color: #9e095e;
+    color: #ab20fd;
     background-color: ${({ theme }) => theme.primary + 15};
     padding: 2px 8px;
     border-radius: 10px;
