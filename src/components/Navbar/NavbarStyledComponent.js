@@ -64,7 +64,7 @@ export const NavLink = styled.a`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   :hover {
-    color: #9e095e;
+    color: #ab20fd;
   }
 
   &.active {
@@ -73,13 +73,13 @@ export const NavLink = styled.a`
 `;
 
 export const GitHubButton = styled.a`
-  border: 1.8px solid  #9e095e;
+  border: 1.8px solid  #ab20fd;
   justify-content: center;
   display: flex;
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: #9e095e;
+  color: #ab20fd;
   cursor: pointer;
   padding: 0 20px;
   font-weight: 500;
@@ -87,7 +87,7 @@ export const GitHubButton = styled.a`
   font-size: 16px;
   transition: all 0.6s ease-in-out;
   :hover {
-    background:  #9e095e;
+    background:  #ab20fd;
     color: ${({ theme }) => theme.white};
   }
   @media screen and (max-width: 768px) {
@@ -117,7 +117,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.5rem;
     cursor: pointer;
-    color:  #9e095e;
+    color:  #ab20fd;
   }
 `;
 
@@ -159,16 +159,16 @@ export const MobileMenuLink = styled(LinkR)`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   :hover {
-    color: #9e095e;
+    color: #ab20fd;
   }
 
   &.active {
-    border-bottom: 2px solid #9e095e;
+    border-bottom: 2px solid #ab20fd;
   }
 `;
 
 export const MobileMenuButton = styled.a`
-  border: 1.8px solid #9e095e;
+  border: 1.8px solid #ab20fd;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -183,7 +183,7 @@ export const MobileMenuButton = styled.a`
   transition: all 0.6s ease-in-out;
 
   :hover {
-    background: #9e095e;
+    background: #ab20fd;
     color: ${({ theme }) => theme.white};
   }
 `;
@@ -195,7 +195,7 @@ export const MobileLink = styled.a`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   :hover {
-    color: #9e095e;
+    color: #ab20fd;
   }
 
   &.active {

@@ -104,7 +104,7 @@ const Navbar = () => {
             <GitHubButton
               style={{
                 padding: "10px 16px",
-                background: ` #9e095e`,
+                background: ` #ab20fd`,
                 color: "white",
                 width: "max-content",
               }}

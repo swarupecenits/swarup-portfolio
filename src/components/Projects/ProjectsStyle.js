@@ -52,8 +52,8 @@ export const Desc = styled.div`
 
 export const ToggleButtonGroup = styled.div`
     display: flex;
-    border: 1.5px solid #9e095e;
-    color: #9e095e;
+    border: 1.5px solid #ab20fd;
+    color: #ab20fd;
     font-size: 16px;
     border-radius: 12px;
     font-weight: 500;
@@ -82,7 +82,7 @@ export const ToggleButton = styled.div`
 `
 export const Divider = styled.div`
     width: 1.5px;
-    background: #9e095e;
+    background: #ab20fd;
 `
 
 
