@@ -5,14 +5,14 @@ import emailjs from "@emailjs/browser";
 import { Snackbar } from "@mui/material";
 import EarthCanvas from "../../components/canvas/Earth";
 
-const rotateBackground = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
+// const rotateBackground = keyframes`
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// `;
 
 const Container = styled.div`
   display: flex;
@@ -173,10 +173,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_tox7kqs",
-        "template_nv7k7mj",
+        "service_w7dzhh5",
+        "template_b0q19al",
         form.current,
-        "SybVGsYS52j2TfLbi"
+        "LXKUbff1C0vzu7wIX"
       )
       .then(
         (result) => {
@@ -199,8 +199,8 @@ const Contact = () => {
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me </ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
+          <ContactInput placeholder="Your Email" name="user_email" />
+          <ContactInput placeholder="Your Name" name="user_name" />
           <ContactInput placeholder="Subject" name="subject" />
           <ContactInputMessage placeholder="Message" rows="4" name="message" />
           <ContactButton type="submit" value="Send Message" />
