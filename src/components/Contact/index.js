@@ -87,7 +87,7 @@ const ContactTitle = styled.div`
 const ContactInput = styled.input`
   flex: 1;
   background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary +90};
+  border: 1px solid ${({ theme }) => theme.text_secondary + 90};
   outline: none;
   font-size: 18px;
   color: ${({ theme }) => theme.text_primary};
@@ -101,7 +101,7 @@ const ContactInput = styled.input`
 const ContactInputMessage = styled.textarea`
   flex: 1;
   background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.text_secondary +90};
+  border: 1px solid ${({ theme }) => theme.text_secondary + 90};
   outline: none;
   font-size: 18px;
   color: ${({ theme }) => theme.text_primary};
@@ -165,12 +165,40 @@ const ContactButton = styled.input`
 `
 
 const Contact = () => {
-  //hooks
+  // hooks
   const [open, setOpen] = React.useState(false);
+  const [error, setError] = React.useState(false);
+  const [errorMsg, setErrorMsg] = React.useState("");
   const form = useRef();
+
+  
+  const isEmailValid = (email) => {
+    // Simple email validation regex
+    const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(String(email).toLowerCase());
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const formData = new FormData(form.current);
+    const user_email = formData.get("user_email");
+    const user_name = formData.get("user_name");
+    const subject = formData.get("subject");
+    const message = formData.get("message");
+
+    if (!user_email || !user_name || !subject || !message) {
+      setErrorMsg("Please fill in all fields.");
+      setError(true);
+      return;
+    }
+
+    if (!isEmailValid(user_email)) {
+      setErrorMsg("Please enter a valid email address.");
+      setError(true);
+      return;
+    }
+
     emailjs
       .sendForm(
         "service_w7dzhh5",
@@ -192,7 +220,7 @@ const Contact = () => {
   return (
     <Container>
       <Wrapper>
-      <EarthCanvas />
+        <EarthCanvas />
         <Title>Contact</Title>
         <Desc>
           Feel free to reach out to me for any questions or opportunities!
@@ -211,6 +239,13 @@ const Contact = () => {
           onClose={() => setOpen(false)}
           message="Email sent successfully!"
           severity="success"
+        />
+        <Snackbar
+          open={error}
+          autoHideDuration={6000}
+          onClose={() => setError(false)}
+          message={errorMsg}
+          severity="error"
         />
       </Wrapper>
     </Container>
