@@ -349,6 +349,7 @@ export const education = [
 export const projects = [
   
 
+  
   {
     id: 9,
     title: "Space Rover",
@@ -386,6 +387,7 @@ export const projects = [
     github: "https://github.com/Ecell-NITS/Incand24-frontend.git",
     webapp: "https://www.incand.co.in/",
   },
+  
   {
     id: 7,
     title: "Tecnoesis-2024 Website",
@@ -404,6 +406,24 @@ export const projects = [
     category: "web app",
     github: "https://github.com/gdsc-nits-org/tecnoesis-web.git",
     webapp: "https://www.tecnoesis.co.in/",
+  },
+  {
+    id: 22,
+    title: "Image Classification Model",
+    date: "May 2024",
+    description:
+      "This Streamlit app is an Image Classifier that uses a pre-trained neural network model to classify uploaded images into various categories. The app provides a user-friendly interface for users to upload an image, and the model predicts the class of the image along with the corresponding accuracy.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/vpbdp6xyslsthh5di2xf",
+    tags: [
+      "TensorFlow",
+      "Keras",
+      "Numpy",
+      "Pandas",
+    ],
+    category: "machine_learning",
+    github: "https://github.com/swarupecenits/Image_Classifier_Model.git",
+    webapp: "https://imageclassifiermodel-bywze.streamlit.app/",
   },
   {
     id: 7,

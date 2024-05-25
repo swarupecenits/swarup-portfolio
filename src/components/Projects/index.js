@@ -63,6 +63,21 @@ const Projects = ({ openModal, setOpenModal }) => {
             </ToggleButton>
           )}
           <Divider />
+          <Divider />
+          {toggle === "machine_learning" ? (
+            <ToggleButton
+              active
+              value="machine_learning"
+              onClick={() => setToggle("machine_learning")}
+            >
+              Machine Learning
+            </ToggleButton>
+          ) : (
+            <ToggleButton value="machine_learning" onClick={() => setToggle("machine_learning")}>
+              Machine Learning
+            </ToggleButton>
+          )}
+          <Divider />
           {toggle === "arduino" ? (
             <ToggleButton
               active
