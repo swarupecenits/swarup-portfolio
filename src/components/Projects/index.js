@@ -41,11 +41,11 @@ const Projects = ({ openModal, setOpenModal }) => {
               value="web app"
               onClick={() => setToggle("web app")}
             >
-              WEB APP'S
+              Web APP
             </ToggleButton>
           ) : (
             <ToggleButton value="web app" onClick={() => setToggle("web app")}>
-              WEB APP'S
+              Web APP
             </ToggleButton>
           )}
           <Divider />
@@ -75,23 +75,6 @@ const Projects = ({ openModal, setOpenModal }) => {
           ) : (
             <ToggleButton value="machine_learning" onClick={() => setToggle("machine_learning")}>
               Machine Learning
-            </ToggleButton>
-          )}
-          <Divider />
-          {toggle === "arduino" ? (
-            <ToggleButton
-              active
-              value="arduino"
-              onClick={() => setToggle("arduino")}
-            >
-              ARDUINO
-            </ToggleButton>
-          ) : (
-            <ToggleButton
-              value="arduino"
-              onClick={() => setToggle("arduino")}
-            >
-              ARDUINO
             </ToggleButton>
           )}
         </ToggleButtonGroup>
