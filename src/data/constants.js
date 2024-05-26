@@ -47,42 +47,23 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
       {
-        name: "Bootstrap",
+        name: "ThreeJS",
         image:
-          "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQIUAO3NbXGjQjASqXqyv7hC9hTerlGRrnqkkBR0LPA&s",
+      },
+      {
+        name: "Sass",
+        image:
+          "https://sass-lang.com/assets/img/styleguide/seal-color.png",
+      },
+      {
+        name: "FramerMotion",
+        image:
+          "https://cdn.worldvectorlogo.com/logos/framer-motion.svg",
       },
     ],
   },
-  {
-    title: "Backend",
-    skills: [
-      {
-        name: "Node Js",
-        image: "https://nodejs.org/static/images/logo.svg",
-      },
-      {
-        name: "Express Js",
-        image:
-          "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png",
-      },
-      {
-        name: "Python",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
-      },
-      {
-        name: "MySQL",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
-      },
-      {
-        name: "MongoDB",
-        image:
-          "https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png",
-      },
-      
-    ],
-  },
+  
   {
     title: "Language",
     skills: [
@@ -99,7 +80,7 @@ export const skills = [
       {
         name: "Python",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
       },
       {
         name: "JavaScript",
@@ -125,6 +106,36 @@ export const skills = [
     ],
   },
   {
+    title: "Backend",
+    skills: [
+      {
+        name: "Node Js",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png",
+      },
+      {
+        name: "Express Js",
+        image:
+          "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png",
+      },
+      {
+        name: "Python",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
+      },
+      {
+        name: "MySQL",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQpg7rtmtCA6ABDknGKW2MdvGYip4_YB8jFXDGGu4hw&s",
+      },
+      {
+        name: "MongoDB",
+        image:
+          "https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png",
+      },
+      
+    ],
+  },
+  {
     title: "Machine Learning",
     skills: [
       {
@@ -135,7 +146,7 @@ export const skills = [
       {
         name: "Python",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
       },
       {
         name: "TensorFlow",
@@ -525,7 +536,7 @@ export const projects = [
       "Bluetooth Module",
       "Sensors",
     ],
-    category: "arduino",
+    category: "robotics",
     github: "https://github.com/swarupecenits/Spidy-The-Spider-Robot.git",
     webapp: "https://youtu.be/MOtOSJDkom8?si=WjYqGAIusp_0Lcip",
   },
@@ -542,7 +553,7 @@ export const projects = [
       "Hardware",
       "Bluetooth Module",
     ],
-    category: "arduino",
+    category: "robotics",
     github: "https://github.com/swarupecenits/Bluetooth-Controlled-car.git",
     webapp: "https://youtu.be/KyjrGN9ZTPg?si=LOdZGxahC-Sqo95_",
   },
