@@ -16,6 +16,7 @@ export const Bio = {
   twitter: "https://twitter.com/_swarup_chanda",
   insta: "https://www.instagram.com/this_is_swarup_/",
   facebook: "https://www.facebook.com/swarup.chanda.984?mibextid=ZbWKwL",
+  youtube: "https://www.youtube.com/channel/UCDuvuuT8Rtgw1JPz84APl5A",
 };
 
 export const skills = [
@@ -452,6 +453,24 @@ export const projects = [
     category: "web app",
     github: "https://github.com/gdsc-nits-org/oikyotaan-2024.git",
     webapp: "https://oikyotaan.in/",
+  },
+  {
+    id: 9,
+    title: "AI Summarizer Website",
+    date: "Jun 2024",
+    description:
+      "Discover the future of information processing with my AI web app powered by OpenAI's GPT-4. Effortlessly summarize web URLs for quick insights and enhanced productivity. Revolutionizing content consumption!",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/zssfpkyhciixlow4jj7z",
+    tags: [
+      "ReactJS",
+      "API",
+      "Redux",
+      "TailwindCSS",
+    ],
+    category: "web app",
+    github: "https://github.com/swarupecenits/ai-summarizer.git",
+    webapp: "https://ai-summarizer-swarup.netlify.app/",
   },
   {
     id: 9,
