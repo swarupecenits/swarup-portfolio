@@ -1,7 +1,6 @@
 import React from "react";
 import { skills } from "../../data/constants";
 import styled, { keyframes } from "styled-components";
-import { Tilt } from "react-tilt";
 
 const Container = styled.div`
   display: flex;
@@ -60,7 +59,7 @@ const SkillsContainer = styled.div`
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
-  background: ${({ theme }) => theme.card};
+  background: #1d1836;
   border: 0.1px solid  #ab20fd;
   box-shadow: #46042a 0px 4px 15px;
   border-radius: 16px;
@@ -136,7 +135,6 @@ const Skills = () => {
         <Desc>Here are some of my skills on which I have been working on.</Desc>
         <SkillsContainer>
           {skills.map((skill) => (
-            <Tilt>
               <Skill>
                 <SkillTitle>{skill.title}</SkillTitle>
                 <SkillList>
@@ -148,7 +146,6 @@ const Skills = () => {
                   ))}
                 </SkillList>
               </Skill>
-            </Tilt>
           ))}
         </SkillsContainer>
       </Wrapper>
