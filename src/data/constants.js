@@ -474,6 +474,24 @@ export const projects = [
   },
   {
     id: 9,
+    title: "3D-Tshirt Designer",
+    date: "Jul 2024",
+    description:
+      "I developed an interactive 3D Tshirt customization website where users can personalize colors, add logos, and generate AI designs. Utilizing React, Three.js, and OpenAI, I offer a unique and immersive user experience.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/b4ibfejpeopjlsnim0rj",
+    tags: [
+      "Three.js",
+      "API",
+      "OpenAI",
+      "Framer Motion",
+    ],
+    category: "web app",
+    github: "https://github.com/swarupecenits/3D-Tshirt_Desginer.git",
+    webapp: "https://3-d-tshirt-desginer.vercel.app/",
+  },
+  {
+    id: 9,
     title: "Buisness Website",
     date: "Jun 2023",
     description:
