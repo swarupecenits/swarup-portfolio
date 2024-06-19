@@ -6,7 +6,7 @@ import {
   Span,
   NavLogo,
   NavItems,
-  GitHubButton,
+  // GitHubButton,
   ButtonContainer,
   MobileIcon,
   MobileMenu,

@@ -101,11 +101,11 @@ const StyledToggleButton = styled.div`
   }
 `;
 
-const Label = styled.span`
-  margin-left: 0.5em;
-  font-size: 1em;
-  vertical-align: middle;
-`;
+// const Label = styled.span`
+//   margin-left: 0.5em;
+//   font-size: 1em;
+//   vertical-align: middle;
+// `;
 
 // Main component
 const ToggleButton = ({ onClick }) => (
