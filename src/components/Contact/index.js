@@ -1,9 +1,8 @@
-import React from "react";
 import styled from 'styled-components';
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Snackbar } from "@mui/material";
-import EarthCanvas from "../../components/canvas/Earth";
+import React, { Suspense, lazy } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -11,11 +10,14 @@ const Container = styled.div`
   justify-content: center;
   position: relative;
   z-index: 1;
+  margin-top: 2rem;
   align-items: center;
   @media (max-width: 960px) {
     padding: 0px;
   }
 `;
+
+const EarthyCanvas = lazy(() => import('../canvas/Earth'));
 
 // New container to handle flex layout for desktop view
 const FlexContainer = styled.div`
@@ -24,13 +26,14 @@ const FlexContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 0.5rem;
   max-width: 1350px;
   @media (max-width: 960px) {
     flex-direction: column;
   }
 `;
 
-const EarthStyles=styled.div`
+const EarthStyles = styled.div`
 display: flex;
 width: 100%;
 height:30rem;
@@ -57,6 +60,7 @@ const Title = styled.div`
   text-align: center;
   font-weight: 600;
   margin-top: 20px;
+  
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
@@ -80,7 +84,7 @@ const ContactForm = styled.form`
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.card};
+  background: ${({ theme }) => theme.skillcard_bg};
   padding: 32px;
   border-radius: 16px;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
@@ -230,13 +234,14 @@ const Contact = () => {
 
   return (
     <Container>
-      <FlexContainer>
-
-        <Wrapper>
-          <Title>Contact</Title>
+      <Title>Contact</Title>
           <Desc>
             Feel free to reach out to me for any questions or opportunities!
           </Desc>
+      <FlexContainer>
+
+        <Wrapper>
+          
           <ContactForm ref={form} onSubmit={handleSubmit}>
             <ContactTitle>Email Me </ContactTitle>
             <ContactInput placeholder="Your Email" name="user_email" />
@@ -260,7 +265,11 @@ const Contact = () => {
             severity="error"
           />
         </Wrapper>
-        <EarthStyles><EarthCanvas /></EarthStyles>
+        <EarthStyles>
+          <Suspense fallback={<div>Loading...</div>}>
+            <EarthyCanvas />
+          </Suspense>
+        </EarthStyles>
 
       </FlexContainer>
     </Container>

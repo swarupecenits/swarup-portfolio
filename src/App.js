@@ -1,6 +1,6 @@
 import styled, { ThemeProvider } from "styled-components";
 import { useState, useEffect } from "react";
-import { darkTheme, lightTheme } from './utils/Themes.js'
+import { darkTheme, lightTheme } from './utils/Themes.js';
 import Navbar from "./components/Navbar";
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -15,6 +15,7 @@ import Preloader from "./components/Preloader/Preloader.jsx";
 import ProjectDetails from "./components/ProjectDetails";
 import StarCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
+import ToggleButton from "./components/ToggleButton/ToggleButton.jsx";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -39,8 +40,10 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 
+
+
 function App() {
-  const [darkMode] = useState(true);
+
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   const [isMobile, setIsMobile] = useState(false);
 
@@ -53,16 +56,25 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log(openModal)
+  const [darkMode, setDarkMode] = useState(false);//default to dark mode
+
+  const toggleTheme = () => {
+    setDarkMode(prevMode => !prevMode);
+  };
+
+  console.log(openModal);
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Router >
+      <Router>
         <Preloader />
         <Navbar />
         <Body>
           {!isMobile && <StarCanvas />}
           <AnimatePresence>
             <div>
+              <ToggleButton
+                onClick={toggleTheme}
+              />
               <HeroSection />
               <Wrapper>
                 <Skills />
@@ -74,9 +86,9 @@ function App() {
                 <Contact />
               </Wrapper>
               <Footer />
-              {openModal.state &&
+              {openModal.state && (
                 <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-              }
+              )}
             </div>
           </AnimatePresence>
         </Body>

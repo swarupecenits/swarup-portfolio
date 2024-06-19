@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 import {
   headContainerAnimation,
   headContentAnimation,
-  headTextAnimation,
+  // headTextAnimation,
 } from "../../utils/motion";
 import StarCanvas from "../canvas/Stars";
 
