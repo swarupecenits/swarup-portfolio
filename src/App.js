@@ -13,7 +13,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Preloader from "./components/Preloader/Preloader.jsx";
 import ProjectDetails from "./components/ProjectDetails";
-import StarCanvas from "./components/canvas/Stars";
+// import StarCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
 import ToggleButton from "./components/ToggleButton/ToggleButton.jsx";
 
@@ -45,16 +45,16 @@ const Wrapper = styled.div`
 function App() {
 
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize(); // Initial check
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setIsMobile(window.innerWidth <= 768); // Adjust the breakpoint as needed
+  //   };
+  //   window.addEventListener("resize", handleResize);
+  //   handleResize(); // Initial check
+  //   return () => window.removeEventListener("resize", handleResize);
+  // }, []);
 
   const [darkMode, setDarkMode] = useState(true);//default to dark mode
 
@@ -69,7 +69,7 @@ function App() {
         <Preloader />
         <Navbar />
         <Body>
-          {!isMobile && <StarCanvas />}
+          {/* {!isMobile && <StarCanvas />} */}
           <AnimatePresence>
             <div>
               <ToggleButton
