@@ -56,7 +56,7 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const [darkMode, setDarkMode] = useState(false);//default to dark mode
+  const [darkMode, setDarkMode] = useState(true);//default to dark mode
 
   const toggleTheme = () => {
     setDarkMode(prevMode => !prevMode);

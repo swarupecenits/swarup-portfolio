@@ -1,67 +1,38 @@
 .btn-hero {
-    position: relative;
-    width: 150px;
-    height: 50px;
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    color: white;
-    flex-direction: column;
-    justify-content: center;
-    border: none;
-    padding: 12px;
-    gap: 12px;
-    font-size: 20px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  .hero_bg{
-    margin-top: -85px;
-    background-repeat: no-repeat;
-  }
-  
-  .btn-hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    left: -4px;
-    top: -1px;
-    margin: auto;
-    width: 128px;
-    height: 48px;
-    border-radius: 10px;
-    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
-    z-index: -10;
-    pointer-events: none;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  
-  .btn-hero::after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
-    transform: translate3d(0, 0, 0) scale(0.95);
-    filter: blur(20px);
-  }
-  
-  .btn-hero:hover::after {
-    filter: blur(30px);
-  }
-  
-  .btn-hero:hover::before {
-    transform: rotate(-180deg);
-  }
-  
-  .btn-hero:active::before {
-    scale: 0.7;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .hero_bg{
-      margin-top: -160px !important;
-      gap: -10rem !important;
-      background-repeat: none !important;
-    }
-  }
+  font-size: 1.4em;
+  padding: 0.6em 0.8em;
+  border-radius: 0.5em;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px #000000b4;
+}
+
+.btn_container {
+  position: relative;
+  width: fit-content;
+  padding: 3px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5);
+  border-radius: 0.9em;
+  transition: all 0.4s ease;
+}
+
+.btn_container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 0.9em;
+  z-index: -10;
+  filter: blur(0);
+  transition: filter 0.4s ease;
+}
+
+.btn_container:hover::before {
+  background: linear-gradient(90deg, #03a9f4, #f441a5);
+  filter: blur(1.2em);
+}
+.btn_container:active::before {
+  filter: blur(0.2em);
+}

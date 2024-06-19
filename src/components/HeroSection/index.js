@@ -52,8 +52,12 @@ const HeroSection = () => {
                 </Span>
               </TextLoop>
               <SubTitle>{Bio.description}</SubTitle>
-              <button class="btn-hero">
-                <a style={{ color: "#fff", textDecoration: "none" }} href="https://drive.google.com/file/d/1WhryeEsULP-3q6lZXpleW26c0jZbB4tz/view" target="blank">Check CV</a> </button>
+              {/* css styles */}
+              <div class="btn_container">
+                <button class="btn-hero">
+                  <a style={{ color: "#fff", textDecoration: "none" }} href="https://drive.google.com/file/d/1WhryeEsULP-3q6lZXpleW26c0jZbB4tz/view" target="blank">Check CV</a> </button>
+              </div>
+
               {/* <ResumeButton href={Bio.resume} target="display">
               Check Resume
             </ResumeButton> */}

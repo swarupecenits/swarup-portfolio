@@ -16,6 +16,7 @@ import {
 import { DiCssdeck } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/constants";
+import Githubbtn from "../Button/GithubButton"
 // import { Close, CloseRounded } from "@mui/icons-material";
 // import { useTheme } from "styled-components";
 
@@ -55,9 +56,9 @@ const Navbar = () => {
         </NavItems>
         
         <ButtonContainer>
-          <GitHubButton href={Bio.github} target="_blank">
+          <Githubbtn href={Bio.github} target="_blank">
             Github Profile
-          </GitHubButton>
+          </Githubbtn>
         </ButtonContainer>
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
@@ -101,7 +102,7 @@ const Navbar = () => {
             >
               Education
             </MobileLink>
-            <GitHubButton
+            <Githubbtn
               style={{
                 padding: "10px 16px",
                 background: ` #ab20fd`,
@@ -112,7 +113,7 @@ const Navbar = () => {
               target="_blank"
             >
               Github Profile
-            </GitHubButton>
+            </Githubbtn>
           </MobileMenu>
         )}
       </NavbarContainer>
