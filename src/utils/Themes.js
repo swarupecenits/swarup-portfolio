@@ -9,14 +9,18 @@ export const darkTheme = {
     button: "#ab20fd",
     white: "#FFFFFF",
     black: "#000000",
+    skillcard_bg:"#1d1836",
+    exp_bg:"#1d1836",
 };
 
 export const lightTheme = {
-    bg: "#FFFFFF",
+    bg: "#FFF3C7",
     bgLight: "#f0f0f0",
     primary: "#be1adb",
     text_primary: "#111111",
     text_secondary: "#48494a",
     card: "#FFFFFF",
     button: "#5c5b5b",
+    skillcard_bg:"#FEC7B4",
+    exp_bg:"#FEC7B4",
 };

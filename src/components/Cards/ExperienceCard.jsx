@@ -50,14 +50,14 @@ const Date = styled.div`
     font-size: 10px;
   }
 `;
-const Grade = styled.div`
-  font-size: 14px;
-  font-weight: 500;
-  color: ${({ theme }) => theme.text_secondary + 99};
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
+// const Grade = styled.div`
+//   font-size: 14px;
+//   font-weight: 500;
+//   color: ${({ theme }) => theme.text_secondary + 99};
+//   @media only screen and (max-width: 768px) {
+//     font-size: 12px;
+//   }
+// `;
 
 const Description = styled.div`
   width: 100%;

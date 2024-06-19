@@ -23,7 +23,7 @@ width: 100%;
 border-radius: 16px;
 margin: 50px 12px;
 height: min-content;
-background-color: ${({ theme }) => theme.card};
+background: ${({ theme }) => theme.skillcard_bg};
 color: ${({ theme }) => theme.text_primary};
 padding: 20px;
 display: flex;

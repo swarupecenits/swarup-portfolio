@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import LazyProject from '../LazyLoading/LazyProject'
 
 
 const Button = styled.button`
@@ -18,7 +19,7 @@ const Button = styled.button`
 const Card = styled.div`
     width: 330px;
     height: 490px;
-    background-color: ${({ theme }) => theme.card};
+    background: ${({ theme }) => theme.skillcard_bg};
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
@@ -112,15 +113,15 @@ const Members = styled.div`
     align-items: center;
     padding-left: 10px;
 `
-const Avatar = styled.img`
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    margin-left: -10px;
-    background-color: ${({ theme }) => theme.white};
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    border: 3px solid ${({ theme }) => theme.card};
-`
+// const Avatar = styled.img`
+//     width: 38px;
+//     height: 38px;
+//     border-radius: 50%;
+//     margin-left: -10px;
+//     background-color: ${({ theme }) => theme.white};
+//     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+//     border: 3px solid ${({ theme }) => theme.card};
+// `
 
 const ProjectCards = ({project,setOpenModal}) => {
     return (
@@ -138,7 +139,7 @@ const ProjectCards = ({project,setOpenModal}) => {
             </Details>
             <Members>
                 {project.member?.map((member) => (
-                    <Avatar src={member.img}/>
+                    <LazyProject src={member.img}/>
                 ))}
             </Members>
             {/* <Button>View Project</Button> */}

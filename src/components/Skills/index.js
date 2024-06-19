@@ -1,6 +1,7 @@
 import React from "react";
 import { skills } from "../../data/constants";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
+import LazyImage from "../LazyLoading/LazyImage";
 
 const Container = styled.div`
   display: flex;
@@ -59,7 +60,7 @@ const SkillsContainer = styled.div`
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
-  background: #1d1836;
+  background: ${({ theme }) => theme.skillcard_bg};
   border: 0.1px solid  #ab20fd;
   box-shadow: #46042a 0px 4px 15px;
   border-radius: 16px;
@@ -111,20 +112,20 @@ const SkillItem = styled.div`
   }
 `;
 
-const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
-`;
+// const SkillImage = styled.img`
+//   width: 24px;
+//   height: 24px;
+// `;
 
 // Define the keyframes animation
-const rotateBackground = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
+// const rotateBackground = keyframes`
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// `;
 
 
 const Skills = () => {
@@ -140,7 +141,7 @@ const Skills = () => {
                 <SkillList>
                   {skill.skills.map((item) => (
                     <SkillItem>
-                      <SkillImage src={item.image} />
+                      <LazyImage src={item.image} alt={item.name} /> 
                       {item.name}
                     </SkillItem>
                   ))}

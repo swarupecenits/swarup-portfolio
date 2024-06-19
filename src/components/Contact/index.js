@@ -1,18 +1,8 @@
-import React from "react";
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Snackbar } from "@mui/material";
-import EarthCanvas from "../../components/canvas/Earth";
-
-// const rotateBackground = keyframes`
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// `;
+import React, { Suspense, lazy } from "react";
 
 const Container = styled.div`
   display: flex;
@@ -20,25 +10,49 @@ const Container = styled.div`
   justify-content: center;
   position: relative;
   z-index: 1;
+  margin-top: 2rem;
   align-items: center;
   @media (max-width: 960px) {
     padding: 0px;
   }
 `;
 
-const Wrapper = styled.div`
-  position: relative;
+const EarthyCanvas = lazy(() => import('../canvas/Earth'));
+
+// New container to handle flex layout for desktop view
+const FlexContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 100%;
+  margin-top: 0.5rem;
   max-width: 1350px;
-  padding: 0px 0px 80px 0px;
-  gap: 12px;
   @media (max-width: 960px) {
     flex-direction: column;
   }
+`;
+
+const EarthStyles = styled.div`
+display: flex;
+width: 100%;
+height:30rem;
+order: 1; /* Default order for desktop view */
+  @media (max-width: 960px) {
+    order: -1; /* Change order for mobile view */
+    height: 10rem;
+  }
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0px 0px 80px 0px;
+  gap: 12px;
 `;
 
 const Title = styled.div`
@@ -46,6 +60,7 @@ const Title = styled.div`
   text-align: center;
   font-weight: 600;
   margin-top: 20px;
+  
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
@@ -69,7 +84,7 @@ const ContactForm = styled.form`
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.card};
+  background: ${({ theme }) => theme.skillcard_bg};
   padding: 32px;
   border-radius: 16px;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
@@ -94,7 +109,7 @@ const ContactInput = styled.input`
   border-radius: 12px;
   padding: 12px 16px;
   &:focus {
-    border: 1px solid #0551ff};
+    border: 1px solid #0551ff;
   }
 `;
 
@@ -113,10 +128,11 @@ const ContactInputMessage = styled.textarea`
 `;
 
 
+
 const ContactButton = styled.input`
   padding: 13px 16px;
   font-weight: 600;
-  height:50px;
+  height: 50px;
   align-items: center;
   background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
   border: 0;
@@ -162,7 +178,7 @@ const ContactButton = styled.input`
   &:active {
     transform: scale(0.9);
   }
-`
+`;
 
 const Contact = () => {
   // hooks
@@ -171,7 +187,6 @@ const Contact = () => {
   const [errorMsg, setErrorMsg] = React.useState("");
   const form = useRef();
 
-  
   const isEmailValid = (email) => {
     // Simple email validation regex
     const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -219,35 +234,44 @@ const Contact = () => {
 
   return (
     <Container>
-      <Wrapper>
-        <EarthCanvas />
-        <Title>Contact</Title>
-        <Desc>
-          Feel free to reach out to me for any questions or opportunities!
-        </Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me </ContactTitle>
-          <ContactInput placeholder="Your Email" name="user_email" />
-          <ContactInput placeholder="Your Name" name="user_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send Message" />
-        </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={() => setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
-        <Snackbar
-          open={error}
-          autoHideDuration={6000}
-          onClose={() => setError(false)}
-          message={errorMsg}
-          severity="error"
-        />
-      </Wrapper>
+      <Title>Contact</Title>
+          <Desc>
+            Feel free to reach out to me for any questions or opportunities!
+          </Desc>
+      <FlexContainer>
+
+        <Wrapper>
+          
+          <ContactForm ref={form} onSubmit={handleSubmit}>
+            <ContactTitle>Email Me </ContactTitle>
+            <ContactInput placeholder="Your Email" name="user_email" />
+            <ContactInput placeholder="Your Name" name="user_name" />
+            <ContactInput placeholder="Subject" name="subject" />
+            <ContactInputMessage placeholder="Message" rows="4" name="message" />
+            <ContactButton type="submit" value="Send Message" />
+          </ContactForm>
+          <Snackbar
+            open={open}
+            autoHideDuration={6000}
+            onClose={() => setOpen(false)}
+            message="Email sent successfully!"
+            severity="success"
+          />
+          <Snackbar
+            open={error}
+            autoHideDuration={6000}
+            onClose={() => setError(false)}
+            message={errorMsg}
+            severity="error"
+          />
+        </Wrapper>
+        <EarthStyles>
+          <Suspense fallback={<div>Loading...</div>}>
+            <EarthyCanvas />
+          </Suspense>
+        </EarthStyles>
+
+      </FlexContainer>
     </Container>
   );
 };

@@ -1,7 +1,7 @@
 import { Link as LinkR } from "react-router-dom";
 import styled from "styled-components";
-import _default from "../../themes/default";
-import React, { useState } from "react";
+// import _default from "../../themes/default";
+// import React, { useState } from "react";
 
 export const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -98,7 +98,7 @@ export const GitHubButton = styled.a`
 `;
 
 export const ButtonContainer = styled.div`
-  width: 80%;
+  width: 90%;
   height: 100%;
   display: flex;
   justify-content: end;

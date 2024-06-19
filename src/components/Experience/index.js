@@ -53,7 +53,7 @@ const Desc = styled.div`
 
 const Experience = () => {
   return (
-    <Container id="Experience">
+    <Container id="experience">
       <Wrapper>
         <Title>Experience</Title>
         <Desc
