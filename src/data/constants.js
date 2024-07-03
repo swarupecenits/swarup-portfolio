@@ -71,17 +71,17 @@ export const skills = [
       {
         name: "C++",
         image:
-          "https://e7.pngegg.com/pngimages/520/669/png-clipart-c-logo-c-programming-language-computer-icons-computer-programming-programming-miscellaneous-blue-thumbnail.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/bwmwosxmgkk1vkgvmmkb",
       },
       {
         name: "C",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/fresjkfqexmvz5ltqhql",
       },
       {
         name: "Python",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pbxqeucqd0yapx9wovqu",
       },
       {
         name: "JavaScript",
@@ -96,22 +96,22 @@ export const skills = [
       {
         name: "SimuLink",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/3/36/Simulink_Logo_%28non-wordmark%29.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/huqtgx8rvjbqsyffo1ti",
       },
       {
         name: "R",
         image:
-          "data:image/png;base64,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",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/xrf3rahxgjrdpi4fltkp",
       },
       
     ],
   },
   {
-    title: "Backend",
+    title: "Backend and Services",
     skills: [
       {
         name: "Node Js",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png",
+        image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
       },
       {
         name: "Express Js",
@@ -121,17 +121,27 @@ export const skills = [
       {
         name: "Python",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pbxqeucqd0yapx9wovqu",
       },
       {
         name: "MySQL",
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQpg7rtmtCA6ABDknGKW2MdvGYip4_YB8jFXDGGu4hw&s",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+      },
+      {
+        name: "Redux",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
       },
       {
         name: "MongoDB",
         image:
           "https://cdn.icon-icons.com/icons2/2415/PNG/512/mongodb_original_wordmark_logo_icon_146425.png",
+      },
+      {
+        name: "AppWrite",
+        image:
+          "https://appwrite.io/assets/logomark/logo.png",
       },
       
     ],
@@ -142,12 +152,17 @@ export const skills = [
       {
         name: "Jupyter",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1767px-Jupyter_logo.svg.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ssx6s7l1jb0mdkd64unj",
       },
       {
         name: "Python",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pbxqeucqd0yapx9wovqu",
+      },
+      {
+        name: "OpenCV",
+        image:
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/lxfpf2yvjefysajiskp1",
       },
       {
         name: "TensorFlow",
@@ -155,9 +170,14 @@ export const skills = [
           "https://static-00.iconduck.com/assets.00/tensorflow-icon-1911x2048-1m2s54vn.png",
       },
       {
+        name: "Pytorch",
+        image:
+          "https://camo.githubusercontent.com/1e72f25c526d43089e8363a10ac4d99eb6e1cf613652c659d77bcdeeda657356/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f7079746f7263682f7079746f7263682d69636f6e2e737667",
+      },
+      {
         name: "Scikit Learn",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/t4ltww9mlaapskta8zrv",
       },
       {
         name: "Keras",
@@ -167,7 +187,7 @@ export const skills = [
       {
         name: "Anaconda",
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5PFIMuL6NzcKxI1PKaOIkX9UPtz9_cCysXe3Z73bY1Q&s",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/jrnkmzub85xzm3fki129",
       },
       
     ],
@@ -178,7 +198,7 @@ export const skills = [
       {
         name: "Arduino IDE",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Arduino_Logo.svg/720px-Arduino_Logo.svg.png?20200922062315",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/dm5tyzxel680kvsnrvct",
       },
       {
         name: "ROS",
@@ -198,7 +218,7 @@ export const skills = [
       {
         name: "GitHub",
         image:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/rjlqses57qfadwoeklib",
       },
       {
         name: "CapCut",
@@ -208,7 +228,7 @@ export const skills = [
       {
         name: "VS Code",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/jdlqm8qkvypvzg4focgk",
       },
       {
         name: "Canva",
@@ -218,7 +238,7 @@ export const skills = [
       {
         name: "Filmora",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wondershare_filmora_logo.svg/800px-Wondershare_filmora_logo.svg.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/n2qbksenf57daaymtieh",
       },
       {
         name: "Altium-PCB",
@@ -245,6 +265,23 @@ export const skills = [
 ];
 
 export const experiences = [
+  {
+    id: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJEsLucn6b9xPwccsc6dyYNBBCfpJ8-tVMUQ&s",
+    role: "Amazon Summer School 2024",
+    company: "Amazon",
+    date: "July 2024 - Present",
+    desc: "Participated in Amazon Summer School 2024, gaining insights into cutting-edge technologies and business practices, enhancing skills in a dynamic learning environment at Amazon.",
+    skills: [
+      "Machine Learning",
+      "Supervised Learning",
+      "Deep Neural Networks",
+      "Casual Inferences",
+      "Reinforcement Learning",
+      "Generative AI and LLMs",
+      "Dimensionality Reduction",
+    ],
+  },
   {
     id: 5,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaHCaJMhFz0p9KjJqOBcFfELj8ZEK5J2_WA&usqp=CAU",
@@ -436,6 +473,25 @@ export const projects = [
     category: "machine_learning",
     github: "https://github.com/swarupecenits/Image_Classifier_Model.git",
     webapp: "https://imageclassifiermodel-bywze.streamlit.app/",
+  },
+  {
+    id: 23,
+    title: "Face Recognition Based Attendance System",
+    date: "July 2024",
+    description:
+      "Developed a Face Recognition Based Attendance System, automating attendance tracking using Python, OpenCV, and Excel integration, ensuring efficient and accurate record-keeping.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/u0zegnahgcc4sedaz4ff",
+    tags: [
+      "OpenCV",
+      "Streamlit",
+      "Numpy",
+      "Face-Recognition",
+      "Python",
+    ],
+    category: "machine_learning",
+    github: "https://github.com/swarupecenits/Facial-Attendance.git",
+    webapp: "https://github.com/swarupecenits/Facial-Attendance.git",
   },
   {
     id: 7,
