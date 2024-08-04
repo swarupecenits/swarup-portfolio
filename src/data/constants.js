@@ -303,19 +303,6 @@ export const experiences = [
   },
   {
     id: 0,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgZjfVFbm53NoqtHcNsIqgDzSzyqdphtlSLQSIL0IWog&s",
-    role: "Web Development Intern",
-    company: "Bharat Intern",
-    date: "Jun 2023 - July 2023",
-    desc: "Had Experience of building responsive web layouts and designs for website including building and deployment.",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-    ],
-  },
-  {
-    id: 0,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpn5WB-RTXBn5P8cSwUSpjREVlqHfAHUiq0Bya4A4&s",
     role: "Junior Technical Associate",
     company: "E-Cell NIT Silchar",
@@ -362,6 +349,19 @@ export const experiences = [
       "NodeJS",
       "ExpressJS",
       "MongoDB",
+    ],
+  },
+  {
+    id: 0,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgZjfVFbm53NoqtHcNsIqgDzSzyqdphtlSLQSIL0IWog&s",
+    role: "Web Development Intern",
+    company: "Bharat Intern",
+    date: "Jun 2023 - July 2023",
+    desc: "Had Experience of building responsive web layouts and designs for website including building and deployment.",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
   },
 
@@ -463,7 +463,7 @@ export const projects = [
     description:
       "This Streamlit app is an Image Classifier that uses a pre-trained neural network model to classify uploaded images into various categories. The app provides a user-friendly interface for users to upload an image, and the model predicts the class of the image along with the corresponding accuracy.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/vpbdp6xyslsthh5di2xf",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/fftu4ohfilwnarilwkny",
     tags: [
       "TensorFlow",
       "Keras",
@@ -476,12 +476,12 @@ export const projects = [
   },
   {
     id: 23,
-    title: "Face Recognition Based Attendance System",
+    title: "Facial Attendance System",
     date: "July 2024",
     description:
       "Developed a Face Recognition Based Attendance System, automating attendance tracking using Python, OpenCV, and Excel integration, ensuring efficient and accurate record-keeping.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/u0zegnahgcc4sedaz4ff",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/zouzned8mp1pu9dpkq28",
     tags: [
       "OpenCV",
       "Streamlit",
@@ -509,6 +509,23 @@ export const projects = [
     category: "web app",
     github: "https://github.com/gdsc-nits-org/oikyotaan-2024.git",
     webapp: "https://oikyotaan.in/",
+  },
+  {
+    id: 12,
+    title: "Chat Application",
+    date: "Aug 2024",
+    description:
+      "C++ chat application utilizing socket programming for real-time messaging, supporting multiple clients with TCP/IP for reliable communication, providing a robust and efficient network-based communication solution.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/jslzcfhqkemftyufjpg9",
+    tags: [
+      "C++",
+      "SOCKET",
+      "Network Programming",
+    ],
+    category: "web app",
+    github: "https://github.com/swarupecenits/Chat-Application.git",
+    webapp: "https://github.com/swarupecenits/Chat-Application.git",
   },
   {
     id: 9,
@@ -545,6 +562,24 @@ export const projects = [
     category: "web app",
     github: "https://github.com/swarupecenits/3D-Tshirt_Desginer.git",
     webapp: "https://3-d-tshirt-desginer.vercel.app/",
+  },
+  {
+    id: 9,
+    title: "Face-HandGesture Control",
+    date: "Aug 2024",
+    description:
+      "HandGesture Pro enables intuitive laptop control through hand commands. Using advanced gesture recognition, it allows users to perform actions and navigate interfaces with simple hand movements, enhancing productivity and user experience.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/uuorcqqsqep57shjliti",
+    tags: [
+      "CNN",
+      "Mediapipe",
+      "Open-CV",
+      "Face-Mesh Detection",
+    ],
+    category: "machine_learning",
+    github: "https://github.com/swarupecenits/Face-Mesh-Detection.git",
+    webapp: "https://github.com/swarupecenits/Face-Mesh-Detection.git",
   },
   {
     id: 9,
