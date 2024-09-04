@@ -15,7 +15,7 @@ import Preloader from "./components/Preloader/Preloader.jsx";
 import ProjectDetails from "./components/ProjectDetails";
 // import StarCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
-import ToggleButton from "./components/ToggleButton/ToggleButton.jsx";
+// import ToggleButton from "./components/ToggleButton/ToggleButton.jsx";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -58,9 +58,9 @@ function App() {
 
   const [darkMode, setDarkMode] = useState(true);//default to dark mode
 
-  const toggleTheme = () => {
-    setDarkMode(prevMode => !prevMode);
-  };
+  // const toggleTheme = () => {
+  //   setDarkMode(prevMode => !prevMode);
+  // };
 
   console.log(openModal);
   return (
@@ -72,9 +72,9 @@ function App() {
           {/* {!isMobile && <StarCanvas />} */}
           <AnimatePresence>
             <div>
-              <ToggleButton
+              {/* <ToggleButton
                 onClick={toggleTheme}
-              />
+              /> */}
               <HeroSection />
               <Wrapper>
                 <Skills />
