@@ -4,8 +4,9 @@ export const Bio = {
     "Full Stack Developer",
     "Robotics Enthusiast",
     "Programmer",
+    "ML Enthusiast",
     "Video Editor",
-    "Arduino Developer",
+    "Arduino Programmer",
   ],
   description:
     "Pursuing a B.Tech in Computer Science and Engineering at NIT Silchar, I'm on an odyssey of continuous learning. I'm sculpting a multidimensional skill set, weaving my experiences into innovation and growth.",
@@ -87,6 +88,11 @@ export const skills = [
         name: "JavaScript",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+      },
+      {
+        name: "JAVA",
+        image:
+          "https://cdn-icons-png.flaticon.com/128/226/226777.png",
       },
       {
         name: "Matlab",
@@ -172,7 +178,7 @@ export const skills = [
       {
         name: "Pytorch",
         image:
-          "https://camo.githubusercontent.com/1e72f25c526d43089e8363a10ac4d99eb6e1cf613652c659d77bcdeeda657356/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f7079746f7263682f7079746f7263682d69636f6e2e737667",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQs9gwB4SmvtMIo6OalC-8yCctF5IOT_r-Yw&s",
       },
       {
         name: "Scikit Learn",
@@ -302,6 +308,21 @@ export const experiences = [
     ],
   },
   {
+    id: 1,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4KCDcGyNkYW5Zgs0xHLh4SO28QcC2Vc4wF9Bz4aJrdw&s",
+    role: "General Secretary",
+    company: "N.E.R.D.S NIT Silchar",
+    date: "Aug 2023 - Present",
+    desc: "Working on Arduino UNO architecture including software as well as hardware practices",
+    skills: [
+      "Arduino IDE",
+      "Sensor Modules",
+      "Programming",
+      "Hardware",
+      "IOT Modules",
+    ],
+  },
+  {
     id: 0,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpn5WB-RTXBn5P8cSwUSpjREVlqHfAHUiq0Bya4A4&s",
     role: "Junior Technical Associate",
@@ -317,21 +338,6 @@ export const experiences = [
       "JavaScript",
       "NodeJS",
       "MongoDB",
-    ],
-  },
-  {
-    id: 1,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4KCDcGyNkYW5Zgs0xHLh4SO28QcC2Vc4wF9Bz4aJrdw&s",
-    role: "Robotics Club Member",
-    company: "N.E.R.D.S NIT Silchar",
-    date: "Aug 2023 - Present",
-    desc: "Working on Arduino UNO architecture including software as well as hardware practices",
-    skills: [
-      "Arduino IDE",
-      "Sensor Modules",
-      "Programming",
-      "Hardware",
-      "IOT Modules",
     ],
   },
   {
