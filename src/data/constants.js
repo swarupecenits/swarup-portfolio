@@ -553,6 +553,24 @@ export const projects = [
   },
   {
     id: 9,
+    title: "Realtime Tracking App",
+    date: "Oct 2024",
+    description:
+      "I developed a web application that tracks the real-time locations of multiple users and displays them on an interactive map. Each user can share their current location and view the locations of other connected users with live updates.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/dhuy3ystnaz25c9le8m1",
+    tags: [
+      "Express",
+      "EJS",
+      "Leaflet",
+      "GeolocationAPI",
+    ],
+    category: "web app",
+    github: "https://github.com/swarupecenits/Realtime-Tracking-App.git",
+    webapp: "https://realtime-tracking-app-9uh8.onrender.com/",
+  },
+  {
+    id: 9,
     title: "3D-Tshirt Designer",
     date: "Jul 2024",
     description:
