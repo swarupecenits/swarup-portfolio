@@ -517,6 +517,23 @@ export const projects = [
     webapp: "https://oikyotaan.in/",
   },
   {
+    id: 7,
+    title: "N.E.R.D.S Robotics Club Website",
+    date: "Oct 2024",
+    description:
+      "N.E.R.D.S Robotics Club website showcases innovative robotics projects, team achievements, and event highlights. A hub for tech enthusiasts, fostering collaboration, learning, and inspiring future engineers in robotics.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/zsph0nrop1h0vxoyh8cw",
+    tags: [
+      "ReactJS",
+      "Tailwind",
+      "Framer Motion",
+    ],
+    category: "web app",
+    github: "https://github.com/swarupecenits/N.E.R.D.S.git",
+    webapp: "https://www.nerdsnitsilchar.in/",
+  },
+  {
     id: 12,
     title: "Chat Application",
     date: "Aug 2024",
