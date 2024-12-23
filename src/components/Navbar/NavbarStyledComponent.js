@@ -119,7 +119,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.5rem;
     cursor: pointer;
-    color:  #ab20fd;
+    color: ${({ theme }) => theme.tags};
   }
 `;
 
