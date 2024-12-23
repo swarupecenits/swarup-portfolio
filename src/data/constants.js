@@ -273,10 +273,28 @@ export const skills = [
 export const experiences = [
   {
     id: 10,
+    img: "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/vcrterwiwnvzdqptpcni",
+    role: "Project Intern",
+    company: "Nephrocare India",
+    date: "May 2024 - Present",
+    desc: "Developed an innovative cloud-based Blood flow monitoring system for Dialysis machines during my internship, integrating real-time remote control, web-based functionality, and affordability to revolutionize healthcare accessibility and efficiency.",
+    skills: [
+      "Machine Learning",
+      "Internet of Things (IoT)",
+      "Web Services",
+      "Web Development",
+      "Cloud Applications",
+      "Arduino",
+      "ESP32 Microcontrollers",
+      "Electronics Hardware Design",
+    ],
+  },
+  {
+    id: 10,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJEsLucn6b9xPwccsc6dyYNBBCfpJ8-tVMUQ&s",
     role: "Amazon Summer School 2024",
     company: "Amazon",
-    date: "July 2024 - Present",
+    date: "July 2024 - Aug 2024",
     desc: "Participated in Amazon Summer School 2024, gaining insights into cutting-edge technologies and business practices, enhancing skills in a dynamic learning environment at Amazon.",
     skills: [
       "Machine Learning",
@@ -313,7 +331,7 @@ export const experiences = [
     role: "General Secretary",
     company: "N.E.R.D.S NIT Silchar",
     date: "Aug 2023 - Present",
-    desc: "Working on Arduino UNO architecture including software as well as hardware practices",
+    desc: "As General Secretary of N.E.R.D.S NIT Silchar, I lead initiatives promoting innovation, organize technical events, mentor members, and foster collaboration to enhance technical skills and knowledge.",
     skills: [
       "Arduino IDE",
       "Sensor Modules",
@@ -498,6 +516,22 @@ export const projects = [
     category: "machine_learning",
     github: "https://github.com/swarupecenits/Facial-Attendance.git",
     webapp: "https://github.com/swarupecenits/Facial-Attendance.git",
+  },
+  {
+    id: 7,
+    title: "Design of a Robot Rover with 5 DOF Manipulator for Uneven Terrain",
+    date: "Oct  2024",
+    description:
+      "Lunar autonomous rovers with manipulators may be considered as one of the most promising directions of lunar exploration with the help of space robotics, a lot of organizations and researchers are working on the production of high-tech rovers for planetary reconnaissance and sample collection missions. IROC-U 2024 is an event organized by ISRO to encourage the development of new-generation moon rovers. ",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/khrh5ujdrve9jsr3pu9l",
+    tags: [
+      "Research",
+      "Publications",
+    ],
+    category: "research",
+    github: "",
+    webapp: "https://www.researchgate.net/publication/385205778_Design_of_a_Robot_Rover_with_5_DOF_Manipulator_for_Uneven_Terrain",
   },
   {
     id: 7,
@@ -708,6 +742,24 @@ export const projects = [
     category: "robotics",
     github: "https://github.com/swarupecenits/Spidy-The-Spider-Robot.git",
     webapp: "https://youtu.be/MOtOSJDkom8?si=WjYqGAIusp_0Lcip",
+  },
+  {
+    id: 2,
+    title: "Blood Flow Monitoring System for Kidney Dialysis Machine",
+    date: "May 2024",
+    description:
+      "Developed an innovative cloud-based blood flow monitoring system for dialysis machines during my internship, integrating real-time remote control, web-based functionality, and affordability to revolutionize healthcare accessibility and efficiency.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nvr0wv3bybc0hpmxr6jt",
+    tags: [
+      "Arduino",
+      "Hardware",
+      "ESP32",
+      "Web Services",
+    ],
+    category: "robotics",
+    github: "https://github.com/swarupecenits/Dialysis-Machine.git",
+    webapp: "",
   },
   {
     id: 2,

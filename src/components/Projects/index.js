@@ -41,11 +41,11 @@ const Projects = ({ openModal, setOpenModal }) => {
               value="web app"
               onClick={() => setToggle("web app")}
             >
-              Web APP
+              Web
             </ToggleButton>
           ) : (
             <ToggleButton value="web app" onClick={() => setToggle("web app")}>
-              Web APP
+              Web
             </ToggleButton>
           )}
           <Divider />
@@ -53,7 +53,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             <ToggleButton
               active
               value="robotics"
-              onClick={() => setToggle("robotics")}
+              onClick={() => setToggle("robotics")} 
             >
               Robotics
             </ToggleButton>
@@ -63,18 +63,31 @@ const Projects = ({ openModal, setOpenModal }) => {
             </ToggleButton>
           )}
           <Divider />
-          <Divider />
           {toggle === "machine_learning" ? (
             <ToggleButton
               active
               value="machine_learning"
               onClick={() => setToggle("machine_learning")}
             >
-              Machine Learning
+              ML
             </ToggleButton>
           ) : (
             <ToggleButton value="machine_learning" onClick={() => setToggle("machine_learning")}>
-              Machine Learning
+              ML
+            </ToggleButton>
+          )}
+          <Divider />
+          {toggle === "research" ? (
+            <ToggleButton
+              active
+              value="research"
+              onClick={() => setToggle("research")}
+            >
+              Research
+            </ToggleButton>
+          ) : (
+            <ToggleButton value="research" onClick={() => setToggle("research")}>
+              Research
             </ToggleButton>
           )}
         </ToggleButtonGroup>
