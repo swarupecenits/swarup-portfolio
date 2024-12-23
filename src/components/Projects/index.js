@@ -53,7 +53,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             <ToggleButton
               active
               value="robotics"
-              onClick={() => setToggle("robotics")}
+              onClick={() => setToggle("robotics")} 
             >
               Robotics
             </ToggleButton>
