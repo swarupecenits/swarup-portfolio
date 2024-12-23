@@ -19,7 +19,7 @@ const Projects = ({ openModal, setOpenModal }) => {
   return (
     <Container id="projects">
       <Wrapper>
-        <Title>My Projects</Title>
+        <Title>My Works</Title>
         <Desc>
           I have worked on a wide range of projects. Here are some of my
           projects.

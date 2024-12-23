@@ -6,11 +6,12 @@ export const darkTheme = {
     text_secondary: "#b1b2b3",
     card: "#171721",
     card_light: "#090917",
-    button: "#ab20fd",
+    button: "#6EACDA",
     white: "#FFFFFF",
     black: "#000000",
-    skillcard_bg:"#1d1836",
+    skillcard_bg:"rgba(17, 25, 40, 0.83)",
     exp_bg:"#1d1836",
+    tags:"#6EACDA",
 };
 
 export const lightTheme = {
