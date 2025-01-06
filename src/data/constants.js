@@ -100,6 +100,11 @@ export const skills = [
           "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/glwnyr790oabfx6jv7b7",
       },
       {
+        name: "Solidity",
+        image:
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/axozw7w2wazs591z8a41",
+      },
+      {
         name: "SimuLink",
         image:
           "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/huqtgx8rvjbqsyffo1ti",
@@ -148,6 +153,11 @@ export const skills = [
         name: "AppWrite",
         image:
           "https://appwrite.io/assets/logomark/logo.png",
+      },
+      {
+        name: "Ethereum",
+        image:
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pacokq4weanpznjmaqhr",
       },
       
     ],
@@ -552,6 +562,22 @@ export const projects = [
   },
   {
     id: 7,
+
+    title: "Krypto Blockchain App",
+    date: "Jan 2025",
+    description:
+      "Developed a blockchain-based web application leveraging ReactJS, Solidity, and EtherJS to enable secure cryptocurrency transactions. Focused on creating an intuitive user interface, implementing smart contract functionality, and ensuring seamless integration with Ethereum wallets.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/erldlvnqednk28s103dx",
+    tags: [
+      "ReactJS",
+      "Solidity",
+      "EtherJS",
+    ],
+    category: "web app",
+    github: "https://github.com/swarupecenits/Krypto.git",
+    webapp: "https://krypto-pi.vercel.app/",
+
     title: "N.E.R.D.S Robotics Club Website",
     date: "Oct 2024",
     description:
@@ -566,6 +592,7 @@ export const projects = [
     category: "web app",
     github: "https://github.com/swarupecenits/N.E.R.D.S.git",
     webapp: "https://www.nerdsnitsilchar.in/",
+
   },
   {
     id: 12,
