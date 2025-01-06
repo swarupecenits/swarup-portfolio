@@ -577,7 +577,9 @@ export const projects = [
     category: "web app",
     github: "https://github.com/swarupecenits/Krypto.git",
     webapp: "https://krypto-pi.vercel.app/",
-
+  },
+  {
+    id:19,
     title: "N.E.R.D.S Robotics Club Website",
     date: "Oct 2024",
     description:
