@@ -7,6 +7,7 @@ export const Bio = {
     "ML Enthusiast",
     "Video Editor",
     "Arduino Programmer",
+    "App Developer",
   ],
   description:
     "Pursuing a B.Tech in Computer Science and Engineering at NIT Silchar, I'm on an odyssey of continuous learning. I'm sculpting a multidimensional skill set, weaving my experiences into innovation and growth.",
@@ -658,7 +659,7 @@ export const projects = [
     description:
       "A React Native movie browsing app built with Expo and Appwrite, providing users with a seamless experience to browse, search, and watch their favorite movies. Features include authentication, movie recommendations, and smooth UI for an engaging viewing experience.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ilqwbhjp515pwygvqo3j",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/atmrsq1cavmpw0nhljng",
     tags: [
       "ReactNative",
       "Expo",
@@ -834,7 +835,7 @@ export const projects = [
     description:
       "Developed an innovative cloud-based blood flow monitoring system for dialysis machines during my internship, integrating real-time remote control, web-based functionality, and affordability to revolutionize healthcare accessibility and efficiency.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nvr0wv3bybc0hpmxr6jt",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/qzmpswfg0lnexawxulym",
     tags: [
       "Arduino",
       "Hardware",
@@ -861,6 +862,24 @@ export const projects = [
     category: "robotics",
     github: "https://github.com/swarupecenits/Bluetooth-Controlled-car.git",
     webapp: "https://youtu.be/KyjrGN9ZTPg?si=LOdZGxahC-Sqo95_",
+  },
+  {
+    id: 82,
+    title: "NoteNest",
+    date: "Jan 2025",
+    description:
+      "NoteNest is a powerful and intuitive desktop application designed for seamless note-taking and organization. With a clean interface and robust features, it allows users to create, categorize, and search notes effortlessly. Whether for personal use or professional productivity, NoteNest ensures your ideas are always within reach.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/jq2zokyap9dvplqbhyhf",
+    tags: [
+      "C#",
+      "Desktop App",
+      "Windows",
+      "",
+    ],
+    category: "Desktop App",
+    github: "https://github.com/swarupecenits/NoteNestApp.git",
+    webapp: "https://drive.google.com/file/d/1vOqY54U4xbd6byMZ49EO69x9I7sK9AqK/view?usp=sharing",
   },
   {
     id: 2,
