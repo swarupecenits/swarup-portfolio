@@ -509,7 +509,23 @@ export const projects = [
     github: "https://github.com/Ecell-NITS/Incand24-frontend.git",
     webapp: "https://www.incand.co.in/",
   },
-  
+  {
+    id: 92,
+    title: "MovieZone App",
+    date: "Mar 2025",
+    description:
+      "A React Native movie browsing app built with Expo and Appwrite, providing users with a seamless experience to browse, search, and watch their favorite movies. Features include authentication, movie recommendations, and smooth UI for an engaging viewing experience.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/atmrsq1cavmpw0nhljng",
+    tags: [
+      "ReactNative",
+      "Expo",
+      "Appwrite",
+    ],
+    category: "Mobile app",
+    github: "https://github.com/swarupecenits/Movie-App.git",
+    webapp: "https://drive.google.com/file/d/1M9dGxt9UK6jB4o5pXIoYGmktZGEqIgQL/view?usp=sharing",
+  },
   {
     id: 7,
     title: "Tecnoesis-2024 Website",
@@ -652,23 +668,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/Chat-Application.git",
     webapp: "https://github.com/swarupecenits/Chat-Application.git",
   },
-  {
-    id: 92,
-    title: "MovieZone App",
-    date: "Mar 2025",
-    description:
-      "A React Native movie browsing app built with Expo and Appwrite, providing users with a seamless experience to browse, search, and watch their favorite movies. Features include authentication, movie recommendations, and smooth UI for an engaging viewing experience.",
-    image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/atmrsq1cavmpw0nhljng",
-    tags: [
-      "ReactNative",
-      "Expo",
-      "Appwrite",
-    ],
-    category: "Mobile app",
-    github: "https://github.com/swarupecenits/Movie-App.git",
-    webapp: "https://drive.google.com/file/d/1M9dGxt9UK6jB4o5pXIoYGmktZGEqIgQL/view?usp=sharing",
-  },
+  
   {
     id: 9,
     title: "AI Summarizer Website",
