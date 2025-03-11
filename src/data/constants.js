@@ -301,6 +301,24 @@ export const skills = [
 ];
 
 export const experiences = [
+  // {
+  //   id: 10,
+  //   img: "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ektelhu38eellrglnkuv",
+  //   role: "SWE Intern",
+  //   company: "Microsoft India",
+  //   date: "May 2025 - Present",
+  //   desc: "Developed an innovative cloud-based Blood flow monitoring system for Dialysis machines during my internship, integrating real-time remote control, web-based functionality, and affordability to revolutionize healthcare accessibility and efficiency.",
+  //   skills: [
+  //     "Machine Learning",
+  //     "Internet of Things (IoT)",
+  //     "Web Services",
+  //     "Web Development",
+  //     "Cloud Applications",
+  //     "Arduino",
+  //     "ESP32 Microcontrollers",
+  //     "Electronics Hardware Design",
+  //   ],
+  // },
   {
     id: 10,
     img: "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/vcrterwiwnvzdqptpcni",
