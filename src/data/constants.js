@@ -27,7 +27,12 @@ export const skills = [
       {
         name: "React Js",
         image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+          "https://reactnative.dev/img/header_logo.svg",
+      },
+      {
+        name: "ReactNative",
+        image:
+          "https://reactnative.dev/img/header_logo.svg",
       },
       {
         name: "Next Js",
@@ -59,6 +64,11 @@ export const skills = [
           "https://sass-lang.com/assets/img/styleguide/seal-color.png",
       },
       {
+        name: "Expo",
+        image:
+          "https://cdn.worldvectorlogo.com/logos/expo-1.svg",
+      },
+      {
         name: "FramerMotion",
         image:
           "https://cdn.worldvectorlogo.com/logos/framer-motion.svg",
@@ -78,6 +88,11 @@ export const skills = [
         name: "C",
         image:
           "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/fresjkfqexmvz5ltqhql",
+      },
+      {
+        name: "C#",
+        image:
+          "https://imgs.search.brave.com/fwOD7cVO8n0triTpajdEFkNo6wgW4HpsZ9hJDaNlslA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdHls/ZXMucmVkZGl0bWVk/aWEuY29tL3Q1XzJx/aGRmL3N0eWxlcy9j/b21tdW5pdHlJY29u/X3NrOGsyaGlzdnl2/NTEucG5n",
       },
       {
         name: "Python",
@@ -245,6 +260,11 @@ export const skills = [
         name: "VS Code",
         image:
           "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/jdlqm8qkvypvzg4focgk",
+      },
+      {
+        name: "Mission Planner",
+        image:
+          "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/v5zj3nsvkafdkgzgb1l4",
       },
       {
         name: "Canva",
@@ -593,6 +613,23 @@ export const projects = [
     category: "web app",
     github: "https://github.com/swarupecenits/Chat-Application.git",
     webapp: "https://github.com/swarupecenits/Chat-Application.git",
+  },
+  {
+    id: 92,
+    title: "MovieZone App",
+    date: "Mar 2025",
+    description:
+      "A React Native movie browsing app built with Expo and Appwrite, providing users with a seamless experience to browse, search, and watch their favorite movies. Features include authentication, movie recommendations, and smooth UI for an engaging viewing experience.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ilqwbhjp515pwygvqo3j",
+    tags: [
+      "ReactNative",
+      "Expo",
+      "Appwrite",
+    ],
+    category: "Mobile app",
+    github: "https://github.com/swarupecenits/Movie-App.git",
+    webapp: "https://drive.google.com/file/d/1M9dGxt9UK6jB4o5pXIoYGmktZGEqIgQL/view?usp=sharing",
   },
   {
     id: 9,
