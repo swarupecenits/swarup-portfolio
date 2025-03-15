@@ -830,6 +830,24 @@ export const projects = [
   },
   {
     id: 2,
+    title: "Quadcopter Drone",
+    date: "Oct 2020",
+    description:
+      "Introducing our high-performance autonomous Quadcopter Drone, powered by the Pixhawk 6X Flight Controller and Jetson Orin Nano! This advanced UAV is designed for precise control, stability, and seamless autonomous flight. Equipped with cutting-edge sensors and a powerful flight system, it delivers exceptional aerial maneuverability. Experience next-gen drone technology with our Quadcopter Drone!",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/qrld7ooi2qs7mugl96ov",
+    tags: [
+      "Drone",
+      "Mission Planner",
+      "Flight Controller",
+      "Pixhawk 6X",
+    ],
+    category: "robotics",
+    github: "",
+    webapp: "",
+  },
+  {
+    id: 2,
     title: "Blood Flow Monitoring System for Kidney Dialysis Machine",
     date: "May 2024",
     description:
