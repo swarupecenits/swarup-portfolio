@@ -136,7 +136,7 @@ export const MobileMenu = styled.div`
   background: ${({ theme }) => theme.card_light + "99"}; /* Add transparency */
   backdrop-filter: blur(10px); /* Apply blur for glass effect */
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  transition: all 1s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */
   transform: ${({ isOpen }) =>
     isOpen ? "translateY(0)" : "translateY(-100%)"};
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
