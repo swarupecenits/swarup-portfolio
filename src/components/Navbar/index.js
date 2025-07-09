@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Nav,
   NavLink,
@@ -23,14 +23,31 @@ import Githubbtn from "../Button/GithubButton"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const navbarRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   // const theme = useTheme();
   return (
-    <Nav>
+    <Nav ref={navbarRef}>
       <NavbarContainer>
-        <NavLogo to="/">
+        <NavLogo to="/" onClick={() => {
+  setIsOpen(false);
+  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+}}>
 
           <a
-            href="https://github.com/swarupecenits"
+            href="#about"
             style={{
               display: "flex",
               alignItems: "center",
@@ -63,12 +80,11 @@ const Navbar = () => {
             Github Profile
           </Githubbtn>
         </ButtonContainer>
-        {isOpen && (
-          <MobileMenu isOpen={isOpen}>
+        <MobileMenu isOpen={isOpen}>
             <MobileLink
               href="#about"
               onClick={() => {
-                setIsOpen(!isOpen);
+                setIsOpen(false);
               }}
             >
               About
@@ -76,7 +92,7 @@ const Navbar = () => {
             <MobileLink
               href="#skills"
               onClick={() => {
-                setIsOpen(!isOpen);
+                setIsOpen(false);
               }}
             >
               Skills
@@ -84,7 +100,7 @@ const Navbar = () => {
             <MobileLink
               href="#experience"
               onClick={() => {
-                setIsOpen(!isOpen);
+                setIsOpen(false);
               }}
             >
               Experience
@@ -92,7 +108,7 @@ const Navbar = () => {
             <MobileLink
               href="#projects"
               onClick={() => {
-                setIsOpen(!isOpen);
+                setIsOpen(false);
               }}
             >
               Projects
@@ -100,7 +116,7 @@ const Navbar = () => {
             <MobileLink
               href="#education"
               onClick={() => {
-                setIsOpen(!isOpen);
+                setIsOpen(false);
               }}
             >
               Education
@@ -108,7 +124,7 @@ const Navbar = () => {
             <Githubbtn
               style={{
                 padding: "10px 16px",
-                background: ` #ab20fd`,
+                background: `#ab20fd`,
                 color: "white",
                 width: "max-content",
               }}
@@ -118,7 +134,6 @@ const Navbar = () => {
               Github Profile
             </Githubbtn>
           </MobileMenu>
-        )}
       </NavbarContainer>
     </Nav>
   );
