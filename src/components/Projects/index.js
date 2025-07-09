@@ -1,21 +1,38 @@
-import React from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Wrapper,
   Title,
   Desc,
-  CardContainer,
   ToggleButtonGroup,
   ToggleButton,
   Divider,
+  CardContainer,
 } from "./ProjectsStyle";
 import ProjectCard from "../Cards/ProjectCards";
 import { projects } from "../../data/constants";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/swiper-bundle.css";
 
 const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  const filteredProjects =
+    toggle === "all"
+      ? projects
+      : projects.filter((item) => item.category === toggle);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Container id="projects">
       <Wrapper>
@@ -53,7 +70,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             <ToggleButton
               active
               value="robotics"
-              onClick={() => setToggle("robotics")} 
+              onClick={() => setToggle("robotics")}
             >
               Robotics
             </ToggleButton>
@@ -72,7 +89,10 @@ const Projects = ({ openModal, setOpenModal }) => {
               ML
             </ToggleButton>
           ) : (
-            <ToggleButton value="machine_learning" onClick={() => setToggle("machine_learning")}>
+            <ToggleButton
+              value="machine_learning"
+              onClick={() => setToggle("machine_learning")}
+            >
               ML
             </ToggleButton>
           )}
@@ -91,25 +111,37 @@ const Projects = ({ openModal, setOpenModal }) => {
             </ToggleButton>
           )}
         </ToggleButtonGroup>
-        <CardContainer>
-          {toggle === "all" &&
-            projects.map((project) => (
+        {isMobile ? (
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation={true}
+            pagination={{ clickable: true }}
+            modules={[Navigation, Pagination]}
+            style={{ width: "100%", padding: "20px" }}
+          >
+            {filteredProjects.map((project, index) => (
+              <SwiperSlide key={index}>
+                <ProjectCard
+                  project={project}
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <CardContainer>
+            {filteredProjects.map((project, index) => (
               <ProjectCard
+                key={index}
                 project={project}
                 openModal={openModal}
                 setOpenModal={setOpenModal}
               />
             ))}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project) => (
-              <ProjectCard
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
-        </CardContainer>
+          </CardContainer>
+        )}
       </Wrapper>
     </Container>
   );

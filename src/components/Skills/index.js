@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { skills } from "../../data/constants";
 import styled from "styled-components";
 import LazyImage from "../LazyLoading/LazyImage";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 
 const Container = styled.div`
   display: flex;
@@ -21,6 +26,7 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1100px;
   gap: 12px;
+  margin-bottom: -90px; /* Decreased bottom margin */
   @media (max-width: 960px) {
     flex-direction: column;
   }
@@ -112,43 +118,65 @@ const SkillItem = styled.div`
   }
 `;
 
-// const SkillImage = styled.img`
-//   width: 24px;
-//   height: 24px;
-// `;
-
-// Define the keyframes animation
-// const rotateBackground = keyframes`
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// `;
-
-
 const Skills = () => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
         <Desc>Here are some of my skills on which I have been working on.</Desc>
-        <SkillsContainer>
-          {skills.map((skill) => (
-              <Skill>
+        {isMobile ? (
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation={true}
+            pagination={{ clickable: true }}
+            modules={[Navigation, Pagination]}
+            style={{ width: '100%', padding: '20px' }}
+          >
+            {skills.map((skill, index) => (
+              <SwiperSlide key={index}>
+                <Skill>
+                  <SkillTitle>{skill.title}</SkillTitle>
+                  <SkillList>
+                    {skill.skills.map((item, idx) => (
+                      <SkillItem key={idx}>
+                        <LazyImage src={item.image} alt={item.name} />
+                        {item.name}
+                      </SkillItem>
+                    ))}
+                  </SkillList>
+                </Skill>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        ) : (
+          <SkillsContainer>
+            {skills.map((skill) => (
+              <Skill key={skill.title}>
                 <SkillTitle>{skill.title}</SkillTitle>
                 <SkillList>
                   {skill.skills.map((item) => (
-                    <SkillItem>
-                      <LazyImage src={item.image} alt={item.name} /> 
+                    <SkillItem key={item.name}>
+                      <LazyImage src={item.image} alt={item.name} />
                       {item.name}
                     </SkillItem>
                   ))}
                 </SkillList>
               </Skill>
-          ))}
-        </SkillsContainer>
+            ))}
+          </SkillsContainer>
+        )}
       </Wrapper>
     </Container>
   );
