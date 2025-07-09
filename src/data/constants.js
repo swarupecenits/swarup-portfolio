@@ -130,6 +130,11 @@ export const skills = [
         image:
           "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/xrf3rahxgjrdpi4fltkp",
       },
+      {
+        name: "Playwright",
+        image:
+          "https://playwright.dev/img/playwright-logo.svg",
+      },
       
     ],
   },
@@ -156,6 +161,16 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
       },
       {
+        name: "OpenAI",
+        image:
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQVRSNCZKUcvSYkmDLtSNNaRwRDh8rz5HxHA&s",
+      },
+      {
+        name: "Docker",
+        image:
+          "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-1024.png",
+      },
+      {
         name: "Redux",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
@@ -171,9 +186,19 @@ export const skills = [
           "https://appwrite.io/assets/logomark/logo.png",
       },
       {
+        name: "Firebase",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Firebase_icon.svg/180px-Firebase_icon.svg.png",
+      },
+      {
         name: "Ethereum",
         image:
           "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pacokq4weanpznjmaqhr",
+      },
+      {
+        name: "Azure DevOps Pipeline",
+        image:
+          "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsoft_Azure?resMode=sharp2&op_usm=1.5,0.65,15,0&qlt=100&fmt=png-alpha",
       },
       
     ],
@@ -199,7 +224,7 @@ export const skills = [
       {
         name: "TensorFlow",
         image:
-          "https://static-00.iconduck.com/assets.00/tensorflow-icon-1911x2048-1m2s54vn.png",
+          "https://images.seeklogo.com/logo-png/39/1/tensorflow-logo-png_seeklogo-394548.png",
       },
       {
         name: "Pytorch",
@@ -231,6 +256,11 @@ export const skills = [
         name: "Arduino IDE",
         image:
           "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/dm5tyzxel680kvsnrvct",
+      },
+      {
+        name: "Azure AI Foundry",
+        image:
+          "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsoft_Azure?resMode=sharp2&op_usm=1.5,0.65,15,0&qlt=100&fmt=png-alpha",
       },
       {
         name: "ROS",
@@ -290,7 +320,7 @@ export const skills = [
       {
         name: "AutoCAD",
         image:
-          "https://banner2.cleanpng.com/20180420/iyq/kisspng-autocad-computer-aided-design-autodesk-computer-so-architectural-vector-5ada29d4b77028.5235821115242469967514.jpg",
+          "https://images.sftcdn.net/images/t_app-icon-m/p/8a1acc12-96d0-11e6-b61e-00163ed833e7/481981230/autocad-icon.png",
       },
       {
         name: "8085/8086 Programming",
