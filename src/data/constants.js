@@ -302,24 +302,24 @@ export const skills = [
 ];
 
 export const experiences = [
-  // {
-  //   id: 10,
-  //   img: "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ektelhu38eellrglnkuv",
-  //   role: "SWE Intern",
-  //   company: "Microsoft India",
-  //   date: "May 2025 - Present",
-  //   desc: "Developed an innovative cloud-based Blood flow monitoring system for Dialysis machines during my internship, integrating real-time remote control, web-based functionality, and affordability to revolutionize healthcare accessibility and efficiency.",
-  //   skills: [
-  //     "Machine Learning",
-  //     "Internet of Things (IoT)",
-  //     "Web Services",
-  //     "Web Development",
-  //     "Cloud Applications",
-  //     "Arduino",
-  //     "ESP32 Microcontrollers",
-  //     "Electronics Hardware Design",
-  //   ],
-  // },
+  {
+    id: 10,
+    img: "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ektelhu38eellrglnkuv",
+    role: "SWE Intern",
+    company: "Microsoft India",
+    date: "May 2025 - July 2025",
+    desc: "Developed and integrated AI based software for an autonomous browser interaction, enhancing automation using AI, creating End to end testing model that can test any website autonomously and create assertions autonomously, and receiving commendations for innovation.",
+    skills: [
+      "AI Agent",
+      "Browser Automation",
+      "Web Services",
+      "Azure OpenAI",
+      "DevOps Pipeline",
+      "Azure AI Foundry",
+      "E2E Test Automation",
+      "Playwright Test Tool",
+    ],
+  },
   {
     id: 10,
     img: "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/vcrterwiwnvzdqptpcni",
@@ -377,7 +377,7 @@ export const experiences = [
   {
     id: 1,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4KCDcGyNkYW5Zgs0xHLh4SO28QcC2Vc4wF9Bz4aJrdw&s",
-    role: "General Secretary",
+    role: "President",
     company: "N.E.R.D.S NIT Silchar",
     date: "Aug 2023 - Present",
     desc: "As General Secretary of N.E.R.D.S NIT Silchar, I lead initiatives promoting innovation, organize technical events, mentor members, and foster collaboration to enhance technical skills and knowledge.",
