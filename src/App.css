@@ -39,3 +39,20 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: #626970;
   }
+
+/* Swiper custom styles */
+.swiper-pagination {
+  display: none; /* Remove page dots */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 20px; /* Make arrows smaller */
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    padding: 10px; /* Add card padding in mobile view */
+  }
+}
