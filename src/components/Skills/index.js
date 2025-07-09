@@ -26,6 +26,7 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1100px;
   gap: 12px;
+  margin-bottom: -90px; /* Decreased bottom margin */
   @media (max-width: 960px) {
     flex-direction: column;
   }

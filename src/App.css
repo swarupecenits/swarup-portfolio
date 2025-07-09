@@ -40,16 +40,14 @@ body{
     background: #626970;
   }
 
-/* Swiper custom styles */
-.swiper-pagination {
-  display: none; /* Remove page dots */
+
+/* Force smaller size for Swiper arrow buttons */
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-button-prev {
+  width: 10px !important; /* Force smaller width */
+  height: 10px !important; /* Force smaller height */
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  width: 20px; /* Make arrows smaller */
-  height: 20px;
-}
 
 @media (max-width: 768px) {
   .swiper-slide {
