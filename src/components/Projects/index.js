@@ -116,7 +116,6 @@ const Projects = ({ openModal, setOpenModal }) => {
             spaceBetween={30}
             slidesPerView={1}
             navigation={true}
-            pagination={{ clickable: true }}
             modules={[Navigation, Pagination]}
             style={{ width: "100%", padding: "20px" }}
           >
