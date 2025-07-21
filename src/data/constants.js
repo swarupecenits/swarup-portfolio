@@ -576,6 +576,25 @@ export const projects = [
     webapp: "https://www.tecnoesis.co.in/",
   },
   {
+    id: 7,
+    title: "Genimeds AI Healthcare App",
+    date: "June 2025",
+    description:
+      "Empowering users with affordable healthcare through AI-driven prescription analysis, medicine insights, and proactive wellness support. This web app leverages advanced AI technologies to provide personalized healthcare solutions, making medical information accessible and actionable for everyone.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/v1753125592/Screenshot_2025-07-22_004714_jhrsf8.png",
+    tags: [
+      "ReactJS",
+      "AI Agent",
+      "OCR",
+      "NodeJS",
+      "Firebase",
+    ],
+    category: "web app",
+    github: "https://github.com/swarupecenits/GeniMeds-AI-Powered-.git",
+    webapp: "https://geni-meds-ai-powered.vercel.app/",
+  },
+  {
     id: 22,
     title: "Image Classification Model",
     date: "May 2024",
