@@ -586,6 +586,7 @@ export const projects = [
     tags: [
       "ReactJS",
       "AI Agent",
+      "Azure AI Foundry",
       "OCR",
       "NodeJS",
       "Firebase",
