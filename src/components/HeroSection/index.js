@@ -66,7 +66,7 @@ const HeroSection = () => {
             <HeroRightContainer id="Right">
               <motion.div {...headContentAnimation}>
                 <Tilt>
-                  <Img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ivcxkvbdqmplvap2fwi6" alt="hero-image" />
+                  <Img src="https://res.cloudinary.com/dagggqd6g/image/upload/v1761346197/Untitled_design_bqv6b2.png" alt="hero-image" />
                 </Tilt>
               </motion.div>
             </HeroRightContainer>
