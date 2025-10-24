@@ -577,6 +577,26 @@ export const projects = [
   },
   {
     id: 7,
+    title: "Rainwise Website",
+    date: "Oct 2025",
+    description:
+      "RainWise provides smart rainwater harvesting, storage, and analysis solutions for sustainable water management using IoT technology and data insights.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/v1761345598/Screenshot_2025-09-27_181826_lvcwgk.png",
+    tags: [
+      "ReactJS",
+      "Tailwind",
+      "Machine Learning",
+      "Ai Agent",
+      "OpenCV",
+      "NodeJS",
+    ],
+    category: "web app",
+    github: "https://github.com/pragyan4261/Rainwater-Harvest-PRO.git",
+    webapp: "https://rain-wise.netlify.app/",
+  },
+  {
+    id: 7,
     title: "Genimeds AI Healthcare App",
     date: "June 2025",
     description:
