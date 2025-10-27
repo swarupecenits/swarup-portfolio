@@ -103,3 +103,14 @@ export const CardContainer = styled.div`
     //     grid-template-columns: repeat(1, 1fr);
     // }
 `;
+
+/* Center Swiper slides content on small viewports so cards appear centered */
+export const SwiperMobileCenter = styled.div`
+    @media (max-width: 768px) {
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+`;
