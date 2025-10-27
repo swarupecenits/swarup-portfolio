@@ -15,6 +15,7 @@ import Preloader from "./components/Preloader/Preloader.jsx";
 import ProjectDetails from "./components/ProjectDetails";
 // import StarCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
+// import { Animation } from "./components/Animation/Animation.jsx";
 // import ToggleButton from "./components/ToggleButton/ToggleButton.jsx";
 
 const Body = styled.div`
