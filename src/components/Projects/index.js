@@ -12,7 +12,7 @@ import {
 import ProjectCard from "../Cards/ProjectCards";
 import { projects } from "../../data/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
 const Projects = ({ openModal, setOpenModal }) => {
@@ -115,8 +115,8 @@ const Projects = ({ openModal, setOpenModal }) => {
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
-            navigation={true}
-            modules={[Navigation, Pagination]}
+            autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+            modules={[Pagination, Autoplay]}
             style={{ width: "100%", padding: "20px" }}
           >
             {filteredProjects.map((project, index) => (

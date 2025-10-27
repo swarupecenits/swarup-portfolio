@@ -4,9 +4,8 @@ import styled from "styled-components";
 import LazyImage from "../LazyLoading/LazyImage";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 const Container = styled.div`
   display: flex;
@@ -139,9 +138,8 @@ const Skills = () => {
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
-            navigation={true}
-            pagination={{ clickable: true }}
-            modules={[Navigation, Pagination]}
+            autoplay={{ delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+            modules={[Pagination, Autoplay]}
             style={{ width: '100%', padding: '20px' }}
           >
             {skills.map((skill, index) => (
