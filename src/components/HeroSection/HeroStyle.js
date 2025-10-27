@@ -15,31 +15,23 @@ export const HeroContainer = styled.div`
     padding: 32px 16px;
   }
   z-index: 1;
-
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
+  /* make bottom a straight line */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 `;
 
 export const HeroBg = styled.div`
   position: absolute;
   display: flex;
   justify-content: end;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  max-width: 1360px;
   overflow: hidden;
-  padding: 0 30px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  z-index: 0;
 
   @media (max-width: 960px) {
     justify-content: center;
-    padding: 0 0px;
+    padding: 0;
   }
 `;
 

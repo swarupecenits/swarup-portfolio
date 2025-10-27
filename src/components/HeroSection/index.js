@@ -1,6 +1,6 @@
 import React from "react";
 import './Hero.css'
-import HeroBgAnimation from "../HeroBgAnimation";
+import AnoAI from "../ui/animated-shader-background";
 import {
   HeroContainer,
   HeroBg,
@@ -29,9 +29,8 @@ const HeroSection = () => {
   return (
     <div id="about">
       <HeroContainer>
-        <StarCanvas />
         <HeroBg className="hero_bg">
-          <HeroBgAnimation width={800} height={500} />
+          <AnoAI />
         </HeroBg>
         <motion.div {...headContainerAnimation}>
           <HeroInnerContainer>
