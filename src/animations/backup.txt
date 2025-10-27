@@ -1,5 +1,5 @@
 import styled, { ThemeProvider } from "styled-components";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { darkTheme, lightTheme } from './utils/Themes.js';
 import Navbar from "./components/Navbar";
 import './App.css';
@@ -11,7 +11,7 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
-// Preloader replaced by Loader component (particle effect)
+import Preloader from "./components/Preloader/Preloader.jsx";
 import ProjectDetails from "./components/ProjectDetails";
 // import StarCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
@@ -45,13 +45,9 @@ const Wrapper = styled.div`
 
 
 function App() {
+
   const [openModal, setOpenModal] = useState({ state: false, project: null });
   // const [isMobile, setIsMobile] = useState(false);
-
-  // Show the Loader until the particle animation signals completion.
-  // The particle component will call the onComplete callback when the
-  // words array has been played once.
-  const [isLoading, setIsLoading] = useState(true)
 
   // useEffect(() => {
   //   const handleResize = () => {
@@ -72,36 +68,32 @@ function App() {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router>
-        {isLoading ? (
-          // While loading, show the Loader (full-screen) and hide the rest.
-          // Pass a callback so Loader/Particle component can stop the loader
-          <Loader onComplete={() => setIsLoading(false)} />
-        ) : (
-          // After loading is done, render the normal app chrome
-          <>
-            <Navbar />
-            <Body>
-              <AnimatePresence>
-                <div>
-                  <HeroSection />
-                  <Wrapper>
-                    <Skills />
-                    <Experience />
-                  </Wrapper>
-                  <Projects openModal={openModal} setOpenModal={setOpenModal} />
-                  <Wrapper>
-                    <Education />
-                    <Contact />
-                  </Wrapper>
-                  <Footer />
-                  {openModal.state && (
-                    <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-                  )}
-                </div>
-              </AnimatePresence>
-            </Body>
-          </>
-        )}
+        <Preloader />
+        <Navbar />
+        <Body>
+          
+          <AnimatePresence>
+            <div>
+              {/* <ToggleButton
+                onClick={toggleTheme}
+              /> */}
+              <HeroSection />
+              <Wrapper>
+                <Skills />
+                <Experience />
+              </Wrapper>
+              <Projects openModal={openModal} setOpenModal={setOpenModal} />
+              <Wrapper>
+                <Education />
+                <Contact />
+              </Wrapper>
+              <Footer />
+              {openModal.state && (
+                <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
+              )}
+            </div>
+          </AnimatePresence>
+        </Body>
       </Router>
     </ThemeProvider>
   );
