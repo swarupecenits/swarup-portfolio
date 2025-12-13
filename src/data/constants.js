@@ -731,7 +731,7 @@ export const projects = [
     description:
       "Lunar autonomous rovers with manipulators may be considered as one of the most promising directions of lunar exploration with the help of space robotics, a lot of organizations and researchers are working on the production of high-tech rovers for planetary reconnaissance and sample collection missions. IROC-U 2024 is an event organized by ISRO to encourage the development of new-generation moon rovers. ",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/khrh5ujdrve9jsr3pu9l",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765637013/Gemini_Generated_Image_w60gk0w60gk0w60g_oratf5.png",
     tags: [
       "Research",
       "Publications",
