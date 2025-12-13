@@ -509,7 +509,7 @@ export const projects = [
     description:
       "Designed and implemented a robust software and electronics system for an autonomous space rover, achieving precise navigation and task execution in challenging environment",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/lcqjp4o8wbd63i4ywcyw",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765630706/Gemini_Generated_Image_82vi9c82vi9c82vi_ewep16.png",
     tags: [
       "Power Electronics",
       "Arduino",
@@ -519,6 +519,78 @@ export const projects = [
     category: "robotics",
     github: "",
     webapp: "https://www.youtube.com/watch?si=3AEBZuTgmTvywpda&v=0hkg6x7ZlYw&feature=youtu.be",
+  },
+  {
+    id: 2,
+    title: "Spider-Bot",
+    date: "Sep 2023",
+    description:
+      "Introducing our cutting-edge Spider Robot, powered by Arduino technology! This remarkable creation combines robotics and innovation, showcasing intricate movements and impressive functionality. With a sleek design and advanced capabilities, our Spider Robot is ready to amaze and inspire. Explore the future of robotics with us!",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765630438/Gemini_Generated_Image_s1msmgs1msmgs1ms_mp4bgl.png",
+    tags: [
+      "Arduino",
+      "Hardware",
+      "Bluetooth Module",
+      "Sensors",
+    ],
+    category: "robotics",
+    github: "https://github.com/swarupecenits/Spidy-The-Spider-Robot.git",
+    webapp: "https://youtu.be/MOtOSJDkom8?si=WjYqGAIusp_0Lcip",
+  },
+    {
+    id: 2,
+    title: "Bionic Robotic Hand",
+    date: "Nov 2025",
+    description:
+      "A Bio-inspired robotic hand featuring tendon-driven motion, precise finger control, and lightweight design for realistic grasping, assistive applications, and advanced prosthetic research.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765630282/unnamed_udfg2a.jpg",
+    tags: [
+      "Arduino",
+      "OpenCV",
+      "Mediapipe",
+      "Python",
+    ],
+    category: "robotics",
+    github: "https://github.com/swarupecenits/Bionic-Hand.git",
+    webapp: "",
+  },
+    {
+    id: 2,
+    title: "17-DOF Humanoid Robot",
+    date: "Sep 2025",
+    description:
+      "A 17-DOF humanoid robot capable of dynamic movement, precise joint control, and human-like motion for advanced research, manipulation, and robotics experimentation.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765630692/Gemini_Generated_Image_gjmje4gjmje4gjmj_sm4biq.png",
+    tags: [
+      "Arduino",
+      "PID Tuning",
+      "Hardware",
+      "Python",
+    ],
+    category: "robotics",
+    github: "",
+    webapp: "",
+  },
+  {
+    id: 2,
+    title: "Quadcopter Drone",
+    date: "Oct 2020",
+    description:
+      "Introducing our high-performance autonomous Quadcopter Drone, powered by the Pixhawk 6X Flight Controller and Jetson Orin Nano! This advanced UAV is designed for precise control, stability, and seamless autonomous flight. Equipped with cutting-edge sensors and a powerful flight system, it delivers exceptional aerial maneuverability. Experience next-gen drone technology with our Quadcopter Drone!",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765630946/Gemini_Generated_Image_9h1ofu9h1ofu9h1o_d2cfyd.png",
+    tags: [
+      "Drone",
+      "Mission Planner",
+      "Flight Controller",
+      "Pixhawk 6X",
+    ],
+    category: "robotics",
+    github: "",
+    webapp: "",
   },
   {
     id: 1,
@@ -546,7 +618,7 @@ export const projects = [
     description:
       "A React Native movie browsing app built with Expo and Appwrite, providing users with a seamless experience to browse, search, and watch their favorite movies. Features include authentication, movie recommendations, and smooth UI for an engaging viewing experience.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/atmrsq1cavmpw0nhljng",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765631416/Gemini_Generated_Image_skszjuskszjusksz_rwbcy7.png",
     tags: [
       "ReactNative",
       "Expo",
@@ -640,7 +712,7 @@ export const projects = [
     description:
       "Developed a Face Recognition Based Attendance System, automating attendance tracking using Python, OpenCV, and Excel integration, ensuring efficient and accurate record-keeping.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/zouzned8mp1pu9dpkq28",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765631611/Gemini_Generated_Image_1wqx3l1wqx3l1wqx_nbzcij.png",
     tags: [
       "OpenCV",
       "Streamlit",
@@ -710,14 +782,14 @@ export const projects = [
     description:
       "N.E.R.D.S Robotics Club website showcases innovative robotics projects, team achievements, and event highlights. A hub for tech enthusiasts, fostering collaboration, learning, and inspiring future engineers in robotics.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/zsph0nrop1h0vxoyh8cw",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/v1765631700/Screenshot_2025-12-13_184447_nttbwe.png",
     tags: [
       "ReactJS",
       "Tailwind",
       "Framer Motion",
     ],
     category: "web app",
-    github: "https://github.com/swarupecenits/N.E.R.D.S.git",
+    github: "",
     webapp: "https://www.nerdsnitsilchar.in/",
 
   },
@@ -880,42 +952,8 @@ export const projects = [
     github: "https://github.com/swarupecenits/News-app.git",
     webapp: "https://news-app-eta-orcin.vercel.app/",
   },
-  {
-    id: 2,
-    title: "Spider-Bot",
-    date: "Sep 2023",
-    description:
-      "Introducing our cutting-edge Spider Robot, powered by Arduino technology! This remarkable creation combines robotics and innovation, showcasing intricate movements and impressive functionality. With a sleek design and advanced capabilities, our Spider Robot is ready to amaze and inspire. Explore the future of robotics with us!",
-    image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/jnlg9kxawwfdnnpjsqjc",
-    tags: [
-      "Arduino",
-      "Hardware",
-      "Bluetooth Module",
-      "Sensors",
-    ],
-    category: "robotics",
-    github: "https://github.com/swarupecenits/Spidy-The-Spider-Robot.git",
-    webapp: "https://youtu.be/MOtOSJDkom8?si=WjYqGAIusp_0Lcip",
-  },
-  {
-    id: 2,
-    title: "Quadcopter Drone",
-    date: "Oct 2020",
-    description:
-      "Introducing our high-performance autonomous Quadcopter Drone, powered by the Pixhawk 6X Flight Controller and Jetson Orin Nano! This advanced UAV is designed for precise control, stability, and seamless autonomous flight. Equipped with cutting-edge sensors and a powerful flight system, it delivers exceptional aerial maneuverability. Experience next-gen drone technology with our Quadcopter Drone!",
-    image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/qrld7ooi2qs7mugl96ov",
-    tags: [
-      "Drone",
-      "Mission Planner",
-      "Flight Controller",
-      "Pixhawk 6X",
-    ],
-    category: "robotics",
-    github: "",
-    webapp: "",
-  },
+  
+
   {
     id: 2,
     title: "Blood Flow Monitoring System for Kidney Dialysis Machine",
