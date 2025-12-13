@@ -2,7 +2,7 @@ import styled from 'styled-components';
 // import _default from '../../themes/default';
 
 export const Container = styled.div`
-    background: linear-gradient(343.07deg, rgba(132, 59, 206, 0.06) 5.71%, rgba(132, 59, 206, 0) 64.83%);
+    background: linear-gradient(343.07deg, rgba(112, 66, 248, 0.1) 5.71%, rgba(112, 66, 248, 0) 64.83%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,8 +52,8 @@ export const Desc = styled.div`
 
 export const ToggleButtonGroup = styled.div`
     display: flex;
-    border: 1.5px solid ${({ theme }) => theme.tags};
-    color: #6EACDA;
+    border: 1.5px solid #7042f8;
+    color: #7042f8;
     font-size: 16px;
     border-radius: 12px;
     font-weight: 500;
@@ -67,13 +67,14 @@ export const ToggleButton = styled.div`
     padding: 8px 18px;
     border-radius: 6px;
     cursor: pointer;
-    ${({ active, theme }) =>
+    transition: all 0.3s ease;
+    ${({ active }) =>
         active && `
-    background: ${theme.primary + 20};
+    background: rgba(112, 66, 248, 0.2);
     `
     }
     &:hover {
-        background: ${({ theme }) => theme.primary + 8};
+        background: rgba(112, 66, 248, 0.15);
     }
     @media (max-width: 768px) {
         padding: 6px 8px;
@@ -82,7 +83,7 @@ export const ToggleButton = styled.div`
 `
 export const Divider = styled.div`
     width: 1.5px;
-    background: ${({ theme }) => theme.tags};
+    background: #7042f8;
 `
 
 

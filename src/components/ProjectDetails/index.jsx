@@ -20,21 +20,27 @@ transition: all 0.5s ease;
 const Wrapper = styled.div`
 max-width: 800px;
 width: 100%;
-border-radius: 16px;
+border-radius: 8px;
 margin: 50px 12px;
 height: min-content;
-background: ${({ theme }) => theme.skillcard_bg};
+background: linear-gradient(135deg, #0f0a1f 0%, #1a0f2e 100%);
 color: ${({ theme }) => theme.text_primary};
 padding: 20px;
 display: flex;
 flex-direction: column;
 position: relative;
+border: 1.5px solid #7042f8;
+box-shadow: 0 0 20px rgba(112, 66, 248, 0.3), inset 0 0 20px rgba(112, 66, 248, 0.05);
+transition: all 0.3s ease-in-out;
 `;
 
 const Title = styled.div`
   font-size: 28px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
+  background: linear-gradient(90deg, #7042f8, #b8a9ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin: 8px 6px 0px 6px;
   @media only screen and (max-width: 600px) {
       font-size: 24px;
@@ -96,11 +102,12 @@ const Tags = styled.div`
 const Tag = styled.div`
     font-size: 14px;
     font-weight: 400;
-    color:${({ theme }) => theme.tags};
+    color: #7042f8;
     margin: 4px;
     padding: 4px 8px;
     border-radius: 8px;
-    background-color: ${({ theme }) => theme.primary + 20};
+    background-color: rgba(112, 66, 248, 0.1);
+    border: 0.5px solid #7042f8;
     @media only screen and (max-width: 600px) {
         font-size: 12px;
     }
@@ -159,22 +166,28 @@ const Button = styled.a`
     text-align: center;
     font-size: 16px;
     font-weight: 600;
-    color: ${({ theme }) => theme.text_primary};
+    color: #ffffff;
     padding: 12px 16px;
     border-radius: 8px;
-    background-color: ${({ theme }) => theme.tags};
-    ${({ dull, theme }) => dull && `
-        background-color: ${theme.bgLight};
-        color: ${theme.text_secondary};
-        &:hover {
-            background-color: ${({ theme }) => theme.tags};
-        }
-    `}
+    background-color: #7042f8;
+    border: 1.5px solid #7042f8;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.5s ease;
+    box-shadow: 0 0 10px rgba(112, 66, 248, 0.3);
+    ${({ dull, theme }) => dull && `
+        background-color: rgba(112, 66, 248, 0.1);
+        color: #7042f8;
+        &:hover {
+            background-color: rgba(112, 66, 248, 0.2);
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(112, 66, 248, 0.4);
+        }
+    `}
     &:hover {
-        background-color: ${({ theme }) => theme.tags + 40};
+        background-color: rgba(112, 66, 248, 0.9);
+        color: #ffffff;
+        box-shadow: 0 0 20px rgba(112, 66, 248, 0.5);
     }
     @media only screen and (max-width: 600px) {
         font-size: 12px;

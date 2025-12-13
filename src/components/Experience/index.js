@@ -69,6 +69,7 @@ const Experience = () => {
             <ExperienceCard
               key={`experience-${index}`}
               experience={experience}
+              index={index}
             />
           ))}
         </VerticalTimeline>
