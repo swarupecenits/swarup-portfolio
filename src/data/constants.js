@@ -954,7 +954,42 @@ export const projects = [
   },
   
 
+
   {
+    id: 2,
+    title: "Bluetooth-Car",
+    date: "Oct 2022",
+    description:
+      "Experience the future of mobility with our Bluetooth-controlled car. This advanced vehicle puts you in the driver's seat with a smartphone app, offering precision control and an exhilarating ride. Seamlessly navigate, accelerate, and steer as you explore the possibilities of connected driving. Unleash the power of Bluetooth technology today.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765638746/Gemini_Generated_Image_gerjtrgerjtrgerj_hkxpf9.png",
+    tags: [
+      "Arduino",
+      "Hardware",
+      "Bluetooth Module",
+    ],
+    category: "robotics",
+    github: "https://github.com/swarupecenits/Bluetooth-Controlled-car.git",
+    webapp: "https://youtu.be/KyjrGN9ZTPg?si=LOdZGxahC-Sqo95_",
+  },
+  {
+    id: 2,
+    title: "Self-Balancing Bot",
+    date: "Oct 2024",
+    description:
+      "The Self Balancing Bot is a two-wheeled robot that uses a combination of sensors and control algorithms to maintain its balance autonomously. Powered by an MPU6050 gyroscope and accelerometer, along with PID control logic",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765638878/Gemini_Generated_Image_q9rq0jq9rq0jq9rq_yb1r5b.png",
+    tags: [
+      "Arduino Mega",
+      "MPU6050",
+      "PID Tuning",
+    ],
+    category: "robotics",
+    github: "https://github.com/swarupecenits/Sef-Balanced-Bot.git",
+    webapp: "",
+  },
+    {
     id: 2,
     title: "Blood Flow Monitoring System for Kidney Dialysis Machine",
     date: "May 2024",
@@ -964,30 +999,13 @@ export const projects = [
       "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/qzmpswfg0lnexawxulym",
     tags: [
       "Arduino",
-      "Hardware",
+      "Machine Learning",
       "ESP32",
       "Web Services",
     ],
     category: "robotics",
     github: "https://github.com/swarupecenits/Dialysis-Machine.git",
     webapp: "",
-  },
-  {
-    id: 2,
-    title: "Bluetooth-Car",
-    date: "Oct 2022",
-    description:
-      "Experience the future of mobility with our Bluetooth-controlled car. This advanced vehicle puts you in the driver's seat with a smartphone app, offering precision control and an exhilarating ride. Seamlessly navigate, accelerate, and steer as you explore the possibilities of connected driving. Unleash the power of Bluetooth technology today.",
-    image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/urepbjmsfl9fngsc9l5q",
-    tags: [
-      "Arduino",
-      "Hardware",
-      "Bluetooth Module",
-    ],
-    category: "robotics",
-    github: "https://github.com/swarupecenits/Bluetooth-Controlled-car.git",
-    webapp: "https://youtu.be/KyjrGN9ZTPg?si=LOdZGxahC-Sqo95_",
   },
   {
     id: 82,
