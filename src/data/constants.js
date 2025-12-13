@@ -654,7 +654,7 @@ export const projects = [
     description:
       "RainWise provides smart rainwater harvesting, storage, and analysis solutions for sustainable water management using IoT technology and data insights.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/v1761345598/Screenshot_2025-09-27_181826_lvcwgk.png",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765636571/Gemini_Generated_Image_m1k02m1k02m1k02m_zxc7sq.png",
     tags: [
       "ReactJS",
       "Tailwind",
@@ -674,7 +674,7 @@ export const projects = [
     description:
       "Empowering users with affordable healthcare through AI-driven prescription analysis, medicine insights, and proactive wellness support. This web app leverages advanced AI technologies to provide personalized healthcare solutions, making medical information accessible and actionable for everyone.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/v1753125592/Screenshot_2025-07-22_004714_jhrsf8.png",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765636564/Gemini_Generated_Image_4qvdfk4qvdfk4qvd_qv5inv.png",
     tags: [
       "ReactJS",
       "AI Agent",
@@ -731,7 +731,7 @@ export const projects = [
     description:
       "Lunar autonomous rovers with manipulators may be considered as one of the most promising directions of lunar exploration with the help of space robotics, a lot of organizations and researchers are working on the production of high-tech rovers for planetary reconnaissance and sample collection missions. IROC-U 2024 is an event organized by ISRO to encourage the development of new-generation moon rovers. ",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/khrh5ujdrve9jsr3pu9l",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765637013/Gemini_Generated_Image_w60gk0w60gk0w60g_oratf5.png",
     tags: [
       "Research",
       "Publications",
@@ -800,7 +800,7 @@ export const projects = [
     description:
       "C++ chat application utilizing socket programming for real-time messaging, supporting multiple clients with TCP/IP for reliable communication, providing a robust and efficient network-based communication solution.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/jslzcfhqkemftyufjpg9",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765636610/Gemini_Generated_Image_r60znwr60znwr60z_g5or4y.png",
     tags: [
       "C++",
       "SOCKET",
@@ -836,7 +836,7 @@ export const projects = [
     description:
       "I developed a web application that tracks the real-time locations of multiple users and displays them on an interactive map. Each user can share their current location and view the locations of other connected users with live updates.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/dhuy3ystnaz25c9le8m1",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765636816/Gemini_Generated_Image_5hdlgs5hdlgs5hdl_btxh0m.png",
     tags: [
       "Express",
       "EJS",

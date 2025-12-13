@@ -6,13 +6,17 @@ export const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-  padding: 80px 30px;
+  padding: 180px 30px 80px 30px;
+  min-height: 100vh;
+  background-color: ${({ theme }) => theme.bg};
   z-index: 1;
   @media (max-width: 960px) {
-    padding: 66px 16px;
+    padding: 150px 16px 66px 16px;
+    min-height: 90vh;
   }
   @media (max-width: 640) {
-    padding: 32px 16px;
+    padding: 100px 16px 32px 16px;
+    min-height: 85vh;
   }
   z-index: 1;
   /* make bottom a straight line */
@@ -90,6 +94,7 @@ export const Img = styled.img`
   width: 100%;
   height: 100%;
   max-width: 400px;
+  z-index: 50;
   max-height: 400px;
   border-radius: 50%;
   border: 2px  solid #e3bb0a;
@@ -98,11 +103,13 @@ export const Img = styled.img`
   @media (max-width: 768px) {
     max-width: 400px;
     max-height: 400px;
+    z-index: 50;
   }
 
   @media (max-width: 640px) {
     max-width: 280px;
     max-height: 280px;
+    z-index: 50;
   }
 `;
 
@@ -140,7 +147,7 @@ export const TextLoop = styled.div`
 `;
 
 export const Span = styled.span`
-  color:rgb(1, 130, 251);
+  color:#7042f8;
   cursor: pointer;
 `;
 

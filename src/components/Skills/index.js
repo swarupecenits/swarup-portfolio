@@ -65,9 +65,9 @@ const SkillsContainer = styled.div`
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
-  background: ${({ theme }) => theme.skillcard_bg};
-  border: 0.1px solid  rgba(255, 255, 255, 0.125);
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  background: linear-gradient(135deg, #0f0a1f 0%, #1a0f2e 100%);
+  border: 1.5px solid #7042f8;
+  box-shadow: 0 0 20px rgba(112, 66, 248, 0.3);
   border-radius: 16px;
   padding: 18px 36px;
   @media (max-width: 768px) {

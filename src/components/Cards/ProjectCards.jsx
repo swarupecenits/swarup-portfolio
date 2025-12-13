@@ -19,10 +19,11 @@ const Button = styled.button`
 const Card = styled.div`
     width: 330px;
     height: 490px;
-    background: ${({ theme }) => theme.skillcard_bg};
+    background: linear-gradient(135deg, #0f0a1f 0%, #1a0f2e 100%);
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
+    border: 1.5px solid #7042f8;
+    box-shadow: 0 0 20px rgba(112, 66, 248, 0.3);
     overflow: hidden;
     padding: 26px 20px;
     display: flex;
@@ -31,7 +32,7 @@ const Card = styled.div`
     transition: all 0.5s ease-in-out;
     &:hover {
         transform: translateY(-10px);
-        box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+        box-shadow: 0 0 30px rgba(112, 66, 248, 0.5);
         filter: brightness(1.1);
     }
     &:hover ${Button} {

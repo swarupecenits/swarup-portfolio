@@ -84,10 +84,11 @@ const ContactForm = styled.form`
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background: ${({ theme }) => theme.skillcard_bg};
+  background: linear-gradient(135deg, #0f0a1f 0%, #1a0f2e 100%);
   padding: 32px;
   border-radius: 16px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border: 1.5px solid #7042f8;
+  box-shadow: 0 0 20px rgba(112, 66, 248, 0.3);
   margin-top: 28px;
   gap: 12px;
 `;

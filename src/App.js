@@ -4,7 +4,6 @@ import { darkTheme, lightTheme } from './utils/Themes.js';
 import Navbar from "./components/Navbar";
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
-import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -16,6 +15,7 @@ import ProjectDetails from "./components/ProjectDetails";
 // import StarCanvas from "./components/canvas/Stars";
 import { AnimatePresence } from "framer-motion";
 import Loader from "./components/Preloader/Loader.jsx";
+import VideoHero from "./components/VideoHero";
 // import { Animation } from "./components/Animation/Animation.jsx";
 // import ToggleButton from "./components/ToggleButton/ToggleButton.jsx";
 
@@ -80,10 +80,10 @@ function App() {
           // After loading is done, render the normal app chrome
           <>
             <Navbar />
+            <VideoHero />
             <Body>
               <AnimatePresence>
                 <div>
-                  <HeroSection />
                   <Wrapper>
                     <Skills />
                     <Experience />

@@ -1,9 +1,9 @@
 .btn-hero {
-  font-size: 1.4em;
-  padding: 0.6em 0.8em;
+  font-size: 1.2em;
+  padding: 0.5em 0.9em;
   border-radius: 0.5em;
   border: none;
-  background-color: #000;
+  background-color: #000000df;
   color: #fff;
   cursor: pointer;
   box-shadow: 2px 2px 3px #000000b4;
@@ -13,7 +13,7 @@
   position: relative;
   width: fit-content;
   padding: 3px;
-  background: linear-gradient(90deg, #03a9f4, #f441a5);
+  background: linear-gradient(90deg, #7042f8, #e1a9ff);
   border-radius: 0.9em;
   transition: all 0.4s ease;
 }
@@ -30,7 +30,7 @@
 }
 
 .btn_container:hover::before {
-  background: linear-gradient(90deg, #03a9f4, #f441a5);
+  background: linear-gradient(90deg, #7042f8, #b8a9ff);
   filter: blur(1.2em);
 }
 .btn_container:active::before {

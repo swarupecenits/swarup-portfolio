@@ -3,32 +3,32 @@ import {
   Nav,
   NavLink,
   NavbarContainer,
-  Span,
   NavLogo,
-  NavItems,
-  // GitHubButton,
-  ButtonContainer,
-  MobileIcon,
-  MobileMenu,
-  // MobileNavLogo,
+  NavItemsContainer,
+  NavLinksWrapper,
+  SocialIconsContainer,
+  SocialIcon,
+  HamburgerMenu,
+  MobileMenuContainer,
+  MobileLinksList,
   MobileLink,
+  MobileSocialIconsContainer,
+  MobileSocialIcon,
+  LogoImg,
+  LogoText,
 } from "./NavbarStyledComponent";
 import { DiCssdeck } from "react-icons/di";
-import { FaBars } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { Bio } from "../../data/constants";
-import Githubbtn from "../Button/GithubButton"
-// import { Close, CloseRounded } from "@mui/icons-material";
-// import { useTheme } from "styled-components";
-
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const navbarRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-        setIsOpen(false);
+        setIsMobileMenuOpen(false);
       }
     };
 
@@ -37,104 +37,90 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  // const theme = useTheme();
+
+  const handleNavClick = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <Nav ref={navbarRef}>
       <NavbarContainer>
-        <NavLogo to="/" onClick={() => {
-  setIsOpen(false);
-  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-}}>
-
-          <a
-            href="#about"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              color: "white",
-              marginBottom: "20;",
-              cursor: "pointer",
-              textDecoration:"none",
-            }}
-          >
-            <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
-          </a>
+        {/* Logo + Name */}
+        <NavLogo
+          to="/"
+          onClick={() => {
+            handleNavClick();
+            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <DiCssdeck size="3rem" color="white" />
+          <LogoText>Portfolio</LogoText>
         </NavLogo>
-        <MobileIcon>
-          <FaBars
-            onClick={() => {
-              setIsOpen(!isOpen);
-            }}
-          />
-        </MobileIcon>
-        <NavItems>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
-        </NavItems>
 
-        <ButtonContainer>
-          <Githubbtn href={Bio.github} target="_blank">
-            Github Profile
-          </Githubbtn>
-        </ButtonContainer>
-        <MobileMenu isOpen={isOpen}>
-            <MobileLink
-              href="#about"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              About
-            </MobileLink>
-            <MobileLink
-              href="#skills"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              Skills
-            </MobileLink>
-            <MobileLink
-              href="#experience"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              Experience
-            </MobileLink>
-            <MobileLink
-              href="#projects"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              Projects
-            </MobileLink>
-            <MobileLink
-              href="#education"
-              onClick={() => {
-                setIsOpen(false);
-              }}
-            >
-              Education
-            </MobileLink>
-            <Githubbtn
-              style={{
-                padding: "10px 16px",
-                background: `#ab20fd`,
-                color: "white",
-                width: "max-content",
-              }}
-              href={Bio.github}
-              target="_blank"
-            >
-              Github Profile
-            </Githubbtn>
-          </MobileMenu>
+        {/* Web Navbar */}
+        <NavItemsContainer>
+          <NavLinksWrapper>
+            <NavLink href="#about">About</NavLink>
+            <NavLink href="#skills">Skills</NavLink>
+            <NavLink href="#experience">Experience</NavLink>
+            <NavLink href="#projects">Projects</NavLink>
+            <NavLink href="#education">Education</NavLink>
+          </NavLinksWrapper>
+        </NavItemsContainer>
+
+        {/* Social Icons (Web) */}
+        <SocialIconsContainer>
+          <SocialIcon href={Bio.github} target="_blank" rel="noreferrer noopener">
+            <FaGithub />
+          </SocialIcon>
+          <SocialIcon href={Bio.linkedin} target="_blank" rel="noreferrer noopener">
+            <FaLinkedin />
+          </SocialIcon>
+          <SocialIcon href={Bio.insta} target="_blank" rel="noreferrer noopener">
+            <FaInstagram />
+          </SocialIcon>
+        </SocialIconsContainer>
+
+        {/* Hamburger Menu */}
+        <HamburgerMenu onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          ☰
+        </HamburgerMenu>
       </NavbarContainer>
+
+      {/* Mobile Menu */}
+      <MobileMenuContainer isOpen={isMobileMenuOpen}>
+        {/* Links */}
+        <MobileLinksList>
+          <MobileLink href="#about" onClick={handleNavClick}>
+            About
+          </MobileLink>
+          <MobileLink href="#skills" onClick={handleNavClick}>
+            Skills
+          </MobileLink>
+          <MobileLink href="#experience" onClick={handleNavClick}>
+            Experience
+          </MobileLink>
+          <MobileLink href="#projects" onClick={handleNavClick}>
+            Projects
+          </MobileLink>
+          <MobileLink href="#education" onClick={handleNavClick}>
+            Education
+          </MobileLink>
+        </MobileLinksList>
+
+        {/* Social Icons */}
+        <MobileSocialIconsContainer>
+          <MobileSocialIcon href={Bio.github} target="_blank" rel="noreferrer noopener">
+            <FaGithub />
+          </MobileSocialIcon>
+          <MobileSocialIcon href="https://linkedin.com" target="_blank" rel="noreferrer noopener">
+            <FaLinkedin />
+          </MobileSocialIcon>
+          <MobileSocialIcon href={Bio.insta} target="_blank" rel="noreferrer noopener">
+            <FaInstagram />
+          </MobileSocialIcon>
+        </MobileSocialIconsContainer>
+      </MobileMenuContainer>
     </Nav>
   );
 };
