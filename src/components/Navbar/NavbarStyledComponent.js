@@ -146,7 +146,9 @@ export const MobileMenuContainer = styled.div`
   top: 65px;
   left: 0;
   width: 100%;
-  background: #030014;
+  background: rgba(3, 0, 20, 0.77);
+  backdrop-filter: blur(30px);
+  border-top: 1px solid rgba(112, 66, 248, 0.2);
   padding: 20px;
   flex-direction: column;
   align-items: center;
