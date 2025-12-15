@@ -1049,7 +1049,7 @@ export const projects = [
     description:
       "Developed a maze-solving bot using Arduino Uno, L298N motor driver, and ultrasonic sensors, demonstrating technical skills in robotics and programming for autonomous navigation tasks.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/qso3ofr1cwv4uivlz67y",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765817919/huyf_dnxsh5.png",
     tags: [
       "Arduino",
       "Hardware",
