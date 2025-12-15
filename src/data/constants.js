@@ -148,7 +148,7 @@ export const skills = [
       {
         name: "Express Js",
         image:
-          "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/v1765817561/Express_ibbwwp.png",
       },
       {
         name: "Python",
@@ -275,7 +275,7 @@ export const skills = [
       {
         name: "Netlify",
         image:
-          "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/v1765817561/netlify_sue285.svg",
       },
       {
         name: "GitHub",
