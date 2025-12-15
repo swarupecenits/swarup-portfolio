@@ -643,7 +643,7 @@ export const projects = [
     ],
     category: "Mobile app",
     github: "https://github.com/swarupecenits/Zest-India.git",
-    webapp: "https://drive.google.com/file/d/1M9dGxt9UK6jB4o5pXIoYGmktZGEqIgQL/view?usp=sharing",
+    webapp: "",
   },
   {
     id: 7,
