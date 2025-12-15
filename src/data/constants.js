@@ -629,6 +629,23 @@ export const projects = [
     webapp: "https://drive.google.com/file/d/1M9dGxt9UK6jB4o5pXIoYGmktZGEqIgQL/view?usp=sharing",
   },
   {
+    id: 93,
+    title: "Zest-India App",
+    date: "Dec 2025",
+    description:
+      "A React Native food delivery app built with Expo and Appwrite, featuring seamless ordering, real-time tracking, and personalized dining recommendations.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765813189/Gemini_Generated_Image_3a20p43a20p43a20_ac6k7g.png",
+    tags: [
+      "ReactNative",
+      "Expo",
+      "Appwrite",
+    ],
+    category: "Mobile app",
+    github: "https://github.com/swarupecenits/Zest-India.git",
+    webapp: "https://drive.google.com/file/d/1M9dGxt9UK6jB4o5pXIoYGmktZGEqIgQL/view?usp=sharing",
+  },
+  {
     id: 7,
     title: "Tecnoesis-2024 Website",
     date: "Jan 2024",

@@ -30,13 +30,15 @@ const Card = styled.div`
     flex-direction: column;
     gap: 14px;
     transition: all 0.5s ease-in-out;
-    &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 0 30px rgba(112, 66, 248, 0.5);
-        filter: brightness(1.1);
-    }
-    &:hover ${Button} {
-        display: block;
+    @media (min-width: 769px) {
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(112, 66, 248, 0.5);
+            filter: brightness(1.1);
+        }
+        &:hover ${Button} {
+            display: block;
+        }
     }
 `
 
