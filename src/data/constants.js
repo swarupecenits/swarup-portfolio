@@ -334,7 +334,7 @@ export const skills = [
 export const experiences = [
   {
     id: 10,
-    img: "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ektelhu38eellrglnkuv",
+    img: "https://res.cloudinary.com/dagggqd6g/image/upload/v1765819007/microsoft-logo-microsoft-icon-transparent-free-png_shxjdw.webp",
     role: "SWE Intern",
     company: "Microsoft India",
     date: "May 2025 - July 2025",
@@ -370,7 +370,7 @@ export const experiences = [
   },
   {
     id: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJEsLucn6b9xPwccsc6dyYNBBCfpJ8-tVMUQ&s",
+    img: "https://res.cloudinary.com/dagggqd6g/image/upload/v1765819269/images_yt9ce5.png",
     role: "Amazon Summer School 2024",
     company: "Amazon",
     date: "July 2024 - Aug 2024",
@@ -387,7 +387,7 @@ export const experiences = [
   },
   {
     id: 5,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaHCaJMhFz0p9KjJqOBcFfELj8ZEK5J2_WA&usqp=CAU",
+    img: "https://res.cloudinary.com/dagggqd6g/image/upload/v1765819336/Indian_Space_Research_Organisation_Logo.svg_y3bodx.png",
     role: "ISRO Robotics Challenge-URSC 2024 (IRoC-U2024)",
     company: "ISRO",
     date: "Nov 2023 - Present",
