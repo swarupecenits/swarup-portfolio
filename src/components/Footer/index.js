@@ -3,8 +3,9 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Youtubeicon from '@mui/icons-material/YouTube';
+import RedditIcon from '@mui/icons-material/Reddit';
 import { Bio } from '../../data/constants';
-import { CloseFullscreen, CloseSharp, CloseTwoTone } from '@mui/icons-material';
+
 
 
 
@@ -101,13 +102,13 @@ function Footer() {
         </Nav>
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.facebook} target="display"><FacebookIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.twitter} target="display"><CloseTwoTone /></SocialMediaIcon>
+          <SocialMediaIcon href={Bio.reddit} target="display"><RedditIcon /></SocialMediaIcon>
           <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
           <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
           <SocialMediaIcon href={Bio.youtube} target="display"><Youtubeicon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2023 Copyright-All Rights Reserved to Swarup Chanda.
+          &copy; 2025 Copyright-All Rights Reserved to Swarup Chanda.
         </Copyright>
 
       </FooterWrapper>

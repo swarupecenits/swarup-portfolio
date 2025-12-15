@@ -15,7 +15,7 @@ export const Bio = {
   resume:
     "https://drive.google.com/file/d/1WhryeEsULP-3q6lZXpleW26c0jZbB4tz/view",
   linkedin: "https://www.linkedin.com/in/swarup-chanda-23053724a/",
-  twitter: "https://twitter.com/_swarup_chanda",
+  reddit: "https://www.reddit.com/user/Round-Moose970/",
   insta: "https://www.instagram.com/this_is_swarup_/",
   facebook: "https://www.facebook.com/swarup.chanda.984?mibextid=ZbWKwL",
   youtube: "https://www.youtube.com/channel/UCDuvuuT8Rtgw1JPz84APl5A",
