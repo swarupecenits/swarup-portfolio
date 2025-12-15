@@ -115,6 +115,8 @@ const Projects = ({ openModal, setOpenModal }) => {
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
+            loop={true}
+            loopAdditionalSlides={2}
             autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
             modules={[Pagination, Autoplay]}
             style={{ width: "100%", padding: "20px" }}

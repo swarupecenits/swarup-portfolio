@@ -76,7 +76,7 @@ export const skills = [
       },
     ],
   },
-  
+
   {
     title: "Language",
     skills: [
@@ -135,7 +135,7 @@ export const skills = [
         image:
           "https://playwright.dev/img/playwright-logo.svg",
       },
-      
+
     ],
   },
   {
@@ -200,7 +200,7 @@ export const skills = [
         image:
           "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsoft_Azure?resMode=sharp2&op_usm=1.5,0.65,15,0&qlt=100&fmt=png-alpha",
       },
-      
+
     ],
   },
   {
@@ -246,7 +246,7 @@ export const skills = [
         image:
           "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/jrnkmzub85xzm3fki129",
       },
-      
+
     ],
   },
   {
@@ -499,9 +499,9 @@ export const education = [
 ];
 
 export const projects = [
-  
 
-  
+
+
   {
     id: 9,
     title: "Space Rover",
@@ -538,7 +538,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/Spidy-The-Spider-Robot.git",
     webapp: "https://youtu.be/MOtOSJDkom8?si=WjYqGAIusp_0Lcip",
   },
-    {
+  {
     id: 2,
     title: "Bionic Robotic Hand",
     date: "Nov 2025",
@@ -556,7 +556,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/Bionic-Hand.git",
     webapp: "",
   },
-    {
+  {
     id: 2,
     title: "17-DOF Humanoid Robot",
     date: "Sep 2025",
@@ -793,7 +793,7 @@ export const projects = [
     webapp: "https://krypto-pi.vercel.app/",
   },
   {
-    id:19,
+    id: 19,
     title: "N.E.R.D.S Robotics Club Website",
     date: "Oct 2024",
     description:
@@ -827,7 +827,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/Chat-Application.git",
     webapp: "https://github.com/swarupecenits/Chat-Application.git",
   },
-  
+
   {
     id: 9,
     title: "AI Summarizer Website",
@@ -969,7 +969,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/News-app.git",
     webapp: "https://news-app-eta-orcin.vercel.app/",
   },
-  
+
 
 
   {
@@ -1006,7 +1006,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/Sef-Balanced-Bot.git",
     webapp: "",
   },
-    {
+  {
     id: 2,
     title: "Blood Flow Monitoring System for Kidney Dialysis Machine",
     date: "May 2024",
@@ -1023,6 +1023,25 @@ export const projects = [
     category: "robotics",
     github: "https://github.com/swarupecenits/Dialysis-Machine.git",
     webapp: "",
+  },
+  
+
+  {
+    id: 2,
+    title: "Maze-Solver-Bot",
+    date: "Jan 2024",
+    description:
+      "Developed a maze-solving bot using Arduino Uno, L298N motor driver, and ultrasonic sensors, demonstrating technical skills in robotics and programming for autonomous navigation tasks.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765817919/huyf_dnxsh5.png",
+    tags: [
+      "Arduino",
+      "Hardware",
+      "Bluetooth Module",
+      "Ultrasonic Sensors",
+    ],
+    category: "robotics",
+    github: "https://github.com/swarupecenits/Maze_solver.git",
   },
   {
     id: 82,
@@ -1042,24 +1061,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/NoteNestApp.git",
     webapp: "https://drive.google.com/file/d/1vOqY54U4xbd6byMZ49EO69x9I7sK9AqK/view?usp=sharing",
   },
-  {
-    id: 2,
-    title: "Maze-Solver-Bot",
-    date: "Jan 2024",
-    description:
-      "Developed a maze-solving bot using Arduino Uno, L298N motor driver, and ultrasonic sensors, demonstrating technical skills in robotics and programming for autonomous navigation tasks.",
-    image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765817919/huyf_dnxsh5.png",
-    tags: [
-      "Arduino",
-      "Hardware",
-      "Bluetooth Module",
-      "Ultrasonic Sensors",
-    ],
-    category: "arduino",
-    github: "https://github.com/swarupecenits/Maze_solver.git",
-  },
-  
+
 ];
 
 export const TimeLineData = [
