@@ -73,8 +73,10 @@ export const ToggleButton = styled.div`
     background: rgba(112, 66, 248, 0.2);
     `
     }
-    &:hover {
-        background: rgba(112, 66, 248, 0.15);
+    @media (min-width: 769px) {
+        &:hover {
+            background: rgba(112, 66, 248, 0.15);
+        }
     }
     @media (max-width: 768px) {
         padding: 6px 8px;

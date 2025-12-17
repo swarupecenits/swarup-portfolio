@@ -113,7 +113,7 @@ const Navbar = () => {
           <MobileSocialIcon href={Bio.github} target="_blank" rel="noreferrer noopener">
             <FaGithub />
           </MobileSocialIcon>
-          <MobileSocialIcon href="https://linkedin.com" target="_blank" rel="noreferrer noopener">
+          <MobileSocialIcon href={Bio.linkedin} target="_blank" rel="noreferrer noopener">
             <FaLinkedin />
           </MobileSocialIcon>
           <MobileSocialIcon href={Bio.insta} target="_blank" rel="noreferrer noopener">

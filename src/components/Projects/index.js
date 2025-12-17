@@ -97,17 +97,17 @@ const Projects = ({ openModal, setOpenModal }) => {
             </ToggleButton>
           )}
           <Divider />
-          {toggle === "research" ? (
+          {toggle === "Mobile app" ? (
             <ToggleButton
               active
-              value="research"
-              onClick={() => setToggle("research")}
+              value="Mobile app"
+              onClick={() => setToggle("Mobile app")}
             >
-              Research
+              App
             </ToggleButton>
           ) : (
-            <ToggleButton value="research" onClick={() => setToggle("research")}>
-              Research
+            <ToggleButton value="Mobile app" onClick={() => setToggle("Mobile app")}>
+              App
             </ToggleButton>
           )}
         </ToggleButtonGroup>
@@ -115,6 +115,8 @@ const Projects = ({ openModal, setOpenModal }) => {
           <Swiper
             spaceBetween={30}
             slidesPerView={1}
+            loop={true}
+            loopAdditionalSlides={2}
             autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
             modules={[Pagination, Autoplay]}
             style={{ width: "100%", padding: "20px" }}

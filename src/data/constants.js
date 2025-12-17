@@ -15,7 +15,7 @@ export const Bio = {
   resume:
     "https://drive.google.com/file/d/1WhryeEsULP-3q6lZXpleW26c0jZbB4tz/view",
   linkedin: "https://www.linkedin.com/in/swarup-chanda-23053724a/",
-  twitter: "https://twitter.com/_swarup_chanda",
+  reddit: "https://www.reddit.com/user/Round-Moose970/",
   insta: "https://www.instagram.com/this_is_swarup_/",
   facebook: "https://www.facebook.com/swarup.chanda.984?mibextid=ZbWKwL",
   youtube: "https://www.youtube.com/channel/UCDuvuuT8Rtgw1JPz84APl5A",
@@ -76,7 +76,7 @@ export const skills = [
       },
     ],
   },
-  
+
   {
     title: "Language",
     skills: [
@@ -135,7 +135,7 @@ export const skills = [
         image:
           "https://playwright.dev/img/playwright-logo.svg",
       },
-      
+
     ],
   },
   {
@@ -148,7 +148,7 @@ export const skills = [
       {
         name: "Express Js",
         image:
-          "https://adware-technologies.s3.amazonaws.com/uploads/technology/thumbnail/20/express-js.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/v1765817561/Express_ibbwwp.png",
       },
       {
         name: "Python",
@@ -200,7 +200,7 @@ export const skills = [
         image:
           "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/Microsoft_Azure?resMode=sharp2&op_usm=1.5,0.65,15,0&qlt=100&fmt=png-alpha",
       },
-      
+
     ],
   },
   {
@@ -246,7 +246,7 @@ export const skills = [
         image:
           "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/jrnkmzub85xzm3fki129",
       },
-      
+
     ],
   },
   {
@@ -275,7 +275,7 @@ export const skills = [
       {
         name: "Netlify",
         image:
-          "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/v1765817561/netlify_sue285.svg",
       },
       {
         name: "GitHub",
@@ -334,7 +334,7 @@ export const skills = [
 export const experiences = [
   {
     id: 10,
-    img: "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ektelhu38eellrglnkuv",
+    img: "https://res.cloudinary.com/dagggqd6g/image/upload/v1765819007/microsoft-logo-microsoft-icon-transparent-free-png_shxjdw.webp",
     role: "SWE Intern",
     company: "Microsoft India",
     date: "May 2025 - July 2025",
@@ -370,7 +370,7 @@ export const experiences = [
   },
   {
     id: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJEsLucn6b9xPwccsc6dyYNBBCfpJ8-tVMUQ&s",
+    img: "https://res.cloudinary.com/dagggqd6g/image/upload/v1765819269/images_yt9ce5.png",
     role: "Amazon Summer School 2024",
     company: "Amazon",
     date: "July 2024 - Aug 2024",
@@ -387,7 +387,7 @@ export const experiences = [
   },
   {
     id: 5,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtaHCaJMhFz0p9KjJqOBcFfELj8ZEK5J2_WA&usqp=CAU",
+    img: "https://res.cloudinary.com/dagggqd6g/image/upload/v1765819336/Indian_Space_Research_Organisation_Logo.svg_y3bodx.png",
     role: "ISRO Robotics Challenge-URSC 2024 (IRoC-U2024)",
     company: "ISRO",
     date: "Nov 2023 - Present",
@@ -499,9 +499,9 @@ export const education = [
 ];
 
 export const projects = [
-  
 
-  
+
+
   {
     id: 9,
     title: "Space Rover",
@@ -538,7 +538,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/Spidy-The-Spider-Robot.git",
     webapp: "https://youtu.be/MOtOSJDkom8?si=WjYqGAIusp_0Lcip",
   },
-    {
+  {
     id: 2,
     title: "Bionic Robotic Hand",
     date: "Nov 2025",
@@ -556,7 +556,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/Bionic-Hand.git",
     webapp: "",
   },
-    {
+  {
     id: 2,
     title: "17-DOF Humanoid Robot",
     date: "Sep 2025",
@@ -627,6 +627,23 @@ export const projects = [
     category: "Mobile app",
     github: "https://github.com/swarupecenits/Movie-App.git",
     webapp: "https://drive.google.com/file/d/1M9dGxt9UK6jB4o5pXIoYGmktZGEqIgQL/view?usp=sharing",
+  },
+  {
+    id: 93,
+    title: "Zest-India App",
+    date: "Dec 2025",
+    description:
+      "A React Native food delivery app built with Expo and Appwrite, featuring seamless ordering, real-time tracking, and personalized dining recommendations.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765813189/Gemini_Generated_Image_3a20p43a20p43a20_ac6k7g.png",
+    tags: [
+      "ReactNative",
+      "Expo",
+      "Appwrite",
+    ],
+    category: "Mobile app",
+    github: "https://github.com/swarupecenits/Zest-India.git",
+    webapp: "",
   },
   {
     id: 7,
@@ -776,7 +793,7 @@ export const projects = [
     webapp: "https://krypto-pi.vercel.app/",
   },
   {
-    id:19,
+    id: 19,
     title: "N.E.R.D.S Robotics Club Website",
     date: "Oct 2024",
     description:
@@ -810,7 +827,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/Chat-Application.git",
     webapp: "https://github.com/swarupecenits/Chat-Application.git",
   },
-  
+
   {
     id: 9,
     title: "AI Summarizer Website",
@@ -952,7 +969,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/News-app.git",
     webapp: "https://news-app-eta-orcin.vercel.app/",
   },
-  
+
 
 
   {
@@ -989,7 +1006,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/Sef-Balanced-Bot.git",
     webapp: "",
   },
-    {
+  {
     id: 2,
     title: "Blood Flow Monitoring System for Kidney Dialysis Machine",
     date: "May 2024",
@@ -1006,6 +1023,25 @@ export const projects = [
     category: "robotics",
     github: "https://github.com/swarupecenits/Dialysis-Machine.git",
     webapp: "",
+  },
+  
+
+  {
+    id: 2,
+    title: "Maze-Solver-Bot",
+    date: "Jan 2024",
+    description:
+      "Developed a maze-solving bot using Arduino Uno, L298N motor driver, and ultrasonic sensors, demonstrating technical skills in robotics and programming for autonomous navigation tasks.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765817919/huyf_dnxsh5.png",
+    tags: [
+      "Arduino",
+      "Hardware",
+      "Bluetooth Module",
+      "Ultrasonic Sensors",
+    ],
+    category: "robotics",
+    github: "https://github.com/swarupecenits/Maze_solver.git",
   },
   {
     id: 82,
@@ -1025,24 +1061,7 @@ export const projects = [
     github: "https://github.com/swarupecenits/NoteNestApp.git",
     webapp: "https://drive.google.com/file/d/1vOqY54U4xbd6byMZ49EO69x9I7sK9AqK/view?usp=sharing",
   },
-  {
-    id: 2,
-    title: "Maze-Solver-Bot",
-    date: "Jan 2024",
-    description:
-      "Developed a maze-solving bot using Arduino Uno, L298N motor driver, and ultrasonic sensors, demonstrating technical skills in robotics and programming for autonomous navigation tasks.",
-    image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/qso3ofr1cwv4uivlz67y",
-    tags: [
-      "Arduino",
-      "Hardware",
-      "Bluetooth Module",
-      "Ultrasonic Sensors",
-    ],
-    category: "arduino",
-    github: "https://github.com/swarupecenits/Maze_solver.git",
-  },
-  
+
 ];
 
 export const TimeLineData = [
