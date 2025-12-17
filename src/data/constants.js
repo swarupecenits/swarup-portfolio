@@ -630,12 +630,12 @@ export const projects = [
   },
   {
     id: 93,
-    title: "Zest-India App",
+    title: "Zesty App",
     date: "Dec 2025",
     description:
       "A React Native food delivery app built with Expo and Appwrite, featuring seamless ordering, real-time tracking, and personalized dining recommendations.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1765813189/Gemini_Generated_Image_3a20p43a20p43a20_ac6k7g.png",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/v1765962789/WhatsApp_Image_2025-12-17_at_14.42.50_cef1b10f_h6uec0.jpg",
     tags: [
       "ReactNative",
       "Expo",
