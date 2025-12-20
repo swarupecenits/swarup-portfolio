@@ -706,6 +706,24 @@ export const projects = [
   },
   {
     id: 22,
+    title: "Lip Reading Model",
+    date: "May 2024",
+    description:
+      "This Streamlit app is an Image Classifier that uses a pre-trained neural network model to classify uploaded images into various categories. The app provides a user-friendly interface for users to upload an image, and the model predicts the class of the image along with the corresponding accuracy.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/fftu4ohfilwnarilwkny",
+    tags: [
+      "TensorFlow",
+      "Keras",
+      "Neural Network",
+      "LipNet",
+    ],
+    category: "machine_learning",
+    github: "https://github.com/swarupecenits/Lip-Reading-Model.git",
+    webapp: "",
+  },
+  {
+    id: 22,
     title: "Image Classification Model",
     date: "May 2024",
     description:
