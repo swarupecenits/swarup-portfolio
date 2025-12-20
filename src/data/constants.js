@@ -709,9 +709,9 @@ export const projects = [
     title: "Lip Reading Model",
     date: "May 2024",
     description:
-      "This Streamlit app is an Image Classifier that uses a pre-trained neural network model to classify uploaded images into various categories. The app provides a user-friendly interface for users to upload an image, and the model predicts the class of the image along with the corresponding accuracy.",
+      "LipSense is a deep learning model that performs automatic lip reading from video sequences. It combines 3D Convolutional Neural Networks (CNNs) to extract spatiotemporal features from the mouth region with Bidirectional LSTMs for sequence modeling, ultimately predicting spoken text using Connectionist Temporal Classification (CTC) loss for alignment.",
     image:
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/fftu4ohfilwnarilwkny",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/v1766257105/WhatsApp_Image_2025-12-21_at_12.24.05_AM_dlpbg8.jpg",
     tags: [
       "TensorFlow",
       "Keras",
