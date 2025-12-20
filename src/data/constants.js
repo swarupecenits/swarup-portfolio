@@ -706,6 +706,24 @@ export const projects = [
   },
   {
     id: 22,
+    title: "Lip Reading Model",
+    date: "May 2024",
+    description:
+      "LipSense is a deep learning model that performs automatic lip reading from video sequences. It combines 3D Convolutional Neural Networks (CNNs) to extract spatiotemporal features from the mouth region with Bidirectional LSTMs for sequence modeling, ultimately predicting spoken text using Connectionist Temporal Classification (CTC) loss for alignment.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/v1766257105/WhatsApp_Image_2025-12-21_at_12.24.05_AM_dlpbg8.jpg",
+    tags: [
+      "TensorFlow",
+      "Keras",
+      "Neural Network",
+      "LipNet",
+    ],
+    category: "machine_learning",
+    github: "https://github.com/swarupecenits/Lip-Reading-Model.git",
+    webapp: "",
+  },
+  {
+    id: 22,
     title: "Image Classification Model",
     date: "May 2024",
     description:
