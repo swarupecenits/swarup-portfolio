@@ -287,8 +287,20 @@ const AnimatedBackground = ({ darkMode }) => {
 
     const kbd = splineApp.findObjectByName("keyboard");
     let teardownKbd;
+    let rotateKbd;
 
     if (kbd) {
+      rotateKbd = gsap.to(kbd.rotation, {
+        y: Math.PI * 2 + kbd.rotation.y,
+        duration: 10,
+        repeat: -1,
+        yoyo: true,
+        yoyoEase: true,
+        ease: "back.inOut",
+        delay: 2.5,
+        paused: true,
+      });
+
       teardownKbd = gsap.fromTo(
         kbd.rotation,
         { y: 0, x: -Math.PI, z: 0 },
@@ -305,6 +317,16 @@ const AnimatedBackground = ({ darkMode }) => {
     }
 
     const manage = async () => {
+
+      if (activeSection === "hero") {
+        rotateKbd?.restart();
+        teardownKbd?.pause();
+      } else if (activeSection === "contact") {
+        rotateKbd?.pause();
+      } else {
+        rotateKbd?.pause();
+        teardownKbd?.pause();
+      }
 
       if (activeSection === "projects") {
         await sleep(300);
@@ -328,6 +350,7 @@ const AnimatedBackground = ({ darkMode }) => {
     manage();
 
     return () => {
+      rotateKbd?.kill();
       teardownKbd?.kill();
     };
   }, [activeSection, splineApp]);
