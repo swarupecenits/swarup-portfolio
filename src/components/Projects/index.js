@@ -134,7 +134,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             modules={[Pagination, Autoplay]}
             style={{ width: "100%", padding: "20px" }}
           >
-            {visibleProjects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
               <SwiperSlide key={index}>
                 <ProjectCard
                   project={project}
@@ -156,7 +156,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             ))}
           </CardContainer>
         )}
-        {shouldShowMoreButton && (
+        {!isMobile && shouldShowMoreButton && (
           <ShowMoreButton onClick={() => setShowAll((prev) => !prev)}>
             {showAll ? "Show Less" : "Show More"}
           </ShowMoreButton>

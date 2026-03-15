@@ -83,7 +83,7 @@ const HeroSection = () => {
                   </OutlineButton>
                   
                   <div style={{ display: 'flex', alignItems: 'center', height: '100%', gap: '0.5rem' }}>
-                    <IconButton href={Bio.instagram} target="_blank" rel="noreferrer noopener">
+                    <IconButton href={Bio.insta} target="_blank" rel="noreferrer noopener">
                       <SiInstagram size={20} />
                     </IconButton>
                     <IconButton href={Bio.github} target="_blank" rel="noreferrer noopener" className="cursor-can-hover">

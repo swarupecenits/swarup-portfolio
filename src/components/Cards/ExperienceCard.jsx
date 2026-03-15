@@ -114,27 +114,27 @@ const ExperienceCard = ({ experience, index = 0 }) => {
         display: "flex",
         flexDirection: "column",
         gap: "12px",
-        background: "rgba(15, 23, 42, 0.8)",
+        background: "linear-gradient(135deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18) 100%)",
         backdropFilter: "blur(32px)",
         color: "#fff",
-        boxShadow: "0 0 20px rgba(0, 0, 0, 0.3)",
-        border: "1px solid rgba(59, 130, 246, 0.2)",
-        borderRadius: "6px",
+        boxShadow: "0 0 20px rgba(59, 130, 246, 0.36)",
+        border: "1.5px solid rgba(59, 130, 246, 0.36)",
+        borderRadius: "16px",
         position: "relative",
         overflow: "hidden",
         transition: "all 0.3s ease-in-out",
         pointerEvents: "auto",
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.boxShadow = "0 0 30px rgba(59, 130, 246, 0.3)";
-        e.currentTarget.style.border = "1px solid rgba(59, 130, 246, 0.5)";
-        e.currentTarget.style.background = "rgba(25, 25, 25, 0.8)";
+        e.currentTarget.style.boxShadow = "0 0 30px rgba(59, 130, 246, 0.5)";
+        e.currentTarget.style.border = "1.5px solid rgba(59, 130, 246, 0.6)";
+        e.currentTarget.style.background = "linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42) 100%)";
         e.currentTarget.style.transform = "translateY(-5px)";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.boxShadow = "0 0 20px rgba(0, 0, 0, 0.3)";
-        e.currentTarget.style.border = "1px solid rgba(59, 130, 246, 0.2)";
-        e.currentTarget.style.background = "rgba(15, 15, 15, 0.6)";
+        e.currentTarget.style.boxShadow = "0 0 20px rgba(59, 130, 246, 0.36)";
+        e.currentTarget.style.border = "1.5px solid rgba(59, 130, 246, 0.36)";
+        e.currentTarget.style.background = "linear-gradient(135deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18) 100%)";
         e.currentTarget.style.transform = "translateY(0)";
       }}
       contentArrowStyle={{

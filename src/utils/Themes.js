@@ -1,12 +1,12 @@
 export const darkTheme = {
     bg: "#050505", // Deep, near-black background matching the 3D aesthetic
     bgLight: "#111111", // Slightly lighter for subtle contrast
-    primary: "#a855f7", // A vibrant purple/magenta accent
+    primary: "#3b82f6", // A vibrant blue accent
     text_primary: "#fafafa",
     text_secondary: "#a1a1aa",
-    card: "rgba(15, 15, 15, 0.6)", // Dark, semi-transparent layout
-    card_light: "rgba(25, 25, 25, 0.8)", // For hovered items or inners
-    button: "#a855f7",
+    card: "rgba(10, 15, 30, 0.95)", // Blue-tinted, less transparent layout
+    card_light: "rgba(15, 23, 42, 0.98)", // For hovered items or inners
+    button: "#3b82f6",
     white: "#FFFFFF",
     black: "#000000",
     skillcard_bg: "rgba(20, 20, 20, 0.7)", 

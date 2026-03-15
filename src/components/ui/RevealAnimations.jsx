@@ -30,7 +30,7 @@ export const BlurIn = ({
 export const BoxReveal = ({
   children,
   width = "fit-content",
-  boxColor = "#a855f7",
+  boxColor = "#3b82f6",
   duration = 0.5,
   delay = 0,
   once = true,

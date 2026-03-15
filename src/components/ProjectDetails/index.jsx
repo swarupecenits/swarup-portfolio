@@ -20,24 +20,25 @@ transition: all 0.5s ease;
 const Wrapper = styled.div`
 max-width: 800px;
 width: 100%;
-border-radius: 8px;
+border-radius: 16px;
 margin: 50px 12px;
 height: min-content;
-background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(32px);
+background: linear-gradient(135deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18) 100%);
+backdrop-filter: blur(32px);
 color: ${({ theme }) => theme.text_primary};
 padding: 20px;
 display: flex;
 flex-direction: column;
 position: relative;
-border: 1.5px solid #5f7bff;
-box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.05);
+border: 1.5px solid rgba(59, 130, 246, 0.36);
+box-shadow: 0 0 20px rgba(59, 130, 246, 0.36);
 transition: all 0.3s ease-in-out;
 `;
 
 const Title = styled.div`
   font-size: 28px;
   font-weight: 600;
-  background: linear-gradient(90deg, #5f7bff, #3ec8ff);
+  background: linear-gradient(90deg, #3b82f6, #3ec8ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -102,12 +103,12 @@ const Tags = styled.div`
 const Tag = styled.div`
     font-size: 14px;
     font-weight: 400;
-    color: #5f7bff;
+    color: #3b82f6;
     margin: 4px;
     padding: 4px 8px;
     border-radius: 8px;
     background-color: rgba(59, 130, 246, 0.1);
-    border: 0.5px solid #5f7bff;
+    border: 0.5px solid #3b82f6;
     @media only screen and (max-width: 600px) {
         font-size: 12px;
     }
@@ -169,15 +170,15 @@ const Button = styled.a`
     color: #ffffff;
     padding: 12px 16px;
     border-radius: 8px;
-    background-color: #5f7bff;
-    border: 1.5px solid #5f7bff;
+    background-color: #3b82f6;
+    border: 1.5px solid #3b82f6;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.5s ease;
     box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
     ${({ dull, theme }) => dull && `
         background-color: rgba(59, 130, 246, 0.1);
-        color: #5f7bff;
+        color: #3b82f6;
         &:hover {
             background-color: rgba(59, 130, 246, 0.2);
             color: #ffffff;

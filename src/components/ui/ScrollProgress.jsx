@@ -13,7 +13,7 @@ export default function ScrollProgress({ className }) {
             className={`fixed top-0 left-0 right-0 h-1 origin-left z-50 ${className || ""}`}
             style={{ 
               scaleX, 
-              backgroundColor: '#a855f7', // Using the primary theme color
+              backgroundColor: '#3b82f6', // Using the primary theme color
               zIndex: 9999 
             }}
         />

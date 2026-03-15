@@ -64,7 +64,7 @@ const SkillsContainer = styled.div`
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
-  background: linear-gradient(135deg, rgba(3, 7, 18, 0.92) 0%, rgba(3, 7, 18) 100%);
+  background: linear-gradient(135deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18) 100%);
   border: 1.5px solid rgba(59, 130, 246, 0.36);
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.36);
   border-radius: 16px;

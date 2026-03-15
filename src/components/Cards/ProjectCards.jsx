@@ -19,12 +19,12 @@ const Button = styled.button`
 const Card = styled.div`
     width: 330px;
     height: 490px;
-    background: ${({ theme }) => theme.card};
+    background: linear-gradient(135deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18) 100%);
     backdrop-filter: blur(32px);
     cursor: pointer;
-    border-radius: 10px;
-    border: 1px solid rgba(59, 130, 246, 0.2); /* using primary theme color roughly */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    border: 1.5px solid rgba(59, 130, 246, 0.36);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.36);
     overflow: hidden;
     padding: 26px 20px;
     display: flex;
@@ -32,6 +32,7 @@ const Card = styled.div`
     gap: 14px;
     transition: all 0.5s ease-in-out;
     position: relative;
+    pointer-events: auto;
 
     &::before {
         content: "";
@@ -46,9 +47,9 @@ const Card = styled.div`
     @media (min-width: 769px) {
         &:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
-            border: 1px solid rgba(59, 130, 246, 0.5);
-            background: ${({ theme }) => theme.card_light};
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+            border: 1.5px solid rgba(59, 130, 246, 0.6);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42) 100%);
             filter: brightness(1.05);
         }
 
