@@ -8,6 +8,7 @@ import {
   ToggleButton,
   Divider,
   CardContainer,
+  ShowMoreButton,
 } from "./ProjectsStyle";
 import ProjectCard from "../Cards/ProjectCards";
 import { projects } from "../../data/constants";
@@ -16,13 +17,21 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 
 const Projects = ({ openModal, setOpenModal }) => {
+  const INITIAL_VISIBLE_CARDS = 6;
   const [toggle, setToggle] = useState("all");
+  const [showAll, setShowAll] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const filteredProjects =
     toggle === "all"
       ? projects
       : projects.filter((item) => item.category === toggle);
+
+  const visibleProjects = showAll
+    ? filteredProjects
+    : filteredProjects.slice(0, INITIAL_VISIBLE_CARDS);
+
+  const shouldShowMoreButton = filteredProjects.length > INITIAL_VISIBLE_CARDS;
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,6 +41,10 @@ const Projects = ({ openModal, setOpenModal }) => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  useEffect(() => {
+    setShowAll(false);
+  }, [toggle]);
 
   return (
     <Container id="projects">
@@ -121,7 +134,7 @@ const Projects = ({ openModal, setOpenModal }) => {
             modules={[Pagination, Autoplay]}
             style={{ width: "100%", padding: "20px" }}
           >
-            {filteredProjects.map((project, index) => (
+            {visibleProjects.map((project, index) => (
               <SwiperSlide key={index}>
                 <ProjectCard
                   project={project}
@@ -133,7 +146,7 @@ const Projects = ({ openModal, setOpenModal }) => {
           </Swiper>
         ) : (
           <CardContainer>
-            {filteredProjects.map((project, index) => (
+            {visibleProjects.map((project, index) => (
               <ProjectCard
                 key={index}
                 project={project}
@@ -142,6 +155,11 @@ const Projects = ({ openModal, setOpenModal }) => {
               />
             ))}
           </CardContainer>
+        )}
+        {shouldShowMoreButton && (
+          <ShowMoreButton onClick={() => setShowAll((prev) => !prev)}>
+            {showAll ? "Show Less" : "Show More"}
+          </ShowMoreButton>
         )}
       </Wrapper>
     </Container>

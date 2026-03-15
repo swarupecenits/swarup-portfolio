@@ -107,6 +107,28 @@ export const CardContainer = styled.div`
     // }
 `;
 
+export const ShowMoreButton = styled.button`
+    margin-top: 8px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 1px solid #7042f8;
+    background: rgba(112, 66, 248, 0.14);
+    color: ${({ theme }) => theme.text_primary};
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:hover {
+        background: rgba(112, 66, 248, 0.24);
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+`;
+
 /* Center Swiper slides content on small viewports so cards appear centered */
 export const SwiperMobileCenter = styled.div`
     @media (max-width: 768px) {
