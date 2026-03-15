@@ -3,12 +3,13 @@ import styled from "styled-components";
 
 export const Nav = styled.div`
   width: 100%;
-  height: 65px;
+  height: 72px;
   position: fixed;
   top: 0;
-  background: rgba(3, 0, 20, 0.27);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(42, 14, 97, 0.3);
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.6));
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+  box-shadow: 0 10px 28px rgba(5, 5, 5, 0.45);
   z-index: 50;
   padding: 0 40px;
 
@@ -76,8 +77,8 @@ export const NavLinksWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   height: auto;
-  border: 1px solid rgba(112, 66, 248, 0.38);
-  background: rgba(3, 0, 20, 0.37);
+  border: 1px solid rgba(168, 85, 247, 0.36);
+  background: rgba(15, 15, 15, 0.54);
   border-radius: 50px;
   padding: 10px 20px;
   color: #c9c9d7;
@@ -90,9 +91,27 @@ export const NavLink = styled.a`
   font-weight: 500;
   font-size: 15px;
   transition: all 0.2s ease-in-out;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #5f7bff, #3ec8ff);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+  }
 
   &:hover {
-    color: rgb(112, 66, 248);
+    color: #8eb6ff;
+
+    &::after {
+      transform: scaleX(1);
+    }
   }
 `;
 
@@ -116,7 +135,7 @@ export const SocialIcon = styled.a`
   cursor: pointer;
 
   &:hover {
-    color: rgb(112, 66, 248);
+    color: rgb(168, 85, 247);
     transform: scale(1.1);
   }
 
@@ -146,9 +165,9 @@ export const MobileMenuContainer = styled.div`
   top: 65px;
   left: 0;
   width: 100%;
-  background: rgba(3, 0, 20, 0.77);
+  background: rgba(5, 5, 5, 0.77);
   backdrop-filter: blur(30px);
-  border-top: 1px solid rgba(112, 66, 248, 0.2);
+  border-top: 1px solid rgba(168, 85, 247, 0.2);
   padding: 20px;
   flex-direction: column;
   align-items: center;
@@ -178,7 +197,7 @@ export const MobileLink = styled.a`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: rgb(112, 66, 248);
+    color: rgb(168, 85, 247);
   }
 `;
 
@@ -200,7 +219,7 @@ export const MobileSocialIcon = styled.a`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: rgb(112, 66, 248);
+    color: rgb(168, 85, 247);
   }
 
   svg {

@@ -29,7 +29,7 @@ padding: 20px;
 display: flex;
 flex-direction: column;
 position: relative;
-border: 1.5px solid #7042f8;
+border: 1.5px solid #a855f7;
 box-shadow: 0 0 20px rgba(112, 66, 248, 0.3), inset 0 0 20px rgba(112, 66, 248, 0.05);
 transition: all 0.3s ease-in-out;
 `;
@@ -37,7 +37,7 @@ transition: all 0.3s ease-in-out;
 const Title = styled.div`
   font-size: 28px;
   font-weight: 600;
-  background: linear-gradient(90deg, #7042f8, #b8a9ff);
+  background: linear-gradient(90deg, #a855f7, #b8a9ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -102,12 +102,12 @@ const Tags = styled.div`
 const Tag = styled.div`
     font-size: 14px;
     font-weight: 400;
-    color: #7042f8;
+    color: #a855f7;
     margin: 4px;
     padding: 4px 8px;
     border-radius: 8px;
     background-color: rgba(112, 66, 248, 0.1);
-    border: 0.5px solid #7042f8;
+    border: 0.5px solid #a855f7;
     @media only screen and (max-width: 600px) {
         font-size: 12px;
     }
@@ -169,15 +169,15 @@ const Button = styled.a`
     color: #ffffff;
     padding: 12px 16px;
     border-radius: 8px;
-    background-color: #7042f8;
-    border: 1.5px solid #7042f8;
+    background-color: #a855f7;
+    border: 1.5px solid #a855f7;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.5s ease;
     box-shadow: 0 0 10px rgba(112, 66, 248, 0.3);
     ${({ dull, theme }) => dull && `
         background-color: rgba(112, 66, 248, 0.1);
-        color: #7042f8;
+        color: #a855f7;
         &:hover {
             background-color: rgba(112, 66, 248, 0.2);
             color: #ffffff;

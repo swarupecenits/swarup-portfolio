@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay } from "swiper/modules";
+import { TypographyH2, TypographyLead } from "../ui/Typography";
 
 const Container = styled.div`
   display: flex;
@@ -31,23 +32,21 @@ const Wrapper = styled.div`
   }
 `;
 
-export const Title = styled.div`
+export const Title = styled(TypographyH2)`
   font-size: 42px;
   text-align: center;
-  font-weight: 600;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
+  border-bottom: none; /* Override TypographyH2 border if any */
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 32px;
   }
 `;
 
-export const Desc = styled.div`
-  font-size: 18px;
+export const Desc = styled(TypographyLead)`
   text-align: center;
   max-width: 600px;
-  color: ${({ theme }) => theme.text_secondary};
   @media (max-width: 768px) {
     font-size: 16px;
   }

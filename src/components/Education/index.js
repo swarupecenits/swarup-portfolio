@@ -5,6 +5,7 @@ import { education} from '../../data/constants';
 import EducationCard from '../Cards/EducationCard';
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { TypographyH2, TypographyLead } from "../ui/Typography";
 
 const Container = styled.div`
 margin-top: 100px;
@@ -29,11 +30,11 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled.div`
+const Title = styled(TypographyH2)`
   font-size: 52px;
   text-align: center;
-  font-weight: 600;
   margin-top: 20px;
+  border-bottom: none;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
@@ -41,8 +42,7 @@ const Title = styled.div`
   }
 `;
 
-const Desc = styled.div`
-  font-size: 18px;
+const Desc = styled(TypographyLead)`
   text-align: center;
   font-weight: 600;
   color: ${({ theme }) => theme.text_secondary};

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { TypographyH2, TypographyLead } from "../ui/Typography";
 // import _default from '../../themes/default';
 
 export const Container = styled.div`
@@ -27,11 +28,11 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const Title = styled.div`
+export const Title = styled(TypographyH2)`
 font-size: 42px;
 text-align: center;
-font-weight: 600;
 margin-top: 20px;
+border-bottom: none;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
       margin-top: 12px;
@@ -39,8 +40,7 @@ margin-top: 20px;
   }
 `;
 
-export const Desc = styled.div`
-    font-size: 18px;
+export const Desc = styled(TypographyLead)`
     text-align: center;
     max-width: 600px;
     color: ${({ theme }) => theme.text_secondary};

@@ -3,6 +3,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Snackbar } from "@mui/material";
 import React, { Suspense, lazy } from "react";
+import { TypographyH2, TypographyLead } from "../ui/Typography";
 
 const Container = styled.div`
   display: flex;
@@ -55,12 +56,11 @@ const Wrapper = styled.div`
   gap: 12px;
 `;
 
-const Title = styled.div`
+const Title = styled(TypographyH2)`
   font-size: 42px;
   text-align: center;
-  font-weight: 600;
   margin-top: 20px;
-  
+  border-bottom: none;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
@@ -68,13 +68,7 @@ const Title = styled.div`
   }
 `;
 
-const Desc = styled.div`
-  font-size: 18px;
-  text-align: center;
-  max-width: 600px;
-  color: ${({ theme }) => theme.text_secondary};
-  @media (max-width: 768px) {
-    margin-top: 12px;
+const Desc = styled(TypographyLead)`
     font-size: 16px;
   }
 `;
@@ -234,7 +228,7 @@ const Contact = () => {
   };
 
   return (
-    <Container>
+    <Container id="contact">
       <Title>Contact</Title>
           <Desc>
             Feel free to reach out to me for any questions or opportunities!

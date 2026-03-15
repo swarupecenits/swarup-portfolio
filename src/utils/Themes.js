@@ -1,27 +1,29 @@
 export const darkTheme = {
-    bg: "#090917",
-    bgLight: "#1C1E27",
-    primary: "#ab20fd",
-    text_primary: "#F2F3F4",
-    text_secondary: "#b1b2b3",
-    card: "#171721",
-    card_light: "#090917",
-    button: "#6EACDA",
+    bg: "#050505", // Deep, near-black background matching the 3D aesthetic
+    bgLight: "#111111", // Slightly lighter for subtle contrast
+    primary: "#a855f7", // A vibrant purple/magenta accent
+    text_primary: "#fafafa",
+    text_secondary: "#a1a1aa",
+    card: "rgba(15, 15, 15, 0.6)", // Dark, semi-transparent layout
+    card_light: "rgba(25, 25, 25, 0.8)", // For hovered items or inners
+    button: "#a855f7",
     white: "#FFFFFF",
     black: "#000000",
-    skillcard_bg:"rgba(17, 25, 40, 0.83)",
-    exp_bg:"#1d1836",
-    tags:"#6EACDA",
+    skillcard_bg: "rgba(20, 20, 20, 0.7)", 
+    exp_bg: "rgba(25, 25, 25, 0.7)",
+    tags: "#d8b4fe", // Lighter purple for tags
 };
 
 export const lightTheme = {
-    bg: "#FFF3C7",
-    bgLight: "#f0f0f0",
-    primary: "#be1adb",
-    text_primary: "#111111",
-    text_secondary: "#48494a",
-    card: "#FFFFFF",
-    button: "#5c5b5b",
-    skillcard_bg:"#FEC7B4",
-    exp_bg:"#FEC7B4",
+  // Can be kept similar if they don't use it, but adapting slightly
+    bg: "#FAFAFA",
+    bgLight: "#F4F4F5",
+    primary: "#9333ea",
+    text_primary: "#18181b",
+    text_secondary: "#52525b",
+    card: "rgba(255, 255, 255, 0.8)",
+    button: "#9333ea",
+    skillcard_bg: "rgba(240, 240, 240, 0.7)",
+    exp_bg: "rgba(230, 230, 230, 0.7)",
+    tags: "#d8b4fe",
 };

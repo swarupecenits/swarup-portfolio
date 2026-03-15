@@ -19,23 +19,43 @@ const Button = styled.button`
 const Card = styled.div`
     width: 330px;
     height: 490px;
-    background: linear-gradient(135deg, #0f0a1f 0%, #1a0f2e 100%);
+    background: ${({ theme }) => theme.card};
+    backdrop-filter: blur(8px);
     cursor: pointer;
     border-radius: 10px;
-    border: 1.5px solid #7042f8;
-    box-shadow: 0 0 20px rgba(112, 66, 248, 0.3);
+    border: 1px solid rgba(168, 85, 247, 0.2); /* using primary theme color roughly */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     padding: 26px 20px;
     display: flex;
     flex-direction: column;
     gap: 14px;
     transition: all 0.5s ease-in-out;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at top right, rgba(168, 85, 247, 0.15), transparent 45%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+    }
+
     @media (min-width: 769px) {
         &:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(112, 66, 248, 0.5);
-            filter: brightness(1.1);
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+            border: 1px solid rgba(168, 85, 247, 0.5);
+            background: ${({ theme }) => theme.card_light};
+            filter: brightness(1.05);
         }
+
+        &:hover::before {
+            opacity: 1;
+        }
+
         &:hover ${Button} {
             display: block;
         }
@@ -48,6 +68,7 @@ const Image = styled.img`
     background-color: ${({ theme }) => theme.white};
     border-radius: 10px;
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
+    object-fit: cover;
 `
 
 const Tags = styled.div`
@@ -132,7 +153,7 @@ const ProjectCards = ({project,setOpenModal}) => {
             <Image src={project.image}/>
             <Tags>
                 {project.tags?.map((tag, index) => (
-                <Tag>{tag}</Tag>
+                <Tag key={`${tag}-${index}`}>{tag}</Tag>
                 ))}
             </Tags>
             <Details>
@@ -142,7 +163,7 @@ const ProjectCards = ({project,setOpenModal}) => {
             </Details>
             <Members>
                 {project.member?.map((member) => (
-                    <LazyProject src={member.img}/>
+                    <LazyProject key={member.img} src={member.img}/>
                 ))}
             </Members>
             {/* <Button>View Project</Button> */}

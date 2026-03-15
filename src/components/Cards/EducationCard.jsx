@@ -14,7 +14,7 @@ const Image = styled.img`
   width: 50px;
   border-radius: 10px;
   margin-top: 4px;
-  border: 2px solid #7042f8;
+  border: 2px solid #a855f7;
   box-shadow: 0 0 10px rgba(112, 66, 248, 0.4);
   transition: all 0.3s ease-in-out;
 
@@ -32,7 +32,7 @@ const Body = styled.div`
 const Name = styled.div`
   font-size: 18px;
   font-weight: 600px;
-  background: linear-gradient(90deg, #7042f8, #b8a9ff);
+  background: linear-gradient(90deg, #a855f7, #b8a9ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -62,7 +62,7 @@ const Date = styled.div`
 const Grade = styled.div`
   font-size: 14px;
   font-weight: 500;
-  color: #7042f8;
+  color: #a855f7;
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -98,25 +98,30 @@ const EducationCard = ({ education, index = 0 }) => {
         display: "flex",
         flexDirection: "column",
         gap: "12px",
-        background: "linear-gradient(135deg, #0f0a1f 0%, #1a0f2e 100%)",
+        background: "rgba(15, 15, 15, 0.6)",
+        backdropFilter: "blur(8px)",
         color: "#fff",
-        boxShadow: "0 0 20px rgba(112, 66, 248, 0.3), inset 0 0 20px rgba(112, 66, 248, 0.05)",
-        border: "1.5px solid #7042f8",
+        boxShadow: "0 0 20px rgba(0, 0, 0, 0.3)",
+        border: "1px solid rgba(168, 85, 247, 0.2)",
         borderRadius: "6px",
         position: "relative",
         overflow: "hidden",
         transition: "all 0.3s ease-in-out",
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.boxShadow = "0 0 30px rgba(112, 66, 248, 0.5), inset 0 0 20px rgba(112, 66, 248, 0.1)";
+        e.currentTarget.style.boxShadow = "0 0 30px rgba(168, 85, 247, 0.3)";
+        e.currentTarget.style.border = "1px solid rgba(168, 85, 247, 0.5)";
+        e.currentTarget.style.background = "rgba(25, 25, 25, 0.8)";
         e.currentTarget.style.transform = "translateY(-5px)";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.boxShadow = "0 0 20px rgba(112, 66, 248, 0.3), inset 0 0 20px rgba(112, 66, 248, 0.05)";
+        e.currentTarget.style.boxShadow = "0 0 20px rgba(0, 0, 0, 0.3)";
+        e.currentTarget.style.border = "1px solid rgba(168, 85, 247, 0.2)";
+        e.currentTarget.style.background = "rgba(15, 15, 15, 0.6)";
         e.currentTarget.style.transform = "translateY(0)";
       }}
       contentArrowStyle={{
-        borderRight: "7px solid #7042f8",
+        borderRight: "7px solid rgba(168, 85, 247, 0.2)",
       }}
       date={education.date}
     >
