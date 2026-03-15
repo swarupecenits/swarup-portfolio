@@ -7,7 +7,7 @@ export const STATES = {
     },
     mobile: {
       scale: { x: 0.30, y: 0.30, z: 0.30 },
-      position: { x: 0, y: -200, z: 0 },
+      position: { x: 0, y: -250, z: 0 },
       rotation: { x: 0, y: 0, z: 0 },
     },
   },
