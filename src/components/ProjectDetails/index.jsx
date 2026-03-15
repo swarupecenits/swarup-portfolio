@@ -23,21 +23,21 @@ width: 100%;
 border-radius: 8px;
 margin: 50px 12px;
 height: min-content;
-background: linear-gradient(135deg, #0f0a1f 0%, #1a0f2e 100%);
+background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(32px);
 color: ${({ theme }) => theme.text_primary};
 padding: 20px;
 display: flex;
 flex-direction: column;
 position: relative;
-border: 1.5px solid #a855f7;
-box-shadow: 0 0 20px rgba(112, 66, 248, 0.3), inset 0 0 20px rgba(112, 66, 248, 0.05);
+border: 1.5px solid #5f7bff;
+box-shadow: 0 0 20px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.05);
 transition: all 0.3s ease-in-out;
 `;
 
 const Title = styled.div`
   font-size: 28px;
   font-weight: 600;
-  background: linear-gradient(90deg, #a855f7, #b8a9ff);
+  background: linear-gradient(90deg, #5f7bff, #3ec8ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -102,12 +102,12 @@ const Tags = styled.div`
 const Tag = styled.div`
     font-size: 14px;
     font-weight: 400;
-    color: #a855f7;
+    color: #5f7bff;
     margin: 4px;
     padding: 4px 8px;
     border-radius: 8px;
-    background-color: rgba(112, 66, 248, 0.1);
-    border: 0.5px solid #a855f7;
+    background-color: rgba(59, 130, 246, 0.1);
+    border: 0.5px solid #5f7bff;
     @media only screen and (max-width: 600px) {
         font-size: 12px;
     }
@@ -169,25 +169,25 @@ const Button = styled.a`
     color: #ffffff;
     padding: 12px 16px;
     border-radius: 8px;
-    background-color: #a855f7;
-    border: 1.5px solid #a855f7;
+    background-color: #5f7bff;
+    border: 1.5px solid #5f7bff;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.5s ease;
-    box-shadow: 0 0 10px rgba(112, 66, 248, 0.3);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
     ${({ dull, theme }) => dull && `
-        background-color: rgba(112, 66, 248, 0.1);
-        color: #a855f7;
+        background-color: rgba(59, 130, 246, 0.1);
+        color: #5f7bff;
         &:hover {
-            background-color: rgba(112, 66, 248, 0.2);
+            background-color: rgba(59, 130, 246, 0.2);
             color: #ffffff;
-            box-shadow: 0 0 15px rgba(112, 66, 248, 0.4);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
         }
     `}
     &:hover {
-        background-color: rgba(112, 66, 248, 0.9);
+        background-color: rgba(59, 130, 246, 0.9);
         color: #ffffff;
-        box-shadow: 0 0 20px rgba(112, 66, 248, 0.5);
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
     }
     @media only screen and (max-width: 600px) {
         font-size: 12px;
@@ -250,3 +250,5 @@ const index = ({ openModal, setOpenModal }) => {
 }
 
 export default index
+
+

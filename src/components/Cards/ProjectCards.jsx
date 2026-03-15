@@ -20,10 +20,10 @@ const Card = styled.div`
     width: 330px;
     height: 490px;
     background: ${({ theme }) => theme.card};
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(32px);
     cursor: pointer;
     border-radius: 10px;
-    border: 1px solid rgba(168, 85, 247, 0.2); /* using primary theme color roughly */
+    border: 1px solid rgba(59, 130, 246, 0.2); /* using primary theme color roughly */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     padding: 26px 20px;
@@ -37,7 +37,7 @@ const Card = styled.div`
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(circle at top right, rgba(168, 85, 247, 0.15), transparent 45%);
+        background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 45%);
         opacity: 0;
         transition: opacity 0.4s ease;
         pointer-events: none;
@@ -46,8 +46,8 @@ const Card = styled.div`
     @media (min-width: 769px) {
         &:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
-            border: 1px solid rgba(168, 85, 247, 0.5);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+            border: 1px solid rgba(59, 130, 246, 0.5);
             background: ${({ theme }) => theme.card_light};
             filter: brightness(1.05);
         }
@@ -172,3 +172,5 @@ const ProjectCards = ({project,setOpenModal}) => {
 }
 
 export default ProjectCards
+
+

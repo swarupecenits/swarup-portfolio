@@ -1,0 +1,1 @@
+﻿const fs = require('fs'); const file = fs.readFileSync('src/components/Cards/ProjectCards.jsx', 'utf8'); fs.writeFileSync('src/components/Cards/ProjectCards.jsx', file.replace('transition: \"all 0.5s ease-in-out\",', 'transition: \"all 0.5s ease-in-out\",\n  pointerEvents: \"auto\",'));

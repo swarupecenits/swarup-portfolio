@@ -31,7 +31,7 @@ const ScrollDownIcon = () => {
             width: 'fit-content',
             minHeight: '50px',
             padding: '4px',
-            border: '2px solid #a855f7', // Primary color
+            border: '2px solid #8eb6ff', // Primary color
             borderRadius: '9999px'
           }}
         >
@@ -48,7 +48,7 @@ const ScrollDownIcon = () => {
               width: '12px',
               height: '12px',
               borderRadius: '50%',
-              backgroundColor: '#a855f7'
+              backgroundColor: '#8eb6ff'
             }}
           />
         </motion.div>

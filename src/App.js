@@ -25,7 +25,6 @@ const Body = styled.div`
   width: 100%;
   overflow-x: hidden;
   position: relative;
-  z-index: 1;
 `;
 
 const Wrapper = styled.div`

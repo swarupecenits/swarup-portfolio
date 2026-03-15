@@ -6,10 +6,10 @@ export const Nav = styled.div`
   height: 72px;
   position: fixed;
   top: 0;
-  background: linear-gradient(180deg, rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.6));
+  background: linear-gradient(180deg, rgba(3, 7, 18, 0.92), rgba(3, 7, 18, 0.6));
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(168, 85, 247, 0.15);
-  box-shadow: 0 10px 28px rgba(5, 5, 5, 0.45);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+  box-shadow: 0 10px 28px rgba(3, 7, 18, 0.45);
   z-index: 50;
   padding: 0 40px;
 
@@ -77,8 +77,8 @@ export const NavLinksWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   height: auto;
-  border: 1px solid rgba(168, 85, 247, 0.36);
-  background: rgba(15, 15, 15, 0.54);
+  border: 1px solid rgba(59, 130, 246, 0.36);
+  background: rgba(15, 23, 42, 0.54);
   border-radius: 50px;
   padding: 10px 20px;
   color: #c9c9d7;
@@ -135,7 +135,7 @@ export const SocialIcon = styled.a`
   cursor: pointer;
 
   &:hover {
-    color: rgb(168, 85, 247);
+    color: rgb(96, 165, 250);
     transform: scale(1.1);
   }
 
@@ -165,9 +165,9 @@ export const MobileMenuContainer = styled.div`
   top: 65px;
   left: 0;
   width: 100%;
-  background: rgba(5, 5, 5, 0.77);
+  background: rgba(3, 7, 18, 0.77);
   backdrop-filter: blur(30px);
-  border-top: 1px solid rgba(168, 85, 247, 0.2);
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
   padding: 20px;
   flex-direction: column;
   align-items: center;
@@ -197,7 +197,7 @@ export const MobileLink = styled.a`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: rgb(168, 85, 247);
+    color: rgb(96, 165, 250);
   }
 `;
 
@@ -219,7 +219,7 @@ export const MobileSocialIcon = styled.a`
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: rgb(168, 85, 247);
+    color: rgb(96, 165, 250);
   }
 
   svg {

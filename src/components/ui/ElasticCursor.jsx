@@ -205,7 +205,7 @@ function ElasticCursor() {
         style={{
           width: CURSOR_DIAMETER,
           height: CURSOR_DIAMETER,
-          border: '2px solid #a855f7',
+          border: '2px solid #8eb6ff',
           position: 'fixed',
           left: 0,
           top: 0,
@@ -221,7 +221,7 @@ function ElasticCursor() {
         style={{
           width: '12px',
           height: '12px',
-          backgroundColor: '#a855f7',
+          backgroundColor: '#8eb6ff',
           borderRadius: '50%',
           position: 'fixed',
           transform: 'translate(-50%, -50%)',

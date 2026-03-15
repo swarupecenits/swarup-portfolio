@@ -6,8 +6,8 @@ export const HeroContainer = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
-  z-index: 1;
   background: transparent;
+  pointer-events: none;
 `;
 
 export const HeroInnerContainer = styled.div`
@@ -23,13 +23,14 @@ export const HeroInnerContainer = styled.div`
 
 export const HeroLeftContainer = styled.div`
   height: calc(100dvh - 3rem);
-  z-index: 2;
   grid-column: span 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding-top: 7rem; /* pt-28 */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   
   @media (min-width: 640px) {
     padding-bottom: 4rem; /* sm:pb-16 */
@@ -55,30 +56,34 @@ import { TypographyH1, TypographyLead } from "../ui/Typography";
 
 export const Greeting = styled(TypographyLead)`
   margin-top: 1rem;
-  font-weight: 100;
+  font-weight: 900;
   font-size: 1rem; /* text-md base */
-  color: #64748b; /* slate-500 */
+  color: #909399; /* slate-500 */
   cursor: default;
   white-space: nowrap;
+  text-align: center;
   
   @media (min-width: 640px) {
     font-size: 1.25rem; /* sm:text-xl */
   }
   @media (min-width: 768px) {
     align-self: flex-start;
+    text-align: left;
   }
 `;
 
 export const NameTitle = styled(TypographyH1)`
-  margin-left: -6px;
+  margin-left: 0;
   line-height: 1;
   font-weight: 900; /* Made bold as replica to the typography.tsx component */
-  text-align: left;
+  text-align: center;
   font-size: 4.5rem; /* text-7xl */
   cursor: default;
-  color: #FFFFFF;
+  color: #E2E2E4;
 
   @media (min-width: 768px) {
+    margin-left: -6px;
+    text-align: left;
     font-size: 4.5rem; /* md:text-7xl */
   }
   @media (min-width: 1024px) {
@@ -91,17 +96,19 @@ export const NameTitle = styled(TypographyH1)`
 
 export const SubTitle = styled(TypographyLead)`
   margin-top: 0;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 1rem;
-  color: #64748b;
+  color: #909399;
   cursor: default;
   white-space: nowrap;
+  text-align: center;
 
   @media (min-width: 640px) {
     font-size: 1.25rem;
   }
   @media (min-width: 768px) {
     align-self: flex-start;
+    text-align: left;
     margin-top: 1rem;
   }
 `;
@@ -133,7 +140,7 @@ export const PrimaryButton = styled.a`
   height: 2.5rem;
   border-radius: 0.375rem;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 1000;
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
   text-decoration: none;
@@ -152,7 +159,7 @@ export const OutlineButton = styled.a`
   height: 2.5rem;
   border-radius: 0.375rem;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 1000;
   background-color: transparent;
   color: hsl(var(--foreground));
   border: 1px solid hsl(var(--border) / 0.5);

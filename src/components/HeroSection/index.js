@@ -17,7 +17,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { BlurIn, BoxReveal } from "../ui/RevealAnimations";
 import ScrollDownIcon from "../ui/ScrollDownIcon";
 import { File } from "lucide-react";
-import { SiGithub, SiLinkedin, SiX } from "react-icons/si";
+import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 
 const HeroSection = () => {
   const containerRef = useRef(null);
@@ -34,20 +34,20 @@ const HeroSection = () => {
   const lastName = authorNameParts.slice(1).join(" ");
 
   return (
-    <div id="about" ref={containerRef} className="canvas-overlay-mode">
+    <div id="about" ref={containerRef}>
       <HeroContainer>
         <motion.div style={{ opacity, scale, width: '100%', height: '100%' }}>
           <HeroInnerContainer>
             <HeroLeftContainer id="Left">
               <div style={{ width: '100%' }}>
-                <BlurIn delay={0.7}>
+                <BlurIn delay={2.7}>
                   <Greeting>
                     Hi, I am
                     <br className="md-hidden" />
                   </Greeting>
                 </BlurIn>
 
-                <BlurIn delay={1}>
+                <BlurIn delay={3.0}>
                   <NameTitle title="theres something waiting for you in devtools">
                     {firstName}
                     <br />
@@ -55,9 +55,9 @@ const HeroSection = () => {
                   </NameTitle>
                 </BlurIn>
 
-                <BlurIn delay={1.2}>
+                <BlurIn delay={3.2}>
                   <SubTitle>
-                    A Full Stack Web Developer
+                    A Software Development Engineer
                   </SubTitle>
                 </BlurIn>
               </div>
@@ -69,7 +69,7 @@ const HeroSection = () => {
                   rel="noreferrer noopener"
                   style={{ textDecoration: 'none', width: '100%' }}
                 >
-                  <BoxReveal delay={2} width="100%">
+                  <BoxReveal delay={3.5} width="100%">
                     <PrimaryButton as="div">
                       <File size={24} />
                       <p style={{ margin: 0 }}>Resume</p>
@@ -79,12 +79,12 @@ const HeroSection = () => {
                 
                 <ButtonGroup>
                   <OutlineButton href="#contact" style={{ flexGrow: 1 }}>
-                    Hire Me
+                    Contact Me
                   </OutlineButton>
                   
                   <div style={{ display: 'flex', alignItems: 'center', height: '100%', gap: '0.5rem' }}>
-                    <IconButton href={Bio.twitter} target="_blank" rel="noreferrer noopener">
-                      <SiX size={20} />
+                    <IconButton href={Bio.instagram} target="_blank" rel="noreferrer noopener">
+                      <SiInstagram size={20} />
                     </IconButton>
                     <IconButton href={Bio.github} target="_blank" rel="noreferrer noopener" className="cursor-can-hover">
                       <SiGithub size={20} />
@@ -112,3 +112,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+

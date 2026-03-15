@@ -15,11 +15,16 @@ const AnimatedBackground = ({ darkMode }) => {
   const { playPressSound, playReleaseSound } = useSounds();
   const [splineApp, setSplineApp] = useState(null);
   const [activeSection, setActiveSection] = useState("hero");
+  const activeSectionRef = useRef("hero");
   const [keyboardRevealed, setKeyboardRevealed] = useState(false);
   const selectedSkillRef = useRef(null);
   const bongoAnimationRef = useRef(null);
   const keycapAnimationsRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
+
+  useEffect(() => {
+    activeSectionRef.current = activeSection;
+  }, [activeSection]);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 767);
@@ -116,6 +121,7 @@ const AnimatedBackground = ({ darkMode }) => {
     const heroState = getKeyboardState({ section: "hero", isMobile });
     gsap.set(kbd.scale, heroState.scale);
     gsap.set(kbd.position, heroState.position);
+    gsap.set(kbd.rotation, heroState.rotation);
 
     createSectionTimeline(app, "#skills", "skills", "hero");
     createSectionTimeline(app, "#experience", "experience", "skills");
@@ -205,16 +211,12 @@ const AnimatedBackground = ({ darkMode }) => {
     if (!kbd) return;
 
     kbd.visible = false;
-    await sleep(400);
+    await sleep(3400); // 2.5s loading + 0.9s loader exit animation
     kbd.visible = true;
     setKeyboardRevealed(true);
 
     const currentState = getKeyboardState({ section: "hero", isMobile });
-    gsap.fromTo(
-      kbd.scale,
-      { x: 0.01, y: 0.01, z: 0.01 },
-      { ...currentState.scale, duration: 1.5, ease: "elastic.out(1,0.6)" }
-    );
+    gsap.set(kbd.scale, { x: 0.01, y: 0.01, z: 0.01 }); gsap.to(kbd.scale, { ...currentState.scale, duration: 1.5, ease: "elastic.out(1,0.6)" }); gsap.to(kbd.position, { ...currentState.position, duration: 1.5, ease: "power2.out" }); gsap.to(kbd.rotation, { ...currentState.rotation, duration: 1.5, ease: "power2.out" });
 
     const allObjects = app.getAllObjects();
     const keycaps = allObjects.filter((obj) => obj.name === "keycap");
@@ -271,9 +273,7 @@ const AnimatedBackground = ({ darkMode }) => {
       tML.visible = mLight;
     };
 
-    if (activeSection !== "skills") {
-      set(false, false, false, false);
-    } else if (darkMode) {
+    if (darkMode) {
       isMobile ? set(false, false, false, true) : set(false, true, false, false);
     } else {
       isMobile ? set(false, false, true, false) : set(true, false, false, false);
@@ -286,19 +286,9 @@ const AnimatedBackground = ({ darkMode }) => {
     if (!splineApp) return;
 
     const kbd = splineApp.findObjectByName("keyboard");
-    let rotateKbd, teardownKbd;
+    let teardownKbd;
 
     if (kbd) {
-      rotateKbd = gsap.to(kbd.rotation, {
-        y: Math.PI * 2 + kbd.rotation.y,
-        duration: 10,
-        repeat: -1,
-        yoyo: true,
-        ease: "back.inOut",
-        delay: 2.5,
-        paused: true,
-      });
-
       teardownKbd = gsap.fromTo(
         kbd.rotation,
         { y: 0, x: -Math.PI, z: 0 },
@@ -315,20 +305,6 @@ const AnimatedBackground = ({ darkMode }) => {
     }
 
     const manage = async () => {
-      if (activeSection !== "skills") {
-        splineApp.setVariable("heading", "");
-        splineApp.setVariable("desc", "");
-      }
-
-      if (activeSection === "hero") {
-        rotateKbd?.restart();
-        teardownKbd?.pause();
-      } else if (activeSection === "contact") {
-        rotateKbd?.pause();
-      } else {
-        rotateKbd?.pause();
-        teardownKbd?.pause();
-      }
 
       if (activeSection === "projects") {
         await sleep(300);
@@ -352,7 +328,6 @@ const AnimatedBackground = ({ darkMode }) => {
     manage();
 
     return () => {
-      rotateKbd?.kill();
       teardownKbd?.kill();
     };
   }, [activeSection, splineApp]);
@@ -374,7 +349,7 @@ const AnimatedBackground = ({ darkMode }) => {
           left: 0,
           width: "100%",
           height: "100%",
-          zIndex: -1,
+          zIndex: 0,
           pointerEvents: "auto",
         }}
         onLoad={handleLoad}
@@ -385,3 +360,4 @@ const AnimatedBackground = ({ darkMode }) => {
 };
 
 export default AnimatedBackground;
+

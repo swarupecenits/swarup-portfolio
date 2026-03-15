@@ -64,11 +64,12 @@ const SkillsContainer = styled.div`
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
-  background: linear-gradient(135deg, #0f0a1f 0%, #1a0f2e 100%);
-  border: 1.5px solid #7042f8;
-  box-shadow: 0 0 20px rgba(112, 66, 248, 0.3);
+  background: linear-gradient(135deg, rgba(3, 7, 18, 0.92) 0%, rgba(3, 7, 18) 100%);
+  border: 1.5px solid rgba(59, 130, 246, 0.36);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.36);
   border-radius: 16px;
   padding: 18px 36px;
+  pointer-events: auto;
   @media (max-width: 768px) {
     max-width: 400px;
     padding: 10px 36px;
@@ -99,7 +100,7 @@ const SkillItem = styled.div`
   font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 80};
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
+  border: 1px solid rgba(59, 130, 246, 0.46);
   border-radius: 12px;
   padding: 12px 16px;
   display: flex;
@@ -181,3 +182,4 @@ const Skills = () => {
 };
 
 export default Skills;
+
