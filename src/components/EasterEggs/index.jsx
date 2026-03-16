@@ -25,16 +25,16 @@ const EasterEggs = () => {
         Object.defineProperty(window, name, {
           get() {
             console.log(
-              "%c✨ Abra Kadabra! ✨\n\n" +
+              "%c✨ Expelliarmus! ✨\n\n" +
                 "You just summoned the magic of Swarup! 🧙‍♂️\n" +
-                "What??? you're not impressed? Fine, but remember: With great power comes great responsibility! 💻⚡",
+                "What??? you're not impressed? Fine, but remember: The Fire within you is what makes you shine! 💻⚡",
               "color: #FF4500; font-size: 18px; font-weight: bold; background-color: #050505; padding: 10px; border-radius: 10px; margin-top:10px"
             );
 
             const timer = setTimeout(() => {
               console.log(
                 "%cPssttt! 🤫\n\n" +
-                  "Do you like cats?? 😺 If yes, then press 'n' on viewport and see what happens! 🐱✨",
+                  "Do you like pokemon?? 😺 If yes, then press 'n' on viewport and see what happens! 🐱✨",
                 "color: #FF69B4; font-size: 16px; font-weight: bold; background-color: #050505; padding: 10px; border-radius: 10px;"
               );
               clearTimeout(timer);
