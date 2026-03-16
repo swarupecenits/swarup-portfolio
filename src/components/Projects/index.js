@@ -152,18 +152,17 @@ const Projects = ({ openModal, setOpenModal }) => {
           </SwiperMobileCenter>
         ) : (
           <CardContainer>
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="popLayout">
               {visibleProjects.map((project, index) => (
                 <motion.div
                   key={`project-${index}-${project.title}`}
                   layout
-                  initial={{ opacity: 0, y: 50, scale: 0.95 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 30, scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ 
                     duration: 0.3, 
-                    delay: (index % INITIAL_VISIBLE_CARDS) * 0.1,
-                    ease: "easeOut"
+                    ease: "easeInOut"
                   }}
                 >
                   <ProjectCard
