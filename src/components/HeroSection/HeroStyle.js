@@ -122,6 +122,7 @@ export const ActionsContainer = styled.div`
   flex-direction: column;
   gap: 0.75rem;
   width: max-content;
+  pointer-events: auto; /* Required to allow clicks to go through the container */
 `;
 
 export const ButtonGroup = styled.div`
