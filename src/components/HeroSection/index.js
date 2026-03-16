@@ -10,7 +10,8 @@ import {
   ButtonGroup,
   PrimaryButton,
   OutlineButton,
-  IconButton
+  IconButton,
+  TextContainer
 } from "./HeroStyle";
 import { Bio } from "../../data/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -40,7 +41,7 @@ const HeroSection = () => {
         <motion.div style={{ opacity, scale, width: '100%', height: '100%' }}>
           <HeroInnerContainer>
             <HeroLeftContainer id="Left">
-              <div style={{ width: '100%' }}>
+              <TextContainer>
                 <BlurIn delay={2.7}>
                   <Greeting>
                     Hi, I am
@@ -61,7 +62,7 @@ const HeroSection = () => {
                     A Software Development Engineer
                   </SubTitle>
                 </BlurIn>
-              </div>
+              </TextContainer>
 
               <ActionsContainer>
                 <a

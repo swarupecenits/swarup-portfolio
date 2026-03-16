@@ -10,6 +10,7 @@ import { TypographyH2, TypographyLead } from "../ui/Typography";
 const Container = styled.div`
 margin-top: 100px;
 display: flex;
+padding: 0 20px;
 flex-direction: column;
 justify-content-center;
 position: relative;
@@ -44,6 +45,7 @@ const Title = styled(TypographyH2)`
 
 const Desc = styled(TypographyLead)`
   text-align: center;
+  padding: 0 30px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_secondary};
   @media (max-width: 768px) {

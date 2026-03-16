@@ -55,6 +55,17 @@ export const HeroLeftContainer = styled.div`
   }
 `;
 
+export const TextContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  @media (min-width: 768px) {
+    align-items: flex-start;
+  }
+`;
+
 import { TypographyH1, TypographyLead } from "../ui/Typography";
 
 export const Greeting = styled(TypographyLead)`

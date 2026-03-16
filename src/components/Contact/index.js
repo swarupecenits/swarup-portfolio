@@ -52,8 +52,9 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 0px 0px 80px 0px;
+  padding: 0px 33px 30px 33px;
   gap: 12px;
+  box-sizing: border-box;
 `;
 
 const Title = styled(TypographyH2)`
@@ -70,12 +71,15 @@ const Title = styled(TypographyH2)`
 `;
 
 const Desc = styled(TypographyLead)`
-    font-size: 16px;
+  font-size: 16px;
+  text-align: center;
+  @media (max-width: 768px) {
+    padding: 0 20px;
   }
 `;
 
 const ContactForm = styled.form`
-  width: 95%;
+  width: 100%;
   max-width: 600px;
   display: flex;
   flex-direction: column;
@@ -86,6 +90,7 @@ const ContactForm = styled.form`
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.36);
   margin-top: 28px;
   gap: 12px;
+  box-sizing: border-box;
 `;
 
 const ContactTitle = styled.div`

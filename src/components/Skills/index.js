@@ -49,6 +49,7 @@ export const Desc = styled(TypographyLead)`
   max-width: 600px;
   @media (max-width: 768px) {
     font-size: 16px;
+    padding: 0 30px;
   }
 `;
 
