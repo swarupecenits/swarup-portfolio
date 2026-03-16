@@ -17,7 +17,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { BlurIn, BoxReveal } from "../ui/RevealAnimations";
 import ScrollDownIcon from "../ui/ScrollDownIcon";
 import { File } from "lucide-react";
-import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
+import { SiGithub, SiInstagram } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
   const containerRef = useRef(null);
@@ -90,7 +91,7 @@ const HeroSection = () => {
                       <SiGithub size={20} />
                     </IconButton>
                     <IconButton href={Bio.linkedin} target="_blank" rel="noreferrer noopener" className="cursor-can-hover">
-                      <SiLinkedin size={20} />
+                      <FaLinkedin size={20} />
                     </IconButton>
                   </div>
                 </ButtonGroup>

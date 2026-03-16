@@ -94,7 +94,7 @@ const AnimatedDiv = ({ id, onClick, onCompleted }) => {
       <NyanImage
         // Using a reliable external link for the Nyan Cat GIF since you might not have it locally
         src="/assets/pikachu-running.gif"
-        alt="Nyan Cat"
+        alt="Pikachu"
       />
     </motion.div>
   );

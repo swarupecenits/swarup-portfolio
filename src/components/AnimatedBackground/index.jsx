@@ -376,7 +376,7 @@ const AnimatedBackground = ({ darkMode }) => {
           pointerEvents: "auto",
         }}
         onLoad={handleLoad}
-        scene="/assets/skills-keyboard.spline"
+        scene="/assets/skills-keyboard.splinecode"
       />
     </Suspense>
   );
