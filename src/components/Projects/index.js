@@ -9,14 +9,18 @@ import {
   Divider,
   CardContainer,
   ShowMoreButton,
+  SwiperMobileCenter,
 } from "./ProjectsStyle";
 import ProjectCard from "../Cards/ProjectCards";
 import { projects } from "../../data/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/swiper-bundle.css";
+import { useLenis } from "lenis/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Projects = ({ openModal, setOpenModal }) => {
+  const lenis = useLenis();
   const INITIAL_VISIBLE_CARDS = 6;
   const [toggle, setToggle] = useState("all");
   const [showAll, setShowAll] = useState(false);
@@ -125,39 +129,71 @@ const Projects = ({ openModal, setOpenModal }) => {
           )}
         </ToggleButtonGroup>
         {isMobile ? (
-          <Swiper
-            spaceBetween={30}
-            slidesPerView={1}
-            loop={true}
-            loopAdditionalSlides={2}
-            autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-            modules={[Pagination, Autoplay]}
-            style={{ width: "100%", padding: "20px" }}
-          >
-            {filteredProjects.map((project, index) => (
-              <SwiperSlide key={index}>
-                <ProjectCard
-                  project={project}
-                  openModal={openModal}
-                  setOpenModal={setOpenModal}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <SwiperMobileCenter style={{ width: "100%" }}>
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              loop={true}
+              loopAdditionalSlides={2}
+              autoplay={{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+              modules={[Pagination, Autoplay]}
+              style={{ width: "100%", padding: "20px" }}
+            >
+              {filteredProjects.map((project, index) => (
+                <SwiperSlide key={index}>
+                  <ProjectCard
+                    project={project}
+                    openModal={openModal}
+                    setOpenModal={setOpenModal}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </SwiperMobileCenter>
         ) : (
           <CardContainer>
-            {visibleProjects.map((project, index) => (
-              <ProjectCard
-                key={index}
-                project={project}
-                openModal={openModal}
-                setOpenModal={setOpenModal}
-              />
-            ))}
+            <AnimatePresence mode="wait">
+              {visibleProjects.map((project, index) => (
+                <motion.div
+                  key={`project-${index}-${project.title}`}
+                  layout
+                  initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 30, scale: 0.95 }}
+                  transition={{ 
+                    duration: 0.3, 
+                    delay: (index % INITIAL_VISIBLE_CARDS) * 0.1,
+                    ease: "easeOut"
+                  }}
+                >
+                  <ProjectCard
+                    project={project}
+                    openModal={openModal}
+                    setOpenModal={setOpenModal}
+                  />
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </CardContainer>
         )}
         {!isMobile && shouldShowMoreButton && (
-          <ShowMoreButton onClick={() => setShowAll((prev) => !prev)}>
+          <ShowMoreButton 
+            id="show-more-btn"
+            onClick={() => {
+              if (showAll) {
+                if (lenis) {
+                  lenis.scrollTo("#projects", { duration: 1.5, lock: true });
+                } else {
+                  document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+                }
+                setTimeout(() => {
+                  setShowAll(false);
+                }, 600); // Wait for mostly finished scroll before cutting height
+              } else {
+                setShowAll(true);
+              }
+            }}
+          >
             {showAll ? "Show Less" : "Show More"}
           </ShowMoreButton>
         )}
