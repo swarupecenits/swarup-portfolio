@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 // Converts style.module.scss to a styled component
 const LoaderContainer = styled(motion.div)`
-  height: 100vh;
+  height: 100dvh; /* Use dynamic viewport height for mobile browsers */
   width: 100vw;
   display: flex;
   align-items: flex-end;
@@ -44,8 +44,8 @@ const LoaderContainer = styled(motion.div)`
   }
   
   @media (max-width: 768px) {
-    padding-inline: 30px;
-    padding-bottom: 20px;
+    padding-inline: 20px;
+    padding-bottom: 80px; /* Increased to avoid mobile bottom navigation bars */
     p {
       font-size: 48px;
     }
