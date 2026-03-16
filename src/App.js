@@ -19,6 +19,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import ScrollProgress from './components/ui/ScrollProgress';
 import ElasticCursor from './components/ui/ElasticCursor';
 import Particles from './components/ui/Particles';
+import SmoothScroll from './components/SmoothScroll';
 
 const Body = styled.div`
   background-color: transparent;
@@ -47,11 +48,12 @@ function App() {
   console.log(openModal);
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Preloader>
-        <Router>
-          <ScrollProgress />
-          <ElasticCursor />
-          <Particles quantity={100} />
+      <SmoothScroll>
+        <Preloader>
+          <Router>
+            <ScrollProgress />
+            <ElasticCursor />
+            <Particles quantity={100} />
           <Routes>
             <Route path="/" element={
               <>
@@ -85,6 +87,7 @@ function App() {
           </Routes>
         </Router>
       </Preloader>
+      </SmoothScroll>
     </ThemeProvider>
   );
 }
