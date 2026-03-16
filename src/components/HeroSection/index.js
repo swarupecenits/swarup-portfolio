@@ -1,78 +1,116 @@
-import React from "react";
-import './Hero.css'
+import React, { useRef } from "react";
 import {
   HeroContainer,
-  HeroBg,
   HeroLeftContainer,
-  Img,
-  HeroRightContainer,
   HeroInnerContainer,
-  TextLoop,
-  Title,
-  Span,
+  Greeting,
+  NameTitle,
   SubTitle,
+  ActionsContainer,
+  ButtonGroup,
+  PrimaryButton,
+  OutlineButton,
+  IconButton
 } from "./HeroStyle";
-// import HeroImg from "../../images/HeroImage.gif";
-import Typewriter from "typewriter-effect";
 import { Bio } from "../../data/constants";
-import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
-import {
-  headContainerAnimation,
-  headContentAnimation,
-  // headTextAnimation,
-} from "../../utils/motion";
-import StarCanvas from "../canvas/Stars";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { BlurIn, BoxReveal } from "../ui/RevealAnimations";
+import ScrollDownIcon from "../ui/ScrollDownIcon";
+import { File } from "lucide-react";
+import { SiGithub, SiInstagram } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.8, 1, 1, 0.8]);
+
+  const authorNameParts = Bio.name.split(" ");
+  const firstName = authorNameParts[0];
+  const lastName = authorNameParts.slice(1).join(" ");
+
   return (
-    <div id="about">
+    <div id="about" ref={containerRef}>
       <HeroContainer>
-        <HeroBg className="hero_bg">
-          <StarCanvas />
-        </HeroBg>
-        <motion.div {...headContainerAnimation}>
+        <motion.div style={{ opacity, scale, width: '100%', height: '100%' }}>
           <HeroInnerContainer>
             <HeroLeftContainer id="Left">
-              <Title>
-                Hi, I am <br /> {Bio.name}
-              </Title>
-              <TextLoop>
-                I am a
-                <Span>
-                  <Typewriter
-                    options={{
-                      strings: Bio.roles,
-                      autoStart: true,
-                      loop: true,
-                    }}
-                  />
-                </Span>
-              </TextLoop>
-              <SubTitle>{Bio.description}</SubTitle>
-              {/* css styles */}
-              <div class="btn_container">
-                <button class="btn-hero">
-                  <a style={{ color: "#fff", textDecoration: "none" }} href="https://drive.google.com/file/d/1WhryeEsULP-3q6lZXpleW26c0jZbB4tz/view" target="blank">Check CV</a> </button>
+              <div style={{ width: '100%' }}>
+                <BlurIn delay={2.7}>
+                  <Greeting>
+                    Hi, I am
+                    <br className="md-hidden" />
+                  </Greeting>
+                </BlurIn>
+
+                <BlurIn delay={3.0}>
+                  <NameTitle title="theres something waiting for you in devtools">
+                    {firstName}
+                    <br />
+                    {lastName}
+                  </NameTitle>
+                </BlurIn>
+
+                <BlurIn delay={3.2}>
+                  <SubTitle>
+                    A Software Development Engineer
+                  </SubTitle>
+                </BlurIn>
               </div>
 
-              {/* <ResumeButton href={Bio.resume} target="display">
-              Check Resume
-            </ResumeButton> */}
+              <ActionsContainer>
+                <a
+                  href={Bio.resume}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  style={{ textDecoration: 'none', width: '100%' }}
+                >
+                  <BoxReveal delay={3.5} width="100%">
+                    <PrimaryButton as="div">
+                      <File size={24} />
+                      <p style={{ margin: 0 }}>Resume</p>
+                    </PrimaryButton>
+                  </BoxReveal>
+                </a>
+                
+                <ButtonGroup>
+                  <OutlineButton href="#contact" style={{ flexGrow: 1 }}>
+                    Contact Me
+                  </OutlineButton>
+                  
+                  <div style={{ display: 'flex', alignItems: 'center', height: '100%', gap: '0.5rem' }}>
+                    <IconButton href={Bio.insta} target="_blank" rel="noreferrer noopener">
+                      <SiInstagram size={20} />
+                    </IconButton>
+                    <IconButton href={Bio.github} target="_blank" rel="noreferrer noopener" className="cursor-can-hover">
+                      <SiGithub size={20} />
+                    </IconButton>
+                    <IconButton href={Bio.linkedin} target="_blank" rel="noreferrer noopener" className="cursor-can-hover">
+                      <FaLinkedin size={20} />
+                    </IconButton>
+                  </div>
+                </ButtonGroup>
+              </ActionsContainer>
             </HeroLeftContainer>
 
-            <HeroRightContainer id="Right">
-              <motion.div {...headContentAnimation}>
-                <Tilt>
-                  <Img src="https://res.cloudinary.com/dagggqd6g/image/upload/v1761346197/Untitled_design_bqv6b2.png" alt="hero-image" />
-                </Tilt>
-              </motion.div>
-            </HeroRightContainer>
+            {/* Empty right container for grid alignment matching reference */}
+            <div style={{ display: 'grid', gridColumn: 'span 1' }}></div>
           </HeroInnerContainer>
         </motion.div>
+        
+        {/* Scroll Down Icon positioned at bottom center */}
+        <div style={{ position: 'absolute', bottom: '20px', left: '50%', transform: 'translateX(-50%)', zIndex: 10 }}>
+          <ScrollDownIcon />
+        </div>
       </HeroContainer>
     </div>
   );
 };
 
 export default HeroSection;
+

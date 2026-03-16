@@ -14,7 +14,7 @@ const Image = styled.img`
   width: 50px;
   border-radius: 10px;
   margin-top: 4px;
-  border: 2px solid #7042f8;
+  border: 2px solid #5f7bff;
   box-shadow: 0 0 10px rgba(112, 66, 248, 0.4);
   transition: all 0.3s ease-in-out;
 
@@ -33,7 +33,7 @@ const Role = styled.div`
   font-size: 18px;
   font-weight: 600px;
   color: ${({ theme }) => theme.text_primary + 99};
-  background: linear-gradient(90deg, #7042f8, #b8a9ff);
+  background: linear-gradient(90deg, #5f7bff, #8eb6ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -114,25 +114,31 @@ const ExperienceCard = ({ experience, index = 0 }) => {
         display: "flex",
         flexDirection: "column",
         gap: "12px",
-        background: "linear-gradient(135deg, #0f0a1f 0%, #1a0f2e 100%)",
+        background: "linear-gradient(135deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18) 100%)",
+        backdropFilter: "blur(32px)",
         color: "#fff",
-        boxShadow: "0 0 20px rgba(112, 66, 248, 0.3), inset 0 0 20px rgba(112, 66, 248, 0.05)",
-        border: "1.5px solid #7042f8",
-        borderRadius: "6px",
+        boxShadow: "0 0 20px rgba(59, 130, 246, 0.36)",
+        border: "1.5px solid rgba(59, 130, 246, 0.36)",
+        borderRadius: "16px",
         position: "relative",
         overflow: "hidden",
         transition: "all 0.3s ease-in-out",
+        pointerEvents: "auto",
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.boxShadow = "0 0 30px rgba(112, 66, 248, 0.5), inset 0 0 20px rgba(112, 66, 248, 0.1)";
+        e.currentTarget.style.boxShadow = "0 0 30px rgba(59, 130, 246, 0.5)";
+        e.currentTarget.style.border = "1.5px solid rgba(59, 130, 246, 0.6)";
+        e.currentTarget.style.background = "linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42) 100%)";
         e.currentTarget.style.transform = "translateY(-5px)";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.boxShadow = "0 0 20px rgba(112, 66, 248, 0.3), inset 0 0 20px rgba(112, 66, 248, 0.05)";
+        e.currentTarget.style.boxShadow = "0 0 20px rgba(59, 130, 246, 0.36)";
+        e.currentTarget.style.border = "1.5px solid rgba(59, 130, 246, 0.36)";
+        e.currentTarget.style.background = "linear-gradient(135deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18) 100%)";
         e.currentTarget.style.transform = "translateY(0)";
       }}
       contentArrowStyle={{
-        borderRight: "7px solid #7042f8",
+        borderRight: "7px solid rgba(59, 130, 246, 0.2)",
       }}
       date={experience.date}
     >
@@ -150,7 +156,7 @@ const ExperienceCard = ({ experience, index = 0 }) => {
             <>
               <br />
               <Skills>
-                <b style={{ color: "#7042f8" }}>✦ Skills:</b>
+                <b style={{ color: "#5f7bff" }}>✦ Skills:</b>
                 <ItemWrapper>
                   {experience?.skills?.map((skill, index) => (
                     <motion.div
@@ -173,3 +179,6 @@ const ExperienceCard = ({ experience, index = 0 }) => {
 };
 
 export default ExperienceCard;
+
+
+

@@ -47,12 +47,12 @@ export const skills = [
       {
         name: "CSS",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/v1773635375/css3-seeklogo_v1bupq.png",
       },
       {
         name: "JavaScript",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/v1773635374/javascript_logo_ub1eur.png",
       },
       {
         name: "ThreeJS",
@@ -103,7 +103,7 @@ export const skills = [
       {
         name: "JavaScript",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+          "https://res.cloudinary.com/dagggqd6g/image/upload/v1773635374/javascript_logo_ub1eur.png",
       },
       {
         name: "JAVA",

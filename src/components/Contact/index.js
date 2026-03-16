@@ -3,6 +3,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Snackbar } from "@mui/material";
 import React, { Suspense, lazy } from "react";
+import { TypographyH2, TypographyLead } from "../ui/Typography";
 
 const Container = styled.div`
   display: flex;
@@ -55,12 +56,11 @@ const Wrapper = styled.div`
   gap: 12px;
 `;
 
-const Title = styled.div`
+const Title = styled(TypographyH2)`
   font-size: 42px;
   text-align: center;
-  font-weight: 600;
   margin-top: 20px;
-  
+  border-bottom: none;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
@@ -68,13 +68,7 @@ const Title = styled.div`
   }
 `;
 
-const Desc = styled.div`
-  font-size: 18px;
-  text-align: center;
-  max-width: 600px;
-  color: ${({ theme }) => theme.text_secondary};
-  @media (max-width: 768px) {
-    margin-top: 12px;
+const Desc = styled(TypographyLead)`
     font-size: 16px;
   }
 `;
@@ -84,11 +78,11 @@ const ContactForm = styled.form`
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #0f0a1f 0%, #1a0f2e 100%);
+  background: linear-gradient(135deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18) 100%);
   padding: 32px;
   border-radius: 16px;
-  border: 1.5px solid #7042f8;
-  box-shadow: 0 0 20px rgba(112, 66, 248, 0.3);
+  border: 1.5px solid rgba(59, 130, 246, 0.36);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.36);
   margin-top: 28px;
   gap: 12px;
 `;
@@ -135,10 +129,10 @@ const ContactButton = styled.input`
   font-weight: 600;
   height: 50px;
   align-items: center;
-  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  background-image: linear-gradient(144deg, #1e3a8a, #3b82f6 50%, #00ddeb);
   border: 0;
   border-radius: 8px;
-  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-shadow: rgba(59, 130, 246, 0.2) 0 15px 30px -5px;
   box-sizing: border-box;
   color: #ffffff;
   display: flex;
@@ -234,7 +228,7 @@ const Contact = () => {
   };
 
   return (
-    <Container>
+    <Container id="contact">
       <Title>Contact</Title>
           <Desc>
             Feel free to reach out to me for any questions or opportunities!

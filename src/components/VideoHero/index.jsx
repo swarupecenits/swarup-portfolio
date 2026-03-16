@@ -9,46 +9,12 @@ const HeroContainer = styled.div`
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-`;
-
-const BackgroundVideo = styled.video`
-  transform: rotate(180deg);
-  position: absolute;
-  top: -340px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 2;
-  mix-blend-mode: lighten;
-  opacity: 0.9;
-
-  @media (max-width: 960px) {
-    top: -240px;
-  }
-
-  @media (max-width: 640px) {
-    top: -440px;
-    height: 80%;
-    width: 120%;
-    left: -10%;
-  }
+  z-index: 1;
 `;
 
 const VideoHero = () => {
   return (
     <HeroContainer>
-      <BackgroundVideo
-        autoPlay
-        muted
-        loop
-        playsInline
-        controls={false}
-      >
-        <source src="/blackhole.webm" type="video/webm" />
-        Your browser does not support the video tag.
-      </BackgroundVideo>
-
       <HeroSection />
     </HeroContainer>
   );

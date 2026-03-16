@@ -19,23 +19,44 @@ const Button = styled.button`
 const Card = styled.div`
     width: 330px;
     height: 490px;
-    background: linear-gradient(135deg, #0f0a1f 0%, #1a0f2e 100%);
+    background: linear-gradient(135deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18) 100%);
+    backdrop-filter: blur(32px);
     cursor: pointer;
-    border-radius: 10px;
-    border: 1.5px solid #7042f8;
-    box-shadow: 0 0 20px rgba(112, 66, 248, 0.3);
+    border-radius: 16px;
+    border: 1.5px solid rgba(59, 130, 246, 0.36);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.36);
     overflow: hidden;
     padding: 26px 20px;
     display: flex;
     flex-direction: column;
     gap: 14px;
     transition: all 0.5s ease-in-out;
+    position: relative;
+    pointer-events: auto;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 45%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+    }
+
     @media (min-width: 769px) {
         &:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(112, 66, 248, 0.5);
-            filter: brightness(1.1);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+            border: 1.5px solid rgba(59, 130, 246, 0.6);
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42) 100%);
+            filter: brightness(1.05);
         }
+
+        &:hover::before {
+            opacity: 1;
+        }
+
         &:hover ${Button} {
             display: block;
         }
@@ -48,6 +69,7 @@ const Image = styled.img`
     background-color: ${({ theme }) => theme.white};
     border-radius: 10px;
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
+    object-fit: cover;
 `
 
 const Tags = styled.div`
@@ -132,7 +154,7 @@ const ProjectCards = ({project,setOpenModal}) => {
             <Image src={project.image}/>
             <Tags>
                 {project.tags?.map((tag, index) => (
-                <Tag>{tag}</Tag>
+                <Tag key={`${tag}-${index}`}>{tag}</Tag>
                 ))}
             </Tags>
             <Details>
@@ -142,7 +164,7 @@ const ProjectCards = ({project,setOpenModal}) => {
             </Details>
             <Members>
                 {project.member?.map((member) => (
-                    <LazyProject src={member.img}/>
+                    <LazyProject key={member.img} src={member.img}/>
                 ))}
             </Members>
             {/* <Button>View Project</Button> */}
@@ -151,3 +173,5 @@ const ProjectCards = ({project,setOpenModal}) => {
 }
 
 export default ProjectCards
+
+

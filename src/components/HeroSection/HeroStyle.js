@@ -1,170 +1,183 @@
 import styled from "styled-components";
-// import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
-  /* background: ${({ theme }) => theme.card_light}; */
+  position: relative;
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  position: relative;
-  padding: 180px 30px 80px 30px;
-  min-height: 100vh;
-  background-color: ${({ theme }) => theme.bg};
-  z-index: 1;
-  @media (max-width: 960px) {
-    padding: 150px 16px 66px 16px;
-    min-height: 90vh;
-  }
-  @media (max-width: 640) {
-    padding: 100px 16px 32px 16px;
-    min-height: 85vh;
-  }
-  z-index: 1;
-  /* make bottom a straight line */
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-`;
-
-export const HeroBg = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: end;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 0;
-
-  @media (max-width: 960px) {
-    justify-content: center;
-    padding: 0;
-  }
+  background: transparent;
+  pointer-events: none;
 `;
 
 export const HeroInnerContainer = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1100px;
-
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
-`;
-export const HeroLeftContainer = styled.div`
-  width: 100%;
-  order: 1;
-  @media (max-width: 960px) {
-    order: 2;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @media (max-width: 640px) {
-    order: 2;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-
-export const HeroRightContainer = styled.div`
-  width: 100%;
-  display: flex;
-  order: 2;
-  justify-content: end;
-  gap: 12px;
-  @media (max-width: 960px) {
-    order: 1;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 80px;
-  }
-
-  @media (max-width: 640px) {
-    margin-bottom: 30px;
-  }
-`;
-
-export const Img = styled.img`
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
   width: 100%;
   height: 100%;
-  max-width: 400px;
-  z-index: 50;
-  max-height: 400px;
-  border-radius: 50%;
-  border: 2px  solid #e3bb0a;
-  box-shadow: 5px 5px 25px #e3bb0a;
-
-  @media (max-width: 768px) {
-    max-width: 400px;
-    max-height: 400px;
-    z-index: 50;
-  }
-
-  @media (max-width: 640px) {
-    max-width: 280px;
-    max-height: 280px;
-    z-index: 50;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr; /* md:grid-cols-2 */
   }
 `;
 
-export const Title = styled.div`
-  font-weight: 700;
-  font-size: 50px;
-  color: ${({ theme }) => theme.text_primary};
-  line-height: 68px;
-  @media (max-width: 960px) {
-    text-align: center;
-  }
-
-  @media (max-width: 640px) {
-    font-size: 40px;
-    line-height: 48px;
-    margin-bottom: 8px;
-  }
-`;
-
-export const TextLoop = styled.div`
-  font-weight: 600;
-  font-size: 32px;
+export const HeroLeftContainer = styled.div`
+  height: calc(100dvh - 3rem);
+  grid-column: span 1;
   display: flex;
-  gap: 12px;
-  color: ${({ theme }) => theme.text_primary};
-  line-height: 68px;
-  @media (max-width: 960px) {
-    text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 7rem; /* pt-28 */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  
+  @media (min-width: 640px) {
+    padding-bottom: 4rem; /* sm:pb-16 */
   }
-  @media (max-width: 640px) {
-    font-size: 22px;
-    line-height: 48px;
-    margin-bottom: 16px;
+  
+  @media (min-width: 768px) {
+    height: calc(100dvh - 4rem);
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5rem; /* md:p-20 */
+    padding-left: 7rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 6rem; /* lg:p-24 */
+    padding-left: 8rem;
+  }
+
+  @media (min-width: 1280px) {
+    padding: 7rem; /* xl:p-28 */
+    padding-left: 9rem;
   }
 `;
 
-export const Span = styled.span`
-  color:#7042f8;
+import { TypographyH1, TypographyLead } from "../ui/Typography";
+
+export const Greeting = styled(TypographyLead)`
+  margin-top: 1rem;
+  font-weight: 900;
+  font-size: 1rem; /* text-md base */
+  color: #909399; /* slate-500 */
+  cursor: default;
+  white-space: nowrap;
+  text-align: center;
+  
+  @media (min-width: 640px) {
+    font-size: 1.25rem; /* sm:text-xl */
+  }
+  @media (min-width: 768px) {
+    align-self: flex-start;
+    text-align: left;
+  }
+`;
+
+export const NameTitle = styled(TypographyH1)`
+  margin-left: 0;
+  line-height: 1;
+  font-weight: 900; /* Made bold as replica to the typography.tsx component */
+  text-align: center;
+  font-size: 4.5rem; /* text-7xl */
+  cursor: default;
+  color: #E2E2E4;
+
+  @media (min-width: 768px) {
+    margin-left: -6px;
+    text-align: left;
+    font-size: 4.5rem; /* md:text-7xl */
+  }
+  @media (min-width: 1024px) {
+    font-size: 6rem; /* lg:text-8xl */
+  }
+  @media (min-width: 1280px) {
+    font-size: 8rem; /* xl:text-9xl */
+  }
+`;
+
+export const SubTitle = styled(TypographyLead)`
+  margin-top: 0;
+  font-weight: 900;
+  font-size: 1rem;
+  color: #909399;
+  cursor: default;
+  white-space: nowrap;
+  text-align: center;
+
+  @media (min-width: 640px) {
+    font-size: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    align-self: flex-start;
+    text-align: left;
+    margin-top: 1rem;
+  }
+`;
+
+export const ActionsContainer = styled.div`
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: max-content;
+`;
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  gap: 0.75rem;
+  
+  @media (min-width: 768px) {
+    align-self: flex-start;
+  }
+`;
+
+export const PrimaryButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  height: 2.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 1000;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  text-decoration: none;
+  transition: all 0.2s;
+  
+  &:hover {
+    opacity: 0.9;
+  }
+`;
+
+export const OutlineButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  height: 2.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 1000;
+  background-color: transparent;
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border) / 0.5);
+  text-decoration: none;
+  transition: all 0.2s;
   cursor: pointer;
+  
+  &:hover {
+    background-color: hsl(var(--accent) / 0.5);
+  }
 `;
 
-export const SubTitle = styled.div`
-  font-size: 20px;
-  line-height: 32px;
-  margin-bottom: 42px;
-  color: ${({ theme }) => theme.text_primary + 95};
-
-  @media (max-width: 960px) {
-    text-align: center;
-  }
-
-  @media (max-width: 640px) {
-    font-size: 16px;
-    line-height: 32px;
-  }
+export const IconButton = styled(OutlineButton)`
+  padding: 0.5rem;
+  width: 2.5rem;
 `;
 
 
