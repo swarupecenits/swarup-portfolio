@@ -6,15 +6,16 @@ import styled from 'styled-components'
 const Container = styled.div`
 width: 100%;
 height: 100%;
-position: absolute;
+position: fixed;
 top: 0;
 left: 0;
 background-color: #000000a7;
 display: flex;
-align-items: top;
+align-items: flex-start;
 justify-content: center;
-overflow-y: scroll;
+overflow-y: auto;
 transition: all 0.5s ease;
+z-index: 1300;
 `;
 
 const Wrapper = styled.div`
@@ -200,7 +201,7 @@ const index = ({ openModal, setOpenModal }) => {
     const project = openModal?.project;
     return (
         <Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
-            <Container>
+            <Container className="modall">
                 <Wrapper>
                     <CloseRounded
                         style={{
