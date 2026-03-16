@@ -10,7 +10,7 @@ import { TypographyH2, TypographyLead } from "../ui/Typography";
 const Container = styled.div`
 margin-top: 100px;
 display: flex;
-padding: 0 20px;
+padding: 0 10px;
 flex-direction: column;
 justify-content-center;
 position: relative;

@@ -14,7 +14,7 @@ display: flex;
 flex-direction: column;
 justify-content:center;
 position: relative;
-padding: 0 20px;
+padding: 0 10px;
 z-index: 1;
 align-items: center;
 `;
