@@ -61,6 +61,7 @@ const Title = styled(TypographyH2)`
   text-align: center;
   margin-top: 20px;
   border-bottom: none;
+  padding-top: 2rem;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
