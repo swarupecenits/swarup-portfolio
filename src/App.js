@@ -21,6 +21,7 @@ import ElasticCursor from './components/ui/ElasticCursor';
 import Particles from './components/ui/Particles';
 import SmoothScroll from './components/SmoothScroll';
 import EasterEggs from './components/EasterEggs';
+import RadialMenu from './components/ui/RadialMenu';
 
 const Body = styled.div`
   background-color: transparent;
@@ -56,6 +57,7 @@ function App() {
             <ElasticCursor />
             <Particles quantity={100} />
             <EasterEggs />
+            <RadialMenu />
           <Routes>
             <Route path="/" element={
               <>
