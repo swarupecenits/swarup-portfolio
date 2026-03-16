@@ -49,7 +49,7 @@ const HeroSection = () => {
                 </BlurIn>
 
                 <BlurIn delay={3.0}>
-                  <NameTitle title="theres something waiting for you in devtools">
+                  <NameTitle>
                     {firstName}
                     <br />
                     {lastName}

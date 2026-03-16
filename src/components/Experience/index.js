@@ -35,6 +35,7 @@ const Title = styled(TypographyH2)`
   font-size: 52px;
   text-align: center;
   margin-top: 20px;
+  padding-top: 4rem;
   border-bottom: none;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {

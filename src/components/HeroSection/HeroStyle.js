@@ -83,11 +83,57 @@ export const NameTitle = styled(TypographyH1)`
   font-size: 4.5rem; /* text-7xl */
   cursor: default;
   color: #E2E2E4;
+  position: relative;
+  display: inline-block;  pointer-events: auto; /* Required to capture hover events */
+/* Mobile: Hidden Tooltips */
+  &::after {
+    display: none;
+  }
+
+  &::after {
+    content: "there is something hidden for you guys in dev tools";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: rgba(3, 7, 18, 0.95);
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+    z-index: 20;
+    letter-spacing: normal;
+    line-height: normal;
+    pointer-events: none;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-10px);
+  }
 
   @media (min-width: 768px) {
     margin-left: -6px;
     text-align: left;
     font-size: 4.5rem; /* md:text-7xl */
+
+    &::after {
+      display: block; /* Desktop Tooltips: Re-enabled */
+      left: 25%; /* Moved right */
+      transform: translateX(0) translateY(10px);
+    }
+    
+    &:hover::after {
+      transform: translateX(0) translateY(-10px);
+    }
   }
   @media (min-width: 1024px) {
     font-size: 6rem; /* lg:text-8xl */

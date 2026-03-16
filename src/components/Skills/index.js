@@ -117,6 +117,17 @@ const SkillItem = styled.div`
   }
 `;
 
+export const SwiperMobileCenter = styled.div`
+  @media (max-width: 768px) {
+    width: 100%;
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+`;
+
 const Skills = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -135,30 +146,32 @@ const Skills = () => {
         <Title>Skills</Title>
         <Desc>Here are some of my skills on which I have been working on.</Desc>
         {isMobile ? (
-          <Swiper
-            spaceBetween={30}
-            slidesPerView={1}
-            loop={true}
-            autoplay={{ delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-            modules={[Pagination, Autoplay]}
-            style={{ width: '100%', padding: '20px' }}
-          >
-            {skills.map((skill, index) => (
-              <SwiperSlide key={index}>
-                <Skill>
-                  <SkillTitle>{skill.title}</SkillTitle>
-                  <SkillList>
-                    {skill.skills.map((item, idx) => (
-                      <SkillItem key={idx}>
-                        <LazyImage src={item.image} alt={item.name} />
-                        {item.name}
-                      </SkillItem>
-                    ))}
-                  </SkillList>
-                </Skill>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <SwiperMobileCenter>
+            <Swiper
+              spaceBetween={30}
+              slidesPerView={1}
+              loop={true}
+              autoplay={{ delay: 2000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+              modules={[Pagination, Autoplay]}
+              style={{ width: '100%', padding: '20px' }}
+            >
+              {skills.map((skill, index) => (
+                <SwiperSlide key={index}>
+                  <Skill>
+                    <SkillTitle>{skill.title}</SkillTitle>
+                    <SkillList>
+                      {skill.skills.map((item, idx) => (
+                        <SkillItem key={idx}>
+                          <LazyImage src={item.image} alt={item.name} />
+                          {item.name}
+                        </SkillItem>
+                      ))}
+                    </SkillList>
+                  </Skill>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </SwiperMobileCenter>
         ) : (
           <SkillsContainer>
             {skills.map((skill) => (
