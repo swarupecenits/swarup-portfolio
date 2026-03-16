@@ -14,6 +14,7 @@ display: flex;
 flex-direction: column;
 justify-content:center;
 position: relative;
+padding: 0 20px;
 z-index: 1;
 align-items: center;
 `;
