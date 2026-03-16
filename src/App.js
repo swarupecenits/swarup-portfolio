@@ -20,6 +20,7 @@ import ScrollProgress from './components/ui/ScrollProgress';
 import ElasticCursor from './components/ui/ElasticCursor';
 import Particles from './components/ui/Particles';
 import SmoothScroll from './components/SmoothScroll';
+import EasterEggs from './components/EasterEggs';
 
 const Body = styled.div`
   background-color: transparent;
@@ -54,6 +55,7 @@ function App() {
             <ScrollProgress />
             <ElasticCursor />
             <Particles quantity={100} />
+            <EasterEggs />
           <Routes>
             <Route path="/" element={
               <>

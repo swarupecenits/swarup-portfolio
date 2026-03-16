@@ -14,7 +14,7 @@ const LoaderContainer = styled(motion.div)`
   padding-bottom: 30px;
   position: fixed;
   z-index: 9999;
-  background-color: #050505; /* using a dark background matching the theme */
+  background-color: hsl(var(--background)); /* matching App.css body background */
   top: 0;
   left: 0;
 
@@ -26,13 +26,13 @@ const LoaderContainer = styled(motion.div)`
     height: calc(100% + 300px);
     pointer-events: none;
     path {
-      fill: #050505;
+      fill: hsl(var(--background));
     }
   }
 
   p {
     display: flex;
-    color: #ffffff;
+    color: hsl(var(--foreground));
     font-size: 72px;
     font-weight: bold;
     align-items: center;

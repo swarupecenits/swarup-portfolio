@@ -11,11 +11,13 @@ import { Bio } from '../../data/constants';
 
 const FooterContainer = styled.div`
   width: 100%;
-  padding: 2rem 0;
+  padding: 5rem 0 2rem 0;
   display: flex;
   justify-content: center;
   position: relative;
   z-index: 1;
+  background: linear-gradient(100.26deg, rgba(0, 102, 255, 0.1) 42.33%, rgba(150, 0, 225, 0.1) 127.07%);
+  clip-path: polygon(0 25%, 35% 0, 100% 30%, 100% 100%, 0 100%);
 `;
 
 const FooterWrapper = styled.div`
@@ -108,7 +110,7 @@ function Footer() {
           <SocialMediaIcon href={Bio.youtube} target="display"><Youtubeicon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2025 Copyright-All Rights Reserved to Swarup Chanda.
+          &copy; 2026 Copyright-All Rights Reserved to Swarup Chanda.
         </Copyright>
 
       </FooterWrapper>
