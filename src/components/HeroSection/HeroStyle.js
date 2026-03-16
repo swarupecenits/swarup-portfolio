@@ -41,14 +41,17 @@ export const HeroLeftContainer = styled.div`
     justify-content: center;
     align-items: flex-start;
     padding: 5rem; /* md:p-20 */
+    padding-left: 7rem;
   }
 
   @media (min-width: 1024px) {
     padding: 6rem; /* lg:p-24 */
+    padding-left: 8rem;
   }
 
   @media (min-width: 1280px) {
     padding: 7rem; /* xl:p-28 */
+    padding-left: 9rem;
   }
 `;
 
