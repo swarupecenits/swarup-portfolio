@@ -626,7 +626,7 @@ export const projects = [
     ],
     category: "Mobile app",
     github: "https://github.com/swarupecenits/Movie-App.git",
-    webapp: "https://drive.google.com/file/d/1M9dGxt9UK6jB4o5pXIoYGmktZGEqIgQL/view?usp=sharing",
+    webapp: "https://docs.google.com/uc?export=download&id=1CsScMQbyhw7P-J_R45ApXNENTCdnJsMy",
   },
   {
     id: 92,
@@ -644,7 +644,7 @@ export const projects = [
     ],
     category: "Mobile app",
     github: "https://github.com/swarupecenits/Habix.git",
-    webapp: "https://drive.google.com/file/d/1M9dGxt9UK6jB4o5pXIoYGmktZGEqIgQL/view?usp=sharing",
+    webapp: "https://docs.google.com/uc?export=download&id=1m9nUlIrsSuW0k8jvdfd4hEqoDNHkOWjY",
   },
   {
     id: 93,
