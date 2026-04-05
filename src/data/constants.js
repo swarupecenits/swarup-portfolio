@@ -626,7 +626,25 @@ export const projects = [
     ],
     category: "Mobile app",
     github: "https://github.com/swarupecenits/Movie-App.git",
-    webapp: "https://drive.google.com/file/d/1M9dGxt9UK6jB4o5pXIoYGmktZGEqIgQL/view?usp=sharing",
+    webapp: "https://docs.google.com/uc?export=download&id=1CsScMQbyhw7P-J_R45ApXNENTCdnJsMy",
+  },
+  {
+    id: 92,
+    title: "Habix App",
+    date: "Apr 2026",
+    description:
+      "A React Native habit tracking app built with Expo, designed to provide a calm and engaging experience for building consistency. Habix transforms daily habits into a growing digital garden, where each completed habit nurtures a plant that evolves over time. The app features a modern dark aesthetic UI, smooth animations, habit insights, and seamless tracking to make self-improvement feel rewarding and visually satisfying.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/v1775411207/Gemini_Generated_Image_tx84bwtx84bwtx84_g40pry.png",
+    tags: [
+      "ReactNative",
+      "Expo",
+      "Supabase",
+      "Nativewind",
+    ],
+    category: "Mobile app",
+    github: "https://github.com/swarupecenits/Habix.git",
+    webapp: "https://docs.google.com/uc?export=download&id=1m9nUlIrsSuW0k8jvdfd4hEqoDNHkOWjY",
   },
   {
     id: 93,
