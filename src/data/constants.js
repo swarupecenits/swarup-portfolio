@@ -417,7 +417,7 @@ export const experiences = [
     id: 1,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4KCDcGyNkYW5Zgs0xHLh4SO28QcC2Vc4wF9Bz4aJrdw&s",
     role: "President",
-    company: "N.E.R.D.S NIT Silchar",
+    company: "N.E.R.D.S. NIT Silchar",
     date: "Aug 2023 - May 2026",
     desc: "As General Secretary of N.E.R.D.S NIT Silchar, I lead initiatives promoting innovation, organize technical events, mentor members, and foster collaboration to enhance technical skills and knowledge.",
     skills: [
@@ -451,7 +451,7 @@ export const experiences = [
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuRe7MZ4Gdpy1oqBvKI-gXer-0uOZJ8wkS2gFxSJqZMQ&s",
     role: "Development Wing Member",
     company: "Computer Science Society, NIT Silchar",
-    date: "Sep 2023 - Present",
+    date: "Sep 2023 - May 2024",
     desc: "Contributing to different open-source projects",
     skills: [
       "ReactJS",
