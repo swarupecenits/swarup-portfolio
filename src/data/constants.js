@@ -335,6 +335,15 @@ export const experiences = [
   {
     id: 10,
     img: "https://res.cloudinary.com/dagggqd6g/image/upload/v1765819007/microsoft-logo-microsoft-icon-transparent-free-png_shxjdw.webp",
+    role: "Software Engineer",
+    company: "Microsoft India",
+    date: "Jul 2026 - Present",
+    desc: "Working as a Software Engineer at Microsoft India, developing AI-driven systems for autonomous browser interaction and end-to-end testing. Building scalable automation frameworks using Azure OpenAI and modern DevOps pipelines, contributing to improved software reliability and efficiency.",
+   
+  },
+  {
+    id: 10,
+    img: "https://res.cloudinary.com/dagggqd6g/image/upload/v1765819007/microsoft-logo-microsoft-icon-transparent-free-png_shxjdw.webp",
     role: "SWE Intern",
     company: "Microsoft India",
     date: "May 2025 - July 2025",
@@ -355,7 +364,7 @@ export const experiences = [
     img: "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/vcrterwiwnvzdqptpcni",
     role: "Project Intern",
     company: "Nephrocare India",
-    date: "May 2024 - Present",
+    date: "May 2024 - May 2026",
     desc: "Developed an innovative cloud-based Blood flow monitoring system for Dialysis machines during my internship, integrating real-time remote control, web-based functionality, and affordability to revolutionize healthcare accessibility and efficiency.",
     skills: [
       "Machine Learning",
@@ -390,7 +399,7 @@ export const experiences = [
     img: "https://res.cloudinary.com/dagggqd6g/image/upload/v1765819336/Indian_Space_Research_Organisation_Logo.svg_y3bodx.png",
     role: "ISRO Robotics Challenge-URSC 2024 (IRoC-U2024)",
     company: "ISRO",
-    date: "Nov 2023 - Present",
+    date: "Nov 2023 - May 2026",
     desc: "Participated in the ISRO Robotics Challenge-URSC 2024 (IRoC-U2024), showcasing expertise in robotics, engineering, and problem-solving within a competitive space exploration context.",
     skills: [
       "Rover Design",
@@ -409,7 +418,7 @@ export const experiences = [
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4KCDcGyNkYW5Zgs0xHLh4SO28QcC2Vc4wF9Bz4aJrdw&s",
     role: "President",
     company: "N.E.R.D.S NIT Silchar",
-    date: "Aug 2023 - Present",
+    date: "Aug 2023 - May 2026",
     desc: "As General Secretary of N.E.R.D.S NIT Silchar, I lead initiatives promoting innovation, organize technical events, mentor members, and foster collaboration to enhance technical skills and knowledge.",
     skills: [
       "Arduino IDE",
@@ -475,10 +484,9 @@ export const education = [
     id: 0,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa2ngdVpqch_pC2GJFdx3xlDt6_PtNBLwXYW6Ut_S_Ug&s",
     school: "National Institute of Technology, Silchar",
-    date: "Nov 2022 - Present",
+    date: "Nov 2022 - May 2026",
     grade: "9.38 CGPA",
-    desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at NIT Silchar. I have completed 2 semesters and have a CGPA of 9.38. I have taken courses in Data Structures, Algorithms,Discrete Maathematics, Object-Oriented Programming, among others.",
-    degree: "Bachelor of Technology - BTech, Computer Science and Engineering",
+    desc: "Completed my Bachelor's degree in Computer Science and Engineering from NIT Silchar with a CGPA of 9.38. Gained strong foundations in Data Structures, Algorithms, Discrete Mathematics, and Object-Oriented Programming, along with hands-on experience through academic and project work.",
   },
   {
     id: 1,
