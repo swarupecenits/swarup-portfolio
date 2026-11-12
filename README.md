@@ -1,6 +1,6 @@
 # Swarup Chanda's Portfolio Website
 
-<img src="https://res.cloudinary.com/dagggqd6g/image/upload/v1773635960/Screenshot_2026-03-16_100828_jtbvkr.png" alt="Portfolio Preview" style="max-width: 100%; height: auto;">
+![alt text](image.png)
 
 
 ## Description
