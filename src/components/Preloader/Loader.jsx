@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { opacity, slideUp } from "./anim";
 import styled from "styled-components";
+import { prefersReducedMotion } from "../../hooks/useMediaQuery";
+import { fadeOut, opacity, slideUp } from "./anim";
 
-// Converts style.module.scss to a styled component
 const LoaderContainer = styled(motion.div)`
-  height: 100dvh; /* Use dynamic viewport height for mobile browsers */
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 9999;
   width: 100vw;
+  height: 100dvh;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   padding-inline: 60px;
   padding-bottom: 30px;
-  position: fixed;
-  z-index: 9999;
-  background-color: hsl(var(--background)); /* matching App.css body background */
-  top: 0;
-  left: 0;
+  background-color: var(--bg);
+  will-change: transform;
 
   svg {
     position: absolute;
@@ -25,80 +25,60 @@ const LoaderContainer = styled(motion.div)`
     width: 100%;
     height: calc(100% + 300px);
     pointer-events: none;
+
     path {
-      fill: hsl(var(--background));
+      fill: var(--bg);
     }
   }
 
   p {
-    display: flex;
-    color: hsl(var(--foreground));
-    font-size: 72px;
-    font-weight: bold;
-    align-items: center;
     position: absolute;
     z-index: 1;
-    margin: 0;
-    padding: 0;
-    /* To prevent double % sign, make sure it looks identical to original */
+    display: flex;
+    align-items: center;
+    color: var(--text);
+    font-size: 72px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.05em;
   }
-  
+
   @media (max-width: 768px) {
     padding-inline: 20px;
-    padding-bottom: 80px; /* Increased to avoid mobile bottom navigation bars */
+    padding-bottom: 80px;
+
     p {
       font-size: 48px;
     }
   }
 `;
 
-export default function Loader({ loadingPercent }) {
-  const [dimension, setDimension] = useState({ width: 0, height: 0 });
+const EASE = [0.76, 0, 0.24, 1];
 
-  useEffect(() => {
-    setDimension({ width: window.innerWidth, height: window.innerHeight });
-  }, []);
-
-  const initialPath = `M0 0 L${window.innerWidth || dimension.width} 0 L${window.innerWidth || dimension.width} ${
-    window.innerHeight || dimension.height
-  } Q${(window.innerWidth || dimension.width) / 2} ${(window.innerHeight || dimension.height) + 300} 0 ${
-    window.innerHeight || dimension.height
-  }  L0 0`;
-  
-  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${
-    dimension.height
-  } Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
+export default function Loader({ counterRef }) {
+  const [{ width, height }] = useState(() => ({ width: window.innerWidth, height: window.innerHeight }));
+  const [reducedMotion] = useState(prefersReducedMotion);
 
   const curve = {
     initial: {
-      d: `M0 0 L${dimension.width || window.innerWidth} 0 L${dimension.width || window.innerWidth} ${dimension.height || window.innerHeight} Q${(dimension.width || window.innerWidth) / 2} ${(dimension.height || window.innerHeight) + 300} 0 ${dimension.height || window.innerHeight}  L0 0`,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
+      d: `M0 0 L${width} 0 L${width} ${height} Q${width / 2} ${height + 300} 0 ${height} L0 0`,
     },
     exit: {
-      d: `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 },
+      d: `M0 0 L${width} 0 L${width} ${height} Q${width / 2} ${height} 0 ${height} L0 0`,
+      transition: { duration: 0.7, ease: EASE, delay: 0.3 },
     },
   };
 
   return (
-    <LoaderContainer
-      variants={slideUp}
-      initial="initial"
-      exit="exit"
-    >
-      {dimension.width > 0 && (
-        <>
-          <motion.p variants={opacity} initial="initial" animate="enter">
-            {loadingPercent ? (loadingPercent - (loadingPercent % 5)).toFixed(0) : "0"} %
-          </motion.p>
-          <svg>
-            <motion.path
-              variants={curve}
-              initial="initial"
-              exit="exit"
-            ></motion.path>
-          </svg>
-        </>
+    <LoaderContainer variants={reducedMotion ? fadeOut : slideUp} initial="initial" exit="exit" role="status">
+      <span className="sr-only">Loading portfolio</span>
+      <motion.p ref={counterRef} variants={opacity} initial="initial" animate="enter" aria-hidden="true">
+        0 %
+      </motion.p>
+      {!reducedMotion && (
+        <svg aria-hidden="true">
+          <motion.path variants={curve} initial="initial" exit="exit" />
+        </svg>
       )}
     </LoaderContainer>
   );

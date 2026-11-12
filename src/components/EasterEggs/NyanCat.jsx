@@ -1,103 +1,62 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
-import { AnimatePresence, motion, useAnimationControls } from "framer-motion";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-const getRandomHeight = () => {
-  return `${Math.random() * 100}vh`;
+const PIKACHU_SRC = `${import.meta.env.BASE_URL}assets/pikachu-running.gif`;
+const RUNNER_HEIGHT = 110;
+const MAX_RUNNERS = 20;
+
+// Behind the 3D keyboard and the page content, above the star field.
+const CONTAINER_STYLE = {
+  position: "fixed",
+  inset: 0,
+  overflow: "hidden",
+  zIndex: -1,
+  pointerEvents: "none",
 };
 
-const Container = styled.div`
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  z-index: -1; /* Placed completely behind the Spline keyboard (0) */
-  pointer-events: none; /* Make sure it doesn't block clicks on main app */
-`;
+const isEditable = (target) =>
+  target instanceof HTMLElement && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName));
 
-const NyanImage = styled.img`
-  position: fixed;
-  height: 110px;
-  width: auto;
-  pointer-events: auto; /* Let users click the cat */
-  cursor: pointer;
-  z-index: -1;
-`;
+function Runner({ onDone }) {
+  const [top] = useState(() => `calc((100% - ${RUNNER_HEIGHT}px) * ${Math.random().toFixed(3)})`);
+  return (
+    <motion.img
+      src={PIKACHU_SRC}
+      alt=""
+      draggable={false}
+      initial={{ x: "-20vw" }}
+      animate={{ x: "100vw" }}
+      transition={{ duration: 5, ease: "linear" }}
+      onAnimationComplete={onDone}
+      style={{ position: "absolute", left: 0, top, height: RUNNER_HEIGHT, width: "auto" }}
+    />
+  );
+}
 
-const NyanCat = () => {
-  const [divs, setDivs] = useState([]);
-
-  const spawnDiv = () => {
-    const newDiv = {
-      id: (Math.random() * 100000).toFixed(),
-    };
-    setDivs((prevDivs) => [...prevDivs, newDiv]);
-  };
+/** Press "n" anywhere (outside form fields) and a Pikachu runs across the screen. */
+export default function NyanCat() {
+  const [runners, setRunners] = useState([]);
 
   useEffect(() => {
-    const handleKeyDown = (e) => {
-      // Don't trigger if user is typing in an input field
-      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-      
-      if (e.key.toLowerCase() === "n") spawnDiv();
+    let nextId = 0;
+    const onKeyDown = (event) => {
+      if (event.repeat || event.ctrlKey || event.metaKey || event.altKey) return;
+      // Autofill can dispatch keydown events without a key.
+      if (event.key?.toLowerCase() !== "n" || isEditable(event.target)) return;
+      const id = nextId++;
+      setRunners((current) => (current.length >= MAX_RUNNERS ? current : [...current, id]));
     };
-
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  return (
-    <Container>
-      <AnimatePresence>
-        {/* Counter removed */}
-      </AnimatePresence>
-      {divs &&
-        divs.map((div) => (
-          <AnimatedDiv
-            key={div.id}
-            id={div.id}
-            onClick={() => console.log("Meow!")}
-            onCompleted={() => {
-              setDivs((prev) => prev.filter((d) => d.id !== div.id));
-            }}
-          />
-        ))}
-    </Container>
-  );
-};
-
-const AnimatedDiv = ({ id, onClick, onCompleted }) => {
-  // Use a ref so randY doesn't recalculate on re-renders, causing jitter
-  const randY = React.useRef(getRandomHeight()).current;
-  const controls = useAnimationControls();
-
-  React.useEffect(() => {
-    controls.start({
-      x: "100vw",
-      y: randY,
-      transition: { duration: 5, ease: "linear" },
-    });
-  }, [controls, randY]);
+  if (runners.length === 0) return null;
 
   return (
-    <motion.div
-      key={id}
-      initial={{ x: "-20vw", y: randY }}
-      animate={controls}
-      onAnimationComplete={onCompleted}
-      onClick={onClick}
-    >
-      <NyanImage
-        // Using a reliable external link for the Nyan Cat GIF since you might not have it locally
-        src="/assets/pikachu-running.gif"
-        alt="Pikachu"
-      />
-    </motion.div>
+    <div aria-hidden="true" style={CONTAINER_STYLE}>
+      {runners.map((id) => (
+        <Runner key={id} onDone={() => setRunners((current) => current.filter((runner) => runner !== id))} />
+      ))}
+    </div>
   );
-};
-
-export default NyanCat;
+}
