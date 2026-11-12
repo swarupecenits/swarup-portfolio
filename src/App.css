@@ -1,84 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;700;800&display=swap');
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  font-family: 'Manrope', sans-serif;
-    
-}
-
-html{
-  scroll-behavior: smooth;
-}
-
 :root {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
-  --radius: 0.5rem;
+  /* One neutral ink scale plus a single accent: change --accent-rgb to re-hue the whole site. */
+  --bg-rgb: 9 9 11;
+  --bg: rgb(var(--bg-rgb));
+  --surface: rgb(18 18 21 / 0.94);
+  --surface-strong: rgb(20 20 24 / 0.97);
+  --surface-hover: rgb(24 24 28 / 0.96);
+  --line: rgb(255 255 255 / 0.08);
+  --line-strong: rgb(255 255 255 / 0.16);
+  --text: #fafafa;
+  --text-soft: #d4d4d8;
+  --text-muted: #a1a1aa;
+  --text-dim: #71717a;
+  --accent-rgb: 190 242 100;
+  --accent: rgb(var(--accent-rgb));
+  --accent-ink: #0b0f04;
+  --danger: #f87171;
+
+  --font-sans: "Geist Variable", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "Cascadia Code", "SFMono-Regular", Menlo, monospace;
+  --font-serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
+
+  --radius: 14px;
+  --radius-lg: 22px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --nav-height: 72px;
+
+  color-scheme: dark;
 }
 
-body{
-  margin: 0px !important;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
-  font-family: 'Manrope', sans-serif;
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Space Grotesk', sans-serif;
-  letter-spacing: -0.02em;
+html {
+  background-color: var(--bg);
+  scroll-padding-top: calc(var(--nav-height) + 8px);
+  /* Locking scroll for dialogs hides the scrollbar; keep its space so nothing shifts. */
+  scrollbar-gutter: stable;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* width */
+body {
+  min-height: 100dvh;
+  background:
+    radial-gradient(56rem 36rem at 88% -6rem, rgb(var(--accent-rgb) / 0.07), transparent 65%),
+    radial-gradient(48rem 32rem at -8% 14rem, rgb(129 140 248 / 0.07), transparent 65%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Film grain between the 3D canvas (z-index 0) and the page content (z-index 10). */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.045;
+  pointer-events: none;
+}
+
+/* Without a GPU, blending a full-screen layer into every frame costs more than the grain adds. */
+html[data-perf="low"] body::after {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+/* Accent words set in an italic serif, e.g. "Featured <em class="serif">projects</em>". */
+.serif {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Sections receive programmatic focus after in-page navigation; no ring needed there. */
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10000;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+  pointer-events: auto;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
-    width: 4px;
-    height: 80px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background:#222A35;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #575C66;
-    border-radius: 6px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #626970;
-  }
-
-
-/* Force smaller size for Swiper arrow buttons */
-.swiper-container .swiper-button-next,
-.swiper-container .swiper-button-prev {
-  width: 10px !important; /* Force smaller width */
-  height: 10px !important; /* Force smaller height */
+  width: 6px;
+  height: 6px;
 }
 
-/* Canvas Overlay Mode for proper z-index and click-through handling */
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e2e33;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #45454d;
+}
+
+@supports (-moz-appearance: none) {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #2e2e33 var(--bg);
+  }
+}
+
+/* The page content floats above the interactive 3D keyboard: only interactive
+   elements capture the pointer so hover/drag events reach the Spline canvas. */
 .canvas-overlay-mode {
   position: relative;
   pointer-events: none;
@@ -93,13 +197,6 @@ h1, h2, h3, h4, h5, h6 {
 .canvas-overlay-mode textarea,
 .canvas-overlay-mode [role="button"],
 .canvas-overlay-mode svg,
-.canvas-overlay-mode div[role="button"] {
+.canvas-overlay-mode [data-interactive] {
   pointer-events: auto;
-}
-
-
-@media (max-width: 768px) {
-  .swiper-slide {
-    padding: 10px; /* Add card padding in mobile view */
-  }
 }
