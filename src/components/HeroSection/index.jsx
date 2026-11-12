@@ -362,7 +362,7 @@ export default function Hero() {
 
         <Actions when={ready} delay={0.85} duration={0.8}>
           <ResumeButton href={Bio.resume} target="_blank" rel="noopener noreferrer">
-            View résumé
+            View resume
             <FiArrowUpRight aria-hidden="true" />
             <span className="sr-only"> (opens in a new tab)</span>
           </ResumeButton>

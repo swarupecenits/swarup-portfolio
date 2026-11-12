@@ -432,7 +432,7 @@ export default function Navbar() {
             </SearchButton>
 
             <ResumeLink href={Bio.resume} target="_blank" rel="noopener noreferrer">
-              Résumé
+              Resume
               <FiArrowUpRight aria-hidden="true" />
               <span className="sr-only"> (opens in a new tab)</span>
             </ResumeLink>
@@ -486,7 +486,7 @@ export default function Navbar() {
                   ))}
                 </ul>
                 <PanelResume href={Bio.resume} target="_blank" rel="noopener noreferrer">
-                  Résumé
+                  Resume
                   <FiArrowUpRight aria-hidden="true" />
                   <span className="sr-only"> (opens in a new tab)</span>
                 </PanelResume>

@@ -70,7 +70,7 @@ const COMMANDS = [
   {
     id: "link-resume",
     group: "Links",
-    label: "Résumé",
+    label: "Resume",
     keywords: ["cv", "download", "pdf"],
     Icon: FiFileText,
     external: true,
