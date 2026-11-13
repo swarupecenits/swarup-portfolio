@@ -352,13 +352,15 @@ export default function ContactForm() {
       });
       finish();
     } catch (error) {
+      const rateLimited = error?.status === 429;
+      // Keep the real reason (e.g. "400 The service ID not found") visible for debugging.
+      if (!rateLimited) console.error("Contact form: EmailJS send failed", error);
       setToast({
         id: Date.now(),
         type: "error",
-        message:
-          error?.status === 429
-            ? "You're sending messages a little too quickly. Please wait a few seconds and try again."
-            : "Sorry, your message couldn't be sent. Please try again, or reach out on LinkedIn.",
+        message: rateLimited
+          ? "You're sending messages a little too quickly. Please wait a few seconds and try again."
+          : "Sorry, your message couldn't be sent. Please try again, or reach out on LinkedIn.",
       });
     } finally {
       setSending(false);

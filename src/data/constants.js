@@ -489,8 +489,8 @@ export const education = [
     school: "National Institute of Technology, Silchar",
     degree: "B.Tech, Computer Science and Engineering",
     date: "Nov 2022 - May 2026",
-    grade: "9.38 CGPA",
-    desc: "Completed my Bachelor's degree in Computer Science and Engineering from NIT Silchar with a CGPA of 9.38. Gained strong foundations in Data Structures, Algorithms, Discrete Mathematics, and Object-Oriented Programming, along with hands-on experience through academic and project work.",
+    grade: "9.41 CGPA",
+    desc: "Completed my Bachelor's degree in Computer Science and Engineering from NIT Silchar with a CGPA of 9.41. Gained strong foundations in Data Structures, Algorithms, Discrete Mathematics, and Object-Oriented Programming, along with hands-on experience through academic and project work.",
   },
   {
     id: 1,
