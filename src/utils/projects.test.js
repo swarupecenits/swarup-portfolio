@@ -52,6 +52,11 @@ describe("getDemoLink", () => {
 });
 
 describe("project data", () => {
+  it("gives every project a unique id so each card opens its own details", () => {
+    const ids = projects.map((project) => project.id);
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+
   it("gives every project a unique slug so deep links resolve to one project", () => {
     const slugs = projects.map(projectSlug);
     expect(slugs.every(Boolean)).toBe(true);
