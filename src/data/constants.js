@@ -638,6 +638,26 @@ export const projects = [
     webapp: "https://www.incand.co.in/",
   },
   {
+    id: 33,
+    title: "Daybook App",
+    date: "Nov 2026",
+    description:
+      "A local-first React Native app built with Expo that keeps notes, tasks and money in one calm daily notebook. One capture bar understands plain English: “Call mom tomorrow 6pm !high” becomes a high-priority task for 6 pm tomorrow, “Rahul owes me 500 for dinner” goes on his tab and “Coffee 180” is logged as spending. Notes come on pastel paper with checklists and #tags, tasks get priorities, repeats, steps and reminders, and the daily work log turns into a shareable standup. The money tab tracks who owes whom, splits bills, sends friendly WhatsApp reminders with your UPI ID and keeps a monthly budget. Everything stays on the phone in SQLite with no account or tracking, plus a biometric app lock, light and dark themes, a 30-day trash and JSON backups.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/v1795165763/image-9b00b49c7b55cdc4_m9nuae.png",
+    tags: [
+      "ReactNative",
+      "Expo",
+      "TypeScript",
+      "SQLite",
+      "Zustand",
+      "Reanimated",
+    ],
+    category: "mobile",
+    github: "https://github.com/swarupecenits/Daybook.git",
+    webapp: "https://docs.google.com/uc?export=download&id=1VIbmmPV9ZmMNfyfuMo293eJkje84sqZq",
+  },
+  {
     id: 6,
     title: "MovieZone App",
     date: "Mar 2025",
