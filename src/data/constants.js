@@ -638,6 +638,26 @@ export const projects = [
     webapp: "https://www.incand.co.in/",
   },
   {
+    id: 34,
+    title: "Thrum Music Player",
+    date: "Nov 2026",
+    description:
+      "An offline, bass-first music player for Android, built with React Native, Expo and a custom Kotlin sound engine on Media3. Every song runs through a 64-bit DSP chain with a 10-band EQ, a tunable bass shelf, phantom bass that makes earbuds and small speakers feel deeper, stereo width and a lookahead limiter so heavy bass never clips. Separate profiles for the speaker, wired headphones and Bluetooth switch automatically. Vibe search understands how you feel: “chill late night lofi” or “sad arijit” is read as moods, tempo and era, and results are ranked by on-device analysis of every song’s BPM, energy, bass, key and loudness. The library follows Samsung Music with Tracks, Albums, Artists, Playlists, Folders and Genres, while Now Playing adds artwork-tinted color, bass-reactive art, synced lyrics embedded in your files and a sleep timer that fades out. A daylist that changes through the day, mood mixes and listening stats round it out, and nothing leaves the phone: no account, no ads, no tracking.",
+    image:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/v1795263379/thrum_ripiwo.png",
+    tags: [
+      "ReactNative",
+      "Expo",
+      "Kotlin",
+      "Media3",
+      "TypeScript",
+      "SQLite",
+    ],
+    category: "mobile",
+    github: "https://github.com/swarupecenits/Thrum.git",
+    webapp: "https://docs.google.com/uc?export=download&id=1DGyfeI87l7VypHRDiFOiMcrJdIbqDuA4",
+  },
+  {
     id: 33,
     title: "Daybook App",
     date: "Nov 2026",
